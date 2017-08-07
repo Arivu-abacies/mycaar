@@ -35,7 +35,7 @@ else
 		foreach($programs as  $tmp)
 		{
 			$overalluser = 0;
-			$countprogress = 0;
+			/* $countprogress = 0;
 			$overallprec = 0;
 			foreach ($users as $user )
 			{				
@@ -50,8 +50,8 @@ else
 				}
 		    }
 			if(!empty($overalluser))
-				$overallprec = $countprogress/$overalluser;
-		
+				$overallprec = $countprogress/$overalluser; */
+			$overallprec = 20;
 			echo $tmp->title."<br>";
 			echo '<div data-id="'.$tmp->program_id.'" id="demo-pie-'.$tmp->program_id.'" class="pie-title-center dataclick" data-percent="'.$overallprec.'"> <span class="pie-value"></span> </div>';
 			
