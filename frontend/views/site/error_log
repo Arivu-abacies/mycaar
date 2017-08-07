@@ -1,0 +1,5 @@
+[05-Feb-2017 18:18:55 UTC] PHP Fatal error:  Using $this when not in object context in /home/mycaar/public_html/v2.0/frontend/views/site/index.php on line 5
+[06-Feb-2017 01:53:37 UTC] PHP Fatal error:  Using $this when not in object context in /home/mycaar/public_html/v2.0/frontend/views/site/index.php on line 5
+[06-Feb-2017 08:12:32 UTC] PHP Fatal error:  Using $this when not in object context in /home/mycaar/public_html/v2.0/frontend/views/site/index.php on line 5
+[06-Feb-2017 10:44:06 UTC] PHP Fatal error:  Using $this when not in object context in /home/mycaar/public_html/v2.0/frontend/views/site/index.php on line 5
+[07-Feb-2017 01:53:30 UTC] PHP Fatal error:  Using $this when not in object context in /home/mycaar/public_html/v2.0/frontend/views/site/index.php on line 5

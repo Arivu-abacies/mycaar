@@ -1,0 +1,31 @@
+Options +FollowSymlinks
+RewriteEngine On
+
+# deal with admin first
+RewriteCond %{REQUEST_URI} ^/mycaar/(admin) 
+RewriteRule ^admin/assets/(.*)$ backend/web/assets/$1 [L]
+RewriteRule ^admin/css/(.*)$ backend/web/css/$1 [L]
+RewriteRule ^admin/js/(.*)$ backend/web/js/$1 [L]
+RewriteRule ^admin/uploads/(.*)$ backend/web/uploads/$1 [L]
+RewriteRule ^admin/img/(.*)$ backend/web/img/$1 [L]
+RewriteRule ^admin/archives/(.*)$ backend/web/archives/$1 [L]
+RewriteRule ^admin/less/(.*)$ backend/web/less/$1 [L]
+
+RewriteCond %{REQUEST_URI} !^/mycaar/backend/web/(assets|css|js|uploads|img|archives|less)/
+RewriteCond %{REQUEST_URI} ^/mycaar/(admin)  
+RewriteRule ^.*$ backend/web/index.php [L]
+
+
+RewriteCond %{REQUEST_URI} ^/mycaar/(assets|css)  
+RewriteRule ^assets/(.*)$ frontend/web/assets/$1 [L]
+RewriteRule ^css/(.*)$ frontend/web/css/$1 [L]
+RewriteRule ^js/(.*)$ frontend/web/js/$1 [L]
+
+RewriteCond %{REQUEST_URI} !^/mycaar/(frontend|backend)/web/(assets|css|js)/
+RewriteCond %{REQUEST_URI} !index.php
+RewriteCond %{REQUEST_FILENAME} !-f [OR]
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^.*$ frontend/web/index.php
+
+
+

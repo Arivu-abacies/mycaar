@@ -1,0 +1,4 @@
+[02-Feb-2017 09:33:18 UTC] PHP Fatal error:  Class 'yii\base\Model' not found in /home/mycaar/public_html/v2.0/frontend/models/ResetPasswordForm.php on line 13
+[04-Feb-2017 00:18:09 UTC] PHP Fatal error:  Class 'yii\base\Model' not found in /home/mycaar/public_html/v2.0/frontend/models/ResetPasswordForm.php on line 13
+[04-Feb-2017 00:48:31 UTC] PHP Fatal error:  Class 'yii\base\Model' not found in /home/mycaar/public_html/v2.0/frontend/models/PasswordResetRequestForm.php on line 12
+[04-Feb-2017 23:22:10 UTC] PHP Fatal error:  Class 'yii\base\Model' not found in /home/mycaar/public_html/v2.0/frontend/models/PasswordResetRequestForm.php on line 12

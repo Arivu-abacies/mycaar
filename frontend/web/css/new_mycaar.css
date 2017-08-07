@@ -1,0 +1,1151 @@
+#build-wrap .stage-wrap>ul,#aware_form .stage-wrap>ul,#capability_form .stage-wrap>ul{		
+	min-height:200px !important;
+}	
+.option-label,.className-wrap,.name-wrap,.access-wrap,.other-wrap,.stage-wrap .fb-textdisplay,.stage-wrap .fb-audio,.stage-wrap .fb-img,.stage-wrap .fb-video,.stage-wrap .fb-fileupload,.stage-wrap .filedownload-preview{
+	display:none;
+}
+span.field_type_display {
+	position: relative;float: right;right: 100px;
+}
+#capability_form .add-opt{
+	display:none;
+}
+ul::-webkit-scrollbar {
+  width: 6px;
+}
+ul::-webkit-scrollbar-thumb {
+   background-color: grey;
+   border-radius: 4px;
+}
+ul::-webkit-scrollbar-track {
+   background-color: #eee;
+}
+#aware_form .stage-wrap>ul, #capability_form .stage-wrap>ul{
+height:650px;
+overflow-y:scroll;
+}
+a{
+	outline:none !important;
+}
+.td-green {
+    background-color: #008000;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    font-size: 13px;
+}
+.td-amber {
+    background-color: #ffc000;
+    color: black;
+    text-align: center;
+    font-weight: bold;
+    font-size: 13px;
+}
+a.circle {
+    display: inline-block;
+    border-radius: 50%;
+    width: 28px;
+    height: 28px;
+    text-align: -webkit-center;
+    font-weight: bold;
+    font-size: 13px;
+    line-height: 28px;
+}
+a.circle>span{
+	display:none;
+} 
+a.circle:hover  span{
+	display:block;
+}
+a.circle:hover {
+    border-radius: 15px;
+    width: 50px;
+	color:#fff;
+	text-decoration:none;
+	overflow: hidden;
+    position: relative;
+}  
+a.circle-green {
+    background-color: #008000;
+	color: white;
+}
+a.circle-amber {
+    background-color: #ffc000;
+}
+a.circle-grey {
+    background-color: #81889a;
+}
+a.circle-red {
+    background-color: #c10001;
+	color: white;
+}
+
+.w3-progress-container{
+height: 25px !important;
+}
+.w3-progressbar{
+background-color: lightgreen;
+}
+.mdl-label{
+	float: right;
+	margin-right: 10px;
+	font-weight: bold;
+	z-index:999;
+	position:relative;
+}
+/*For Chrome */
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+
+    .mdl-section{
+        margin-top: 12px;
+        margin-bottom: 0px;
+        margin-left: 202px;
+    }
+
+    .mdl-hover-green:hover{
+        background: green !important;
+        min-width: 52px !important;
+        width: 0px !important;
+        border-radius: 14px;
+        font-size: 14px !important;
+    }
+    .graybox{
+        background-color: #e3e3e3!important;
+        height:55px;
+        text-align: center;
+        margin-left: 0px;
+        padding-top: 15px;
+        margin-top:-3px;
+        width:230px;
+    }
+
+    .mdl-hover-amber:hover{
+        background: #ffc000  !important;
+        height:25px !important;
+        min-width: 67px !important;
+        width: 0px !important;
+        margin-top: 0px;
+        border-radius: 10px;
+    }
+	.mdl-hover-amber:hover .toolkit{
+	visibility: visible;
+	color: black;
+	font-size: 14px;
+	text-transform: capitalize;
+	}
+    .mdl-hover-red:hover{
+        background: #c10001 !important;
+        height:25px !important;
+        min-width: 67px !important;
+        width: 0px !important;
+        margin-top: 0px;
+        border-radius: 10px;
+    }
+
+    .mdl-hover-amber:hover .tooltiptext{
+        visibility: visible;
+        color: black;
+        font-size: 14px;
+        text-transform: capitalize;
+    }
+
+    .mdl-hover-red:hover .toolkit{
+        visibility: visible;
+        font-size: 14px;
+        text-transform: capitalize;
+        color:#faf3f3 !important; ;
+
+    }
+
+    .mdl-small-icon-amber{
+        background-color:#ffc000 !important;
+        height:25px !important;
+        min-width: 25px !important;
+        width: 0px !important;
+        margin-top: 0px;
+        color: #ffc000;
+        font-size: 0px;
+        padding: 4px 0px 0px 0px !important;
+    }
+
+    .mdl-small-icon-red{
+        background-color:#c10001 !important;
+        height:25px !important;
+        min-width: 25px !important;
+        width: 0px !important;
+        margin-top: 0px;
+        color:#c10001 !important;
+        font-size: 0px;
+        padding: 4px 0px 0px 0px;
+    }
+
+    .mdl-text{
+        float: left;
+        margin-left: 10px;
+        font-weight: bold;
+    }
+    .mdl-label{
+        float: right;
+        margin-right: 10px;
+        font-weight: bold;
+		z-index:999;
+		position:relative;
+    }
+    .mdl-test{
+        color:#999999;
+    }
+    .mdl-home{
+        border-bottom: 1px solid #ececec;
+        border-top: 1px solid #ececec;;
+    }
+    .mdl-complete{
+        margin-top: 18px;
+    }
+    .mdl-container{
+        overflow-x: auto;
+        overflow-y: auto;
+        margin: -34px 0px 0px 337px;
+    }
+
+    #content{
+        background-color: white;
+        margin-bottom: 125px;
+    }
+    #base{
+        background-color: white;
+    }
+    .course_name{
+        padding: 0px !important;
+        height:43px !important;
+        width: auto !important;
+        min-height: 0px !important;
+        background-color: #4F81BE !important;
+        margin-top:0px;
+        font-size: 13px;
+        color: #fff;
+        text-align: center;
+    }
+    .single_unit_title{
+        background: #e3e3e3;
+        height: 55px;
+        width: 250px;
+        padding: 10px;
+        margin-bottom: 4px;
+        overflow: hidden;
+        min-width: 230px;
+        font-weight: 500 !important;
+        font-size: 13px !important;
+        margin: 4px 0px 4px 302px;
+            position: relative;
+    }
+
+    .course_types .course_indicate .first_heading{
+        padding: 8px;
+        background: #e3e3e3;
+        width: 122.75px;
+        height: 34px;
+        margin: 0px 0px 0px 148px;
+        display: block;
+    }
+
+
+
+    .mdl-small-icon{
+        background-color: #ffc000 !important;
+        height: 25px !important;
+        min-width: 25px !important;
+        width: 0px !important;
+        color: #ffc000;
+        font-size: 0px;
+        border-radius: 50%;
+        height: 56px;
+        margin: auto;
+        min-width: 56px;
+        width: 56px;
+        padding: 0;
+        overflow: hidden;
+        background: rgba(158,158,158,.2);
+        box-shadow: 0 1px 1.5px 0 rgba(0,0,0,.12),0 1px 1px 0 rgba(0,0,0,.24);
+        position: relative;
+        line-height: normal;
+    }
+
+    .mdl-hover:hover{
+        background: #ffc000 !important;
+        height: 25px !important;
+        min-width: 67px !important;
+        width: 0px !important;
+        margin-top: 0px;
+        border-radius: 10px;
+    }
+
+    .course_types{
+        display: block;
+        width: 100%;
+        overflow: hidden;
+    }
+    .course_indicate{
+        display: block;
+        width: 100%;
+        overflow: hidden;
+    }
+
+
+    .assessement_item div[name='unit1']:last-child{
+        margin-right: auto;
+        float: right;
+        margin-top: -78px;
+        margin-left: -144px;
+    }
+    .assessement_item div[name='unit1']:first-child{
+        margin-left: 155px;
+    }
+    .course_types .course_indicate:first-child .first_heading{
+        display: block;
+    }
+    .assessement_item div[name='unit1']{
+        float: left;
+        margin: auto 1%;
+        text-align: center;
+        width: 49%;
+    }
+    .assessement_item div[name="unit1"] div[name="unit1"]{
+        background: #e3e3e3;
+        padding: 0px;
+        text-align: center;
+        width: auto;
+        margin: 4px auto;
+        margin-bottom: auto;
+        height: 40px;
+    }
+    .assessement_item div[name='unit1'] div[name='unit1']{
+        display: block;
+        float: right;
+        width: 122.5px;
+        padding: 8px;
+    }
+
+    .course_units ul li{
+        margin: auto;
+        text-align: center;
+        overflow: hidden;
+        vertical-align: middle;
+        margin:0px;
+        display: inline-block;
+        margin-left: -318px;
+        font-weight: 600;
+        font-size: 13px;
+
+    }
+
+    .course_listing{
+        display: inline-block;
+        margin-bottom: -7px;
+        overflow: hidden;
+        padding: 0;
+        margin-right: 5px;
+        width:auto;
+    }
+
+    .all_course{
+        display: block;
+        white-space: nowrap;
+        margin-left: 350px;
+        overflow: auto;
+       white-space: nowrap;
+       overflow-y: hidden !important; 
+    }
+
+    .course_name h2{
+    font-size: 16px !important;
+    padding-top: 13px;
+    max-width: 27em;
+    overflow: visible;
+    white-space: initial;
+    margin: 0 auto;
+    vertical-align: super;
+    text-align:center;
+    }
+
+
+    .mdl-sidebar > strong {
+        font-size: 26px !important;
+        font-weight: 600;
+    }
+
+    .mdl-sidebar {
+        margin-top: 15px !important;
+    }
+
+
+    .mdl-welcome h3 {
+        color: #333;
+        font-family: 'Titillium Web', sans-serif;
+        margin-top: 15px !important;
+        font-weight: 500;
+    }
+
+    .mdl-current h3{
+        color: #333;
+        font-family: 'Titillium Web', sans-serif;
+        font-weight: 500;
+        font-size: 18px !important;
+        margin-top: 15px !important;
+    }
+
+    .mdl-program h4 {
+        font-weight: 500;
+        font-size: 18px !important;
+    }
+
+    .mdl-icon{
+        min-height: 35px;
+        background: #008000 !important;
+        min-width: 35px !important;
+        width: 0px !important;
+        border-radius: 14px;
+        font-size: 10px !important;
+        margin-right:5px;
+        text-transform: initial;
+    }
+
+    .mdl-yellow{
+        min-height: 35px;
+        background: #ffc000 !important;
+        min-width: 35px !important;
+        width: 0px !important;
+        border-radius: 14px;
+        font-size: 10px !important;
+        margin-right:5px;
+        text-transform: initial;
+
+    }
+    .mdl-hover-fabelyellow:hover{
+
+        min-height: 35px;
+        background: #ffc000 !important;
+        min-width: 35px !important;
+        width: 0px !important;
+        border-radius: 37% !important;
+        font-size: 12px !important;
+    }
+
+
+    .mdl-darkred{
+        min-height: 35px;
+        background: #C10001 !important;
+        min-width: 35px !important;
+        width: 0px !important;
+        border-radius: 14px;
+        font-size: 10px !important;
+        margin-right:5px;
+        text-transform: initial;
+
+    }
+
+    .mdl-hover-fabelred:hover{
+        min-height: 35px;
+        background: #C10001 !important;
+        min-width: 35px !important;
+        width: 0px !important;
+        border-radius: 37% !important;
+        font-size: 12px !important;
+    }
+
+
+    .mdl-lightgrey{
+        min-height: 35px;
+        background: #81889A !important;
+        min-width: 35px !important;
+        width: 0px !important;
+        border-radius: 14px;
+        font-size: 10px !important;
+        margin-right:5px;
+        text-transform: initial;
+    }
+
+    .mdl-hover-fabelgrey:hover{
+
+        min-height: 35px;
+        background: #81889A !important;
+        min-width: 35px !important;
+        width: 0px !important;
+        border-radius: 37% !important;
+        font-size: 12px !important;
+    }
+
+    .mdl-button--fab.mdl-button--mini-fab{
+        width: 34px !important;
+        height: 34px !important;
+        border-radius: 50%;
+        font-size: 12px !important;
+    }
+    .mdl-hover-fabelgreen:hover{
+        min-height: 35px;
+        background: green !important;
+        min-width: 35px !important;
+        width: 0px !important;
+        border-radius: 14px;
+        font-size: 12px !important;
+    }
+
+    .mdl-complete{
+        font-size:13px !important;
+    }
+    ul{
+        list-style:none;
+    }
+
+    .mdl-small-icon-grey{
+        background-color: #81889a !important;
+        height: 25px !important;
+        min-width: 25px !important;
+        width: 0px !important;
+        color: white !important;
+        font-size: 0px;
+        border-radius: 50%;
+        height: 56px;
+        margin: auto;
+        min-width: 56px;
+        width: 56px;
+        padding: 0;
+        overflow: hidden;
+        background: rgba(158,158,158,.2);
+        box-shadow: 0 1px 1.5px 0 rgba(0,0,0,.12),0 1px 1px 0 rgba(0,0,0,.24);
+        position: relative;
+        line-height: normal;
+    }
+    .mdl-small-icon-green{
+        background-color: #008000!important;
+        height: 25px !important;
+        min-width: 25px !important;
+        width: 0px !important;
+        color: white !important;
+        font-size: 0px;
+        border-radius: 50%;
+        height: 56px;
+        margin: auto;
+        min-width: 56px;
+        width: 56px;
+        padding: 0;
+        overflow: hidden;
+        background: rgba(158,158,158,.2);
+        box-shadow: 0 1px 1.5px 0 rgba(0,0,0,.12),0 1px 1px 0 rgba(0,0,0,.24);
+        position: relative;
+        line-height: normal;
+    }
+
+    .mdl-hover-grey:hover{
+        background: #81889a !important;
+        height: 25px !important;
+        min-width: 67px !important;
+        width: 0px !important;
+        margin-top: 0px;
+        color: white !important;
+        border-radius: 10px;
+        padding-top: 4px;
+        text-decoration: none;
+    }
+
+    .mdl-hover-green:hover{
+        background: #008000 !important;
+        height: 25px !important;
+        min-width: 67px !important;
+        width: 0px !important;
+        margin-top: 0px;
+        color: white !important;
+        border-radius: 10px;
+        padding-top: 4px;
+        text-decoration: none;
+    }
+    .mdl-hover-green:hover .toolkit{
+        visibility: visible;
+        font-size: 14px;
+        text-transform: capitalize;
+        color:#faf3f3 !important;
+    }
+    .mdl-small-icon-grey:hover .toolkit{
+        visibility: visible;
+        font-size: 14px;
+        text-transform: capitalize;
+        color:#faf3f3 !important;
+    }
+    .mdl-home1{
+        margin: -8px 0px 0px 4px;
+    }
+
+    .mdl-main{
+        width:1000px;
+    }
+    .mdl-home{
+        padding-bottom: 7px;
+    }
+
+    /*for progress bar*/
+    .mdl-bar{
+        width: 317px;
+        background: #e3e3e3;
+        height: 39px;
+        margin-top: -4px;
+    }
+    .mdl-card--border{
+        border: 1px solid #008000;
+        margin:6px;
+        height:27px;
+    }
+
+
+    /*progress Bar*/
+
+    .mdl-grid{
+        margin-bottom: -15px;
+    }
+
+    .name_list{
+        float: left;
+        bottom: -140px;
+        position: relative;
+    }
+
+
+}
+
+/* for firfox browser*/
+@-moz-document url-prefix() {
+
+    .mdl-section {
+        margin-top: 12px;
+        margin-bottom: 0px;
+        margin-left: 202px;
+    }
+
+    .mdl-hover-green:hover {
+        background: green !important;
+        min-width: 52px !important;
+        width: 0px !important;
+        border-radius: 14px;
+        font-size: 14px !important;
+    }
+    .graybox {
+        background-color: #e3e3e3 !important;
+        height: 55px;
+        text-align: center;
+        margin-left: 0px;
+        padding-top: 15px;
+        margin-top: -3px;
+        width: 230px;
+    }
+
+    .mdl-hover:hover {
+        background: #ffc000 !important;
+        height: 25px !important;
+        min-width: 67px !important;
+        width: 0px !important;
+        margin-top: 0px;
+        border-radius: 10px;
+    }
+
+    .mdl-hover-red:hover {
+        background: #c10001 !important;
+        height: 25px !important;
+        min-width: 67px !important;
+        width: 0px !important;
+        margin-top: 0px;
+        border-radius: 10px;
+    }
+
+    .mdl-hover-amber:hover .tooltiptext {
+        visibility: visible;
+        color: black;
+        font-size: 14px;
+        text-transform: capitalize;
+    }
+
+    .mdl-hover-red:hover .toolkit {
+        visibility: visible;
+        font-size: 14px;
+        text-transform: capitalize;
+        color: #faf3f3 !important;;
+
+    }
+
+    .mdl-small-icon-amber {
+        background-color: #ffc000 !important;
+        height: 25px !important;
+        min-width: 25px !important;
+        width: 0px !important;
+        margin-top: 0px;
+        color: #ffc000;
+        font-size: 0px;
+        padding: 4px 0px 0px 0px !important;
+    }
+
+    .mdl-small-icon-red {
+        background-color: #c10001 !important;
+        height: 25px !important;
+        min-width: 25px !important;
+        width: 0px !important;
+        margin-top: 0px;
+        color: #c10001 !important;
+        font-size: 0px;
+        padding: 4px 0px 0px 0px;
+    }
+
+    .mdl-text {
+        float: left;
+        margin-left: 10px;
+        font-weight: bold;
+    }
+    .mdl-label {
+        float: right;
+        margin-right: 10px;
+        font-weight: bold;
+    }
+    .mdl-test {
+        color: #999999;
+    }
+    .mdl-home {
+        border-bottom: 1px solid #ececec;
+        border-top: 1px solid #ececec;;
+    }
+    .mdl-complete {
+        margin-top: 18px;
+    }
+    .mdl-container {
+        overflow-x: auto;
+        overflow-y: auto;
+        margin: -34px 0px 0px 337px;
+    }
+
+    #content {
+        background-color: white;
+        margin-bottom: 125px;
+        width: 96% !important;
+    }
+    #base {
+        background-color: white;
+    }
+    .course_name {
+        padding: 0px !important;
+        height: 43px !important;
+        width: auto !important;
+        min-height: 0px !important;
+        background-color: #4F81BE !important;
+        margin-top: 0px;
+        font-size: 13px;
+        color: #fff;
+        text-align: center;
+
+    }
+    .single_unit_title {
+        background: #e3e3e3;
+        height: 55px;
+        width: 250px;
+        padding: 10px;
+        margin-bottom: 4px;
+        overflow: hidden;
+        min-width: 230px;
+        font-weight: 500 !important;
+        font-size: 13px !important;
+        margin: 4px 0px 4px 302px;
+    }
+
+    .course_types .course_indicate .first_heading {
+        padding: 5px;
+        background: #e3e3e3;
+        width: 122.5px;
+        height: 33px;
+        margin: 0px 0px 0px 148px;
+        display: block;
+        margin-right: -10px;
+    }
+
+    .mdl-small-icon {
+        background-color: #ffc000 !important;
+        height: 25px !important;
+        min-width: 25px !important;
+        width: 0px !important;
+        color: #ffc000;
+        font-size: 0px;
+        border-radius: 50%;
+        height: 56px;
+        margin: auto;
+        min-width: 56px;
+        width: 56px;
+        padding: 0;
+        overflow: hidden;
+        background: rgba(158, 158, 158, .2);
+        box-shadow: 0 1px 1.5px 0 rgba(0, 0, 0, .12), 0 1px 1px 0 rgba(0, 0, 0, .24);
+        position: relative;
+        line-height: normal;
+    }
+
+    .mdl-hover:hover {
+        background: #ffc000 !important;
+        height: 25px !important;
+        min-width: 67px !important;
+        width: 0px !important;
+        margin-top: 0px;
+        border-radius: 10px;
+    }
+
+    .course_types {
+        display: block;
+        width: 100%;
+        overflow: hidden;
+    }
+    .course_indicate {
+        display: block;
+        width: 100%;
+        overflow: hidden;
+    }
+
+    /*.assessement_item div[name='unit1']:last-child{
+        margin-right: auto;
+    }*/
+    .assessement_item div[name='unit1']:last-child {
+        margin-right: auto;
+        float: right;
+        margin-top: -78px;
+        margin-left: -144px;
+    }
+    .assessement_item div[name='unit1']:first-child {
+        margin-left: 155px;
+    }
+    .course_types .course_indicate:first-child .first_heading {
+        display: block;
+    }
+    .assessement_item div[name='unit1'] {
+        float: left;
+        margin: auto 1%;
+        text-align: center;
+        width: 49%;
+    }
+    .assessement_item div[name="unit1"] div[name="unit1"] {
+        background: #e3e3e3;
+        padding: 0px;
+        text-align: center;
+        width: auto;
+        margin: 4px auto;
+        margin-bottom: auto;
+        height: 41px;
+    }
+    .assessement_item div[name='unit1'] div[name='unit1'] {
+        display: block;
+        float: right;
+        width: 122.75px;
+        padding: 7px;
+    }
+    /*.assessement_item div[name='unit1'] div[name='unit1'] {
+        display: block;
+        float: initial;
+        width: 122.5px;
+        margin-left: 148px;
+        padding: 8px;
+    }*/
+
+    .course_units ul li {
+        margin: auto;
+        text-align: center;
+        overflow: hidden;
+        vertical-align: middle;
+        margin-top: 0px;
+        display: inline-block;
+        margin-right: 0px;
+        margin-left: -318px;
+        font-weight: 600;
+        font-size: 13px;
+
+    }
+
+    .course_listing {
+        display: inline-block;
+        margin-bottom: -7px;
+        overflow: hidden;
+        padding: 0;
+        margin-right: 5px;
+        width: auto;
+
+    }
+    .all_course {
+        display: block;
+        overflow: auto;
+        overflow-y: hidden;
+        white-space: nowrap;
+        margin-left: 350px;
+    }
+
+    .course_name h2 {
+       font-size: 16px !important;
+    padding-top: 13px;
+    max-width: 27em;
+    overflow: visible;
+    white-space: initial;
+    margin: 0 auto;
+    vertical-align: super;
+    text-align:center;
+    }
+
+
+    .mdl-sidebar > strong {
+        font-size: 26px !important;
+        font-weight: 600;
+    }
+
+    .mdl-sidebar {
+        margin-top: 15px !important;
+    }
+
+    .mdl-welcome h3 {
+        color: #333;
+        font-family: 'Titillium Web', sans-serif;
+        margin-top: 15px !important;
+        font-weight: 500;
+    }
+
+    .mdl-current h3 {
+        color: #333;
+        font-family: 'Titillium Web', sans-serif;
+        font-weight: 500;
+        font-size: 18px !important;
+        margin-top: 15px !important;
+    }
+
+    .mdl-program h4 {
+        font-weight: 500;
+        font-size: 18px !important;
+    }
+
+    .mdl-icon {
+        min-height: 35px;
+        background: #008000 !important;
+        min-width: 35px !important;
+        width: 0px !important;
+        border-radius: 14px;
+        font-size: 10px !important;
+        margin-right: 5px;
+        text-transform: initial;
+    }
+
+    .mdl-yellow {
+        min-height: 35px;
+        background: #ffc000 !important;
+        min-width: 35px !important;
+        width: 0px !important;
+        border-radius: 14px;
+        font-size: 10px !important;
+        margin-right: 5px;
+        text-transform: initial;
+
+    }
+    .mdl-hover-fabelyellow:hover {
+
+        min-height: 35px;
+        background: #ffc000 !important;
+        min-width: 35px !important;
+        width: 0px !important;
+        border-radius: 37% !important;
+        font-size: 12px !important;
+    }
+
+    .mdl-darkred {
+        min-height: 35px;
+        background: #C10001 !important;
+        min-width: 35px !important;
+        width: 0px !important;
+        border-radius: 14px;
+        font-size: 10px !important;
+        margin-right: 5px;
+        text-transform: initial;
+
+    }
+
+    .mdl-hover-fabelred:hover {
+        min-height: 35px;
+        background: #C10001 !important;
+        min-width: 35px !important;
+        width: 0px !important;
+        border-radius: 37% !important;
+        font-size: 12px !important;
+    }
+
+    .mdl-lightgrey {
+        min-height: 35px;
+        background: #81889A !important;
+        min-width: 35px !important;
+        width: 0px !important;
+        border-radius: 14px;
+        font-size: 10px !important;
+        margin-right: 5px;
+        text-transform: initial;
+    }
+
+    .mdl-hover-fabelgrey:hover {
+
+        min-height: 35px;
+        background: #81889A !important;
+        min-width: 35px !important;
+        width: 0px !important;
+        border-radius: 37% !important;
+        font-size: 12px !important;
+    }
+
+    .mdl-button--fab.mdl-button--mini-fab {
+        width: 34px !important;
+        height: 34px !important;
+        border-radius: 50%;
+        font-size: 12px !important;
+    }
+    .mdl-hover-fabelgreen:hover {
+        min-height: 35px;
+        background: green !important;
+        min-width: 35px !important;
+        width: 0px !important;
+        border-radius: 14px;
+        font-size: 12px !important;
+    }
+
+    .mdl-complete {
+        font-size: 13px !important;
+    }
+    ul {
+        list-style: none;
+    }
+
+    .mdl-small-icon-grey {
+        background-color: #81889a !important;
+        height: 25px !important;
+        min-width: 25px !important;
+        width: 0px !important;
+        color: white !important;
+        font-size: 0px;
+        border-radius: 50%;
+        height: 56px;
+        margin: auto;
+        min-width: 56px;
+        width: 56px;
+        padding: 0;
+        overflow: hidden;
+        background: rgba(158, 158, 158, .2);
+        box-shadow: 0 1px 1.5px 0 rgba(0, 0, 0, .12), 0 1px 1px 0 rgba(0, 0, 0, .24);
+        position: relative;
+        line-height: normal;
+    }
+    .mdl-small-icon-green {
+        background-color: #008000 !important;
+        height: 25px !important;
+        min-width: 25px !important;
+        width: 0px !important;
+        color: white !important;
+        font-size: 0px;
+        border-radius: 50%;
+        height: 56px;
+        margin: auto;
+        min-width: 56px;
+        width: 56px;
+        padding: 0;
+        overflow: hidden;
+        background: rgba(158, 158, 158, .2);
+        box-shadow: 0 1px 1.5px 0 rgba(0, 0, 0, .12), 0 1px 1px 0 rgba(0, 0, 0, .24);
+        position: relative;
+        line-height: normal;
+    }
+
+    .mdl-hover-grey:hover {
+        background: #81889a !important;
+        height: 25px !important;
+        min-width: 67px !important;
+        width: 0px !important;
+        margin-top: 0px;
+        color: white !important;
+        border-radius: 10px;
+        padding-top: 4px;
+        text-decoration: none;
+    }
+
+    .mdl-hover-green:hover {
+        background: #008000 !important;
+        height: 25px !important;
+        min-width: 67px !important;
+        width: 0px !important;
+        margin-top: 0px;
+        color: white !important;
+        border-radius: 10px;
+        padding-top: 4px;
+        text-decoration: none;
+    }
+    .mdl-hover-green:hover .toolkit {
+        visibility: visible;
+        font-size: 14px;
+        text-transform: capitalize;
+        color: #faf3f3 !important;
+    }
+    .mdl-small-icon-grey:hover .toolkit {
+        visibility: visible;
+        font-size: 14px;
+        text-transform: capitalize;
+        color: #faf3f3 !important;
+    }
+
+    .mdl-home1 {
+        margin: -8px 0px 0px 4px;
+    }
+    .mdl-main {
+        width: 1000px;
+    }
+
+    .mdl-home {
+        padding-bottom: 7px;
+    }
+    /*for progress bar*/
+
+    .mdl-bar{
+        width: 317px;
+        background: #e3e3e3;
+        height: 41px;
+        margin-top: -4px;
+    }
+
+    .mdl-card--border{
+        border: 1px solid #008000;
+        margin:6px;
+        height:27px;
+    }
+
+/*progress bar*/
+
+    .mdl-grid{
+        margin-bottom: -15px;
+    }
+
+    .name_list{
+        float: left;
+        bottom: -140px;
+        position: relative;
+    }
+
+}
+/*** Summernote textarea **/
+.note-editor .note-editable{
+	min-height:100px;
+}
+.nestable-pg-title{
+	display: block;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    min-height: 20px;
+}
+.program_test>span, .program_test>form, .program_test>div{
+    display: inline-block;
+    margin-right: 10px;
+}
+.lesson {
+	margin-top: 5px;
+}
+.lesson>div {
+    line-height: 20px;
+}
+.lesson label{
+	min-width:120px;
+}

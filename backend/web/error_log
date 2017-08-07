@@ -1,0 +1,534 @@
+[08-Nov-2016 09:25:07 UTC] PHP Fatal error:  Call to a member function andFilterWhere() on a non-object in /home/wordpressmonks/public_html/works/mycaar_lms/common/models/Usersearch.php on line 76
+[08-Nov-2016 09:40:22 UTC] PHP Fatal error:  Call to a member function andFilterWhere() on a non-object in /home/wordpressmonks/public_html/works/mycaar_lms/common/models/Usersearch.php on line 76
+[08-Nov-2016 10:07:20 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library '/usr/local/lib/php/extensions/no-debug-non-zts-20121212/php_fileinfo.dll' - /usr/local/lib/php/extensions/no-debug-non-zts-20121212/php_fileinfo.dll: cannot open shared object file: No such file or directory in Unknown on line 0
+[08-Nov-2016 10:11:16 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library '/usr/local/lib/php/extensions/no-debug-non-zts-20121212/php_fileinfo.dll' - /usr/local/lib/php/extensions/no-debug-non-zts-20121212/php_fileinfo.dll: cannot open shared object file: No such file or directory in Unknown on line 0
+[08-Nov-2016 10:11:17 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library '/usr/local/lib/php/extensions/no-debug-non-zts-20121212/php_fileinfo.dll' - /usr/local/lib/php/extensions/no-debug-non-zts-20121212/php_fileinfo.dll: cannot open shared object file: No such file or directory in Unknown on line 0
+[08-Nov-2016 10:18:16 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library '/usr/local/lib/php/extensions/no-debug-non-zts-20121212/php_fileinfo.dll' - /usr/local/lib/php/extensions/no-debug-non-zts-20121212/php_fileinfo.dll: cannot open shared object file: No such file or directory in Unknown on line 0
+[08-Nov-2016 10:27:23 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library '/usr/local/lib/php/extensions/no-debug-non-zts-20121212/php_fileinfo.dll' - /usr/local/lib/php/extensions/no-debug-non-zts-20121212/php_fileinfo.dll: cannot open shared object file: No such file or directory in Unknown on line 0
+[08-Nov-2016 10:36:45 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library '/usr/local/lib/php/extensions/no-debug-non-zts-20121212/php_fileinfo.dll' - /usr/local/lib/php/extensions/no-debug-non-zts-20121212/php_fileinfo.dll: cannot open shared object file: No such file or directory in Unknown on line 0
+[08-Nov-2016 10:39:51 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library '/usr/local/lib/php/extensions/no-debug-non-zts-20121212/fileinfo.so' - /usr/local/lib/php/extensions/no-debug-non-zts-20121212/fileinfo.so: cannot open shared object file: No such file or directory in Unknown on line 0
+[08-Nov-2016 10:43:32 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library '/usr/local/lib/php/extensions/no-debug-non-zts-20121212/fileinfo.so' - /usr/local/lib/php/extensions/no-debug-non-zts-20121212/fileinfo.so: cannot open shared object file: No such file or directory in Unknown on line 0
+[08-Nov-2016 10:46:20 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library '/usr/local/lib/php/extensions/no-debug-non-zts-20121212/fileinfo.so' - /usr/local/lib/php/extensions/no-debug-non-zts-20121212/fileinfo.so: cannot open shared object file: No such file or directory in Unknown on line 0
+[08-Nov-2016 11:09:05 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library '/usr/local/lib/php/extensions/no-debug-non-zts-20121212/fileinfo.so' - /usr/local/lib/php/extensions/no-debug-non-zts-20121212/fileinfo.so: cannot open shared object file: No such file or directory in Unknown on line 0
+[08-Nov-2016 12:16:16 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library '/usr/local/lib/php/extensions/no-debug-non-zts-20121212/fileinfo.so' - /usr/local/lib/php/extensions/no-debug-non-zts-20121212/fileinfo.so: cannot open shared object file: No such file or directory in Unknown on line 0
+[08-Nov-2016 12:17:35 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library '/usr/local/lib/php/extensions/no-debug-non-zts-20121212/fileinfo.so' - /usr/local/lib/php/extensions/no-debug-non-zts-20121212/fileinfo.so: cannot open shared object file: No such file or directory in Unknown on line 0
+[08-Nov-2016 12:19:34 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library '/usr/local/lib/php/extensions/no-debug-non-zts-20121212/fileinfo.so' - /usr/local/lib/php/extensions/no-debug-non-zts-20121212/fileinfo.so: cannot open shared object file: No such file or directory in Unknown on line 0
+[08-Nov-2016 12:20:56 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library '/usr/local/lib/php/extensions/no-debug-non-zts-20121212/fileinfo.so' - /usr/local/lib/php/extensions/no-debug-non-zts-20121212/fileinfo.so: cannot open shared object file: No such file or directory in Unknown on line 0
+[08-Nov-2016 12:23:38 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library '/usr/local/lib/php/extensions/no-debug-non-zts-20121212/fileinfo.so' - /usr/local/lib/php/extensions/no-debug-non-zts-20121212/fileinfo.so: cannot open shared object file: No such file or directory in Unknown on line 0
+[08-Nov-2016 13:05:24 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library '/usr/local/lib/php/extensions/no-debug-non-zts-20121212/fileinfo.so' - /usr/local/lib/php/extensions/no-debug-non-zts-20121212/fileinfo.so: cannot open shared object file: No such file or directory in Unknown on line 0
+[10-Nov-2016 04:45:00 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library '/usr/local/lib/php/extensions/no-debug-non-zts-20121212/fileinfo.so' - /usr/local/lib/php/extensions/no-debug-non-zts-20121212/fileinfo.so: cannot open shared object file: No such file or directory in Unknown on line 0
+[10-Nov-2016 04:45:03 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library '/usr/local/lib/php/extensions/no-debug-non-zts-20121212/fileinfo.so' - /usr/local/lib/php/extensions/no-debug-non-zts-20121212/fileinfo.so: cannot open shared object file: No such file or directory in Unknown on line 0
+[10-Nov-2016 04:45:15 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library '/usr/local/lib/php/extensions/no-debug-non-zts-20121212/fileinfo.so' - /usr/local/lib/php/extensions/no-debug-non-zts-20121212/fileinfo.so: cannot open shared object file: No such file or directory in Unknown on line 0
+[10-Nov-2016 04:45:15 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library '/usr/local/lib/php/extensions/no-debug-non-zts-20121212/fileinfo.so' - /usr/local/lib/php/extensions/no-debug-non-zts-20121212/fileinfo.so: cannot open shared object file: No such file or directory in Unknown on line 0
+[10-Nov-2016 04:45:16 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library '/usr/local/lib/php/extensions/no-debug-non-zts-20121212/fileinfo.so' - /usr/local/lib/php/extensions/no-debug-non-zts-20121212/fileinfo.so: cannot open shared object file: No such file or directory in Unknown on line 0
+[10-Nov-2016 04:45:16 UTC] PHP Warning:  PHP Startup: Unable to load dynamic library '/usr/local/lib/php/extensions/no-debug-non-zts-20121212/fileinfo.so' - /usr/local/lib/php/extensions/no-debug-non-zts-20121212/fileinfo.so: cannot open shared object file: No such file or directory in Unknown on line 0
+[18-Nov-2016 05:35:25 UTC] PHP Parse error:  syntax error, unexpected end of file, expecting function (T_FUNCTION) in /home/wordpressmonks/public_html/works/mycaar_lms/common/models/Module.php on line 108
+[24-Nov-2016 12:50:21 UTC] PHP Fatal error:  Call to a member function getActiveValidators() on a non-object in /home/wordpressmonks/public_html/works/mycaar_lms/vendor/yiisoft/yii2/helpers/BaseHtml.php on line 1265
+[24-Nov-2016 12:51:02 UTC] PHP Fatal error:  Call to a member function getActiveValidators() on a non-object in /home/wordpressmonks/public_html/works/mycaar_lms/vendor/yiisoft/yii2/helpers/BaseHtml.php on line 1265
+[24-Nov-2016 12:55:35 UTC] PHP Fatal error:  Call to a member function getActiveValidators() on a non-object in /home/wordpressmonks/public_html/works/mycaar_lms/vendor/yiisoft/yii2/helpers/BaseHtml.php on line 1265
+[24-Nov-2016 12:57:14 UTC] PHP Fatal error:  Call to a member function getActiveValidators() on a non-object in /home/wordpressmonks/public_html/works/mycaar_lms/vendor/yiisoft/yii2/helpers/BaseHtml.php on line 1265
+[29-Nov-2016 04:32:41 UTC] PHP Fatal error:  Call to a member function andFilterWhere() on a non-object in /home/wordpressmonks/public_html/works/mycaar_lms/common/models/search/SearchLocation.php on line 67
+[29-Nov-2016 04:54:57 UTC] PHP Fatal error:  Call to a member function getActiveValidators() on a non-object in /home/wordpressmonks/public_html/works/mycaar_lms/vendor/yiisoft/yii2/helpers/BaseHtml.php on line 1265
+[29-Nov-2016 05:33:20 UTC] PHP Fatal error:  Call to a member function andFilterWhere() on a non-object in /home/wordpressmonks/public_html/works/mycaar_lms/common/models/search/SearchDivision.php on line 67
+[29-Nov-2016 09:06:15 UTC] PHP Fatal error:  Call to a member function andFilterWhere() on a non-object in /home/wordpressmonks/public_html/works/mycaar_lms/common/models/search/SearchUser.php on line 72
+[29-Nov-2016 09:28:47 UTC] PHP Fatal error:  Class 'PHPExcel_IOFactory' not found in /home/wordpressmonks/public_html/works/mycaar_lms/backend/modules/user/controllers/ImportuserController.php on line 71
+[29-Nov-2016 09:29:40 UTC] PHP Fatal error:  Class 'PHPExcel_IOFactory' not found in /home/wordpressmonks/public_html/works/mycaar_lms/backend/modules/user/controllers/ImportuserController.php on line 71
+[29-Nov-2016 11:50:10 UTC] PHP Fatal error:  Class 'PHPExcel_IOFactory' not found in /home/wordpressmonks/public_html/works/mycaar_lms/backend/modules/user/controllers/ImportuserController.php on line 71
+[30-Nov-2016 04:15:07 UTC] PHP Fatal error:  Class 'common\models\Mycaar' not found in /home/wordpressmonks/public_html/works/mycaar_lms/backend/modules/user/controllers/UserController.php on line 89
+[30-Nov-2016 04:16:30 UTC] PHP Fatal error:  Class 'common\models\Mycaar' not found in /home/wordpressmonks/public_html/works/mycaar_lms/backend/modules/user/controllers/UserController.php on line 89
+[30-Nov-2016 04:17:17 UTC] PHP Fatal error:  Class 'common\models\Mycaar' not found in /home/wordpressmonks/public_html/works/mycaar_lms/backend/modules/user/controllers/UserController.php on line 89
+[30-Nov-2016 04:20:34 UTC] PHP Fatal error:  Class 'common\models\Mycaar' not found in /home/wordpressmonks/public_html/works/mycaar_lms/backend/modules/user/controllers/UserController.php on line 89
+[30-Nov-2016 04:24:48 UTC] PHP Fatal error:  Class 'common\models\Mycaar' not found in /home/wordpressmonks/public_html/works/mycaar_lms/backend/modules/user/controllers/UserController.php on line 89
+[30-Nov-2016 04:25:16 UTC] PHP Fatal error:  Class 'common\models\Mycaar' not found in /home/wordpressmonks/public_html/works/mycaar_lms/backend/modules/user/controllers/UserController.php on line 89
+[30-Nov-2016 04:31:33 UTC] PHP Fatal error:  Class 'common\models\Mycaar' not found in /home/wordpressmonks/public_html/works/mycaar_lms/backend/modules/user/controllers/UserController.php on line 89
+[30-Nov-2016 06:17:46 UTC] PHP Fatal error:  Call to a member function andFilterWhere() on a non-object in /home/wordpressmonks/public_html/works/mycaar_lms/common/models/search/SearchUser.php on line 72
+[30-Nov-2016 06:32:39 UTC] PHP Fatal error:  Call to a member function andFilterWhere() on a non-object in /home/wordpressmonks/public_html/works/mycaar_lms/common/models/search/SearchUser.php on line 72
+[30-Nov-2016 06:38:00 UTC] PHP Fatal error:  Call to a member function andFilterWhere() on a non-object in /home/wordpressmonks/public_html/works/mycaar_lms/common/models/search/SearchState.php on line 67
+[30-Nov-2016 06:38:06 UTC] PHP Fatal error:  Call to a member function andFilterWhere() on a non-object in /home/wordpressmonks/public_html/works/mycaar_lms/common/models/search/SearchState.php on line 67
+[30-Nov-2016 06:38:10 UTC] PHP Fatal error:  Call to a member function andFilterWhere() on a non-object in /home/wordpressmonks/public_html/works/mycaar_lms/common/models/search/SearchUser.php on line 72
+[30-Nov-2016 06:38:51 UTC] PHP Fatal error:  Call to a member function andFilterWhere() on a non-object in /home/wordpressmonks/public_html/works/mycaar_lms/common/models/search/SearchUser.php on line 72
+[30-Nov-2016 06:47:57 UTC] PHP Fatal error:  Class 'PHPExcel' not found in /home/wordpressmonks/public_html/works/mycaar_lms/backend/modules/user/controllers/ImportuserController.php on line 72
+[30-Nov-2016 06:48:26 UTC] PHP Fatal error:  Class 'PHPExcel' not found in /home/wordpressmonks/public_html/works/mycaar_lms/backend/modules/user/controllers/ImportuserController.php on line 72
+[30-Nov-2016 06:57:48 UTC] PHP Fatal error:  Class 'PHPExcel' not found in /home/wordpressmonks/public_html/works/mycaar_lms/backend/modules/user/controllers/ImportuserController.php on line 72
+[30-Nov-2016 10:43:32 UTC] PHP Fatal error:  Call to a member function delete() on a non-object in /home/wordpressmonks/public_html/works/mycaar_lms/backend/modules/course/controllers/UnitController.php on line 364
+[30-Nov-2016 10:43:32 UTC] PHP Fatal error:  Call to a member function delete() on a non-object in /home/wordpressmonks/public_html/works/mycaar_lms/backend/modules/course/controllers/UnitController.php on line 364
+[30-Nov-2016 10:43:32 UTC] PHP Fatal error:  Call to a member function delete() on a non-object in /home/wordpressmonks/public_html/works/mycaar_lms/backend/modules/course/controllers/UnitController.php on line 364
+[30-Nov-2016 10:43:32 UTC] PHP Fatal error:  Call to a member function delete() on a non-object in /home/wordpressmonks/public_html/works/mycaar_lms/backend/modules/course/controllers/UnitController.php on line 364
+[30-Nov-2016 10:43:32 UTC] PHP Fatal error:  Call to a member function delete() on a non-object in /home/wordpressmonks/public_html/works/mycaar_lms/backend/modules/course/controllers/UnitController.php on line 364
+[30-Nov-2016 10:43:35 UTC] PHP Fatal error:  Call to a member function delete() on a non-object in /home/wordpressmonks/public_html/works/mycaar_lms/backend/modules/course/controllers/UnitController.php on line 364
+[30-Nov-2016 10:43:35 UTC] PHP Fatal error:  Call to a member function delete() on a non-object in /home/wordpressmonks/public_html/works/mycaar_lms/backend/modules/course/controllers/UnitController.php on line 364
+[30-Nov-2016 10:43:36 UTC] PHP Fatal error:  Call to a member function delete() on a non-object in /home/wordpressmonks/public_html/works/mycaar_lms/backend/modules/course/controllers/UnitController.php on line 364
+[30-Nov-2016 10:43:36 UTC] PHP Fatal error:  Call to a member function delete() on a non-object in /home/wordpressmonks/public_html/works/mycaar_lms/backend/modules/course/controllers/UnitController.php on line 364
+[01-Dec-2016 04:20:14 UTC] PHP Fatal error:  Class 'PHPExcel' not found in /home/wordpressmonks/public_html/works/mycaar_lms/backend/modules/user/controllers/ImportuserController.php on line 72
+[01-Dec-2016 04:29:52 UTC] PHP Fatal error:  Class 'common\models\Mycaar' not found in /home/wordpressmonks/public_html/works/mycaar_lms/backend/modules/user/controllers/ImportuserController.php on line 106
+[01-Dec-2016 09:23:10 UTC] PHP Warning:  POST Content-Length of 101336364 bytes exceeds the limit of 8388608 bytes in Unknown on line 0
+[01-Dec-2016 09:56:18 UTC] PHP Fatal error:  Maximum execution time of 60 seconds exceeded in /home/wordpressmonks/public_html/works/mycaar_lms/vendor/yiisoft/yii2/base/Security.php on line 606
+[01-Dec-2016 10:17:09 UTC] PHP Fatal error:  Maximum execution time of 60 seconds exceeded in /home/wordpressmonks/public_html/works/mycaar_lms/vendor/yiisoft/yii2/base/Security.php on line 606
+[01-Dec-2016 13:14:26 UTC] PHP Fatal error:  Call to a member function andFilterWhere() on a non-object in /home/wordpressmonks/public_html/works/mycaar_lms/common/models/search/SearchUser.php on line 72
+[02-Dec-2016 06:12:41 UTC] PHP Fatal error:  Call to a member function delete() on a non-object in /home/wordpressmonks/public_html/works/mycaar_lms/backend/modules/course/controllers/UnitController.php on line 364
+[05-Dec-2016 10:43:19 UTC] PHP Warning:  POST Content-Length of 46309735 bytes exceeds the limit of 8388608 bytes in Unknown on line 0
+[05-Dec-2016 13:26:56 UTC] PHP Warning:  POST Content-Length of 10563840 bytes exceeds the limit of 8388608 bytes in Unknown on line 0
+[05-Dec-2016 13:47:09 UTC] PHP Warning:  POST Content-Length of 10563840 bytes exceeds the limit of 8388608 bytes in Unknown on line 0
+[05-Dec-2016 13:52:21 UTC] PHP Warning:  POST Content-Length of 10563840 bytes exceeds the limit of 8388608 bytes in Unknown on line 0
+[06-Dec-2016 12:34:41 UTC] PHP Fatal error:  Call to a member function delete() on a non-object in /home/wordpressmonks/public_html/works/mycaar_lms/backend/modules/user/controllers/UserController.php on line 218
+[06-Dec-2016 12:56:11 UTC] PHP Warning:  POST Content-Length of 10563840 bytes exceeds the limit of 8388608 bytes in Unknown on line 0
+[06-Dec-2016 13:12:36 UTC] PHP Fatal error:  Call to a member function delete() on a non-object in /home/wordpressmonks/public_html/works/mycaar_lms/backend/modules/user/controllers/CompanyController.php on line 415
+[06-Dec-2016 13:16:23 UTC] PHP Fatal error:  Call to a member function delete() on a non-object in /home/wordpressmonks/public_html/works/mycaar_lms/backend/modules/user/controllers/CompanyController.php on line 266
+[06-Dec-2016 13:16:45 UTC] PHP Fatal error:  Call to a member function delete() on a non-object in /home/wordpressmonks/public_html/works/mycaar_lms/backend/modules/user/controllers/CompanyController.php on line 266
+[06-Dec-2016 13:20:15 UTC] PHP Fatal error:  Call to a member function delete() on a non-object in /home/wordpressmonks/public_html/works/mycaar_lms/backend/modules/user/controllers/UserController.php on line 182
+[07-Dec-2016 03:41:05 UTC] PHP Fatal error:  Call to a member function delete() on a non-object in /home/wordpressmonks/public_html/works/mycaar_lms/backend/modules/user/controllers/UserController.php on line 182
+[07-Dec-2016 03:41:20 UTC] PHP Fatal error:  Call to a member function delete() on a non-object in /home/wordpressmonks/public_html/works/mycaar_lms/backend/modules/user/controllers/UserController.php on line 182
+[07-Dec-2016 03:42:57 UTC] PHP Fatal error:  Call to a member function delete() on a non-object in /home/wordpressmonks/public_html/works/mycaar_lms/backend/modules/user/controllers/UserController.php on line 182
+[07-Dec-2016 03:46:06 UTC] PHP Fatal error:  Call to a member function delete() on a non-object in /home/wordpressmonks/public_html/works/mycaar_lms/backend/modules/user/controllers/UserController.php on line 182
+[07-Dec-2016 03:55:49 UTC] PHP Fatal error:  Call to a member function delete() on a non-object in /home/wordpressmonks/public_html/works/mycaar_lms/backend/modules/user/controllers/UserController.php on line 182
+[07-Dec-2016 04:01:18 UTC] PHP Fatal error:  Call to a member function delete() on a non-object in /home/wordpressmonks/public_html/works/mycaar_lms/backend/modules/user/controllers/UserController.php on line 182
+[07-Dec-2016 04:02:32 UTC] PHP Fatal error:  Call to a member function delete() on a non-object in /home/wordpressmonks/public_html/works/mycaar_lms/backend/modules/user/controllers/UserController.php on line 182
+[07-Dec-2016 07:16:05 UTC] PHP Warning:  POST Content-Length of 10563840 bytes exceeds the limit of 8388608 bytes in Unknown on line 0
+[08-Dec-2016 05:32:27 UTC] PHP Fatal error:  Class 'backend\modules\user\controllers\Company' not found in /home/wordpressmonks/public_html/works/mycaar_lms/backend/modules/user/controllers/UserController.php on line 247
+[08-Dec-2016 05:32:35 UTC] PHP Fatal error:  Class 'backend\modules\user\controllers\Company' not found in /home/wordpressmonks/public_html/works/mycaar_lms/backend/modules/user/controllers/UserController.php on line 247
+[08-Dec-2016 05:33:23 UTC] PHP Fatal error:  Class 'backend\modules\user\controllers\Company' not found in /home/wordpressmonks/public_html/works/mycaar_lms/backend/modules/user/controllers/UserController.php on line 247
+[08-Dec-2016 05:34:14 UTC] PHP Fatal error:  Class 'backend\modules\user\controllers\Company' not found in /home/wordpressmonks/public_html/works/mycaar_lms/backend/modules/user/controllers/UserController.php on line 247
+[08-Dec-2016 05:34:16 UTC] PHP Fatal error:  Class 'backend\modules\user\controllers\Company' not found in /home/wordpressmonks/public_html/works/mycaar_lms/backend/modules/user/controllers/UserController.php on line 247
+[08-Dec-2016 05:34:18 UTC] PHP Fatal error:  Class 'backend\modules\user\controllers\Company' not found in /home/wordpressmonks/public_html/works/mycaar_lms/backend/modules/user/controllers/UserController.php on line 247
+[08-Dec-2016 05:34:26 UTC] PHP Fatal error:  Class 'backend\modules\user\controllers\Company' not found in /home/wordpressmonks/public_html/works/mycaar_lms/backend/modules/user/controllers/UserController.php on line 247
+[08-Dec-2016 11:14:00 UTC] PHP Fatal error:  Maximum execution time of 60 seconds exceeded in /home/wordpressmonks/public_html/works/mycaar_lms/vendor/yiisoft/yii2/base/Security.php on line 606
+[08-Dec-2016 11:57:57 UTC] PHP Fatal error:  Maximum execution time of 60 seconds exceeded in /home/wordpressmonks/public_html/works/mycaar_lms/vendor/yiisoft/yii2/base/Security.php on line 606
+[09-Dec-2016 06:04:44 UTC] PHP Parse error:  syntax error, unexpected '<<' (T_SL), expecting function (T_FUNCTION) in /home/wordpressmonks/public_html/works/mycaar_lms/backend/controllers/SiteController.php on line 230
+[09-Dec-2016 06:04:48 UTC] PHP Parse error:  syntax error, unexpected '<<' (T_SL), expecting function (T_FUNCTION) in /home/wordpressmonks/public_html/works/mycaar_lms/backend/controllers/SiteController.php on line 230
+[09-Dec-2016 07:38:27 UTC] PHP Fatal error:  Call to a member function getRoleName() on a non-object in /home/wordpressmonks/public_html/works/mycaar_lms/backend/modules/user/controllers/CompanyController.php on line 275
+[12-Dec-2016 14:12:21 UTC] PHP Fatal error:  Maximum execution time of 60 seconds exceeded in /home/wordpressmonks/public_html/works/mycaar_lms/vendor/yiisoft/yii2/base/Security.php on line 606
+[13-Dec-2016 04:50:35 UTC] PHP Fatal error:  Maximum execution time of 60 seconds exceeded in /home/wordpressmonks/public_html/works/mycaar_lms/vendor/yiisoft/yii2/base/Security.php on line 606
+[13-Dec-2016 06:47:29 UTC] PHP Fatal error:  Call to a member function andFilterWhere() on a non-object in /home/wordpressmonks/public_html/works/mycaar_lms/common/models/search/SearchState.php on line 67
+[13-Dec-2016 13:30:46 UTC] PHP Fatal error:  Maximum execution time of 360 seconds exceeded in /home/wordpressmonks/public_html/works/mycaar_lms/vendor/yiisoft/yii2/base/Security.php on line 606
+[13-Dec-2016 13:43:15 UTC] PHP Fatal error:  Maximum execution time of 360 seconds exceeded in /home/wordpressmonks/public_html/works/mycaar_lms/vendor/yiisoft/yii2/base/Security.php on line 606
+[13-Dec-2016 14:01:01 UTC] PHP Fatal error:  Allowed memory size of 524288000 bytes exhausted (tried to allocate 72 bytes) in /home/wordpressmonks/public_html/works/mycaar_lms/vendor/yiisoft/yii2-debug/LogTarget.php on line 116
+[13-Dec-2016 14:02:59 UTC] PHP Fatal error:  Allowed memory size of 524288000 bytes exhausted (tried to allocate 72 bytes) in /home/wordpressmonks/public_html/works/mycaar_lms/vendor/yiisoft/yii2-debug/LogTarget.php on line 116
+[14-Dec-2016 03:47:52 UTC] PHP Fatal error:  Allowed memory size of 524288000 bytes exhausted (tried to allocate 72 bytes) in /home/wordpressmonks/public_html/works/mycaar_lms/vendor/yiisoft/yii2/log/Target.php on line 216
+[14-Dec-2016 03:53:02 UTC] PHP Fatal error:  Allowed memory size of 524288000 bytes exhausted (tried to allocate 72 bytes) in /home/wordpressmonks/public_html/works/mycaar_lms/vendor/yiisoft/yii2/log/Target.php on line 216
+[14-Dec-2016 04:02:48 UTC] PHP Fatal error:  Allowed memory size of 524288000 bytes exhausted (tried to allocate 72 bytes) in /home/wordpressmonks/public_html/works/mycaar_lms/vendor/yiisoft/yii2-debug/LogTarget.php on line 116
+[14-Dec-2016 04:08:15 UTC] PHP Fatal error:  Allowed memory size of 524288000 bytes exhausted (tried to allocate 72 bytes) in /home/wordpressmonks/public_html/works/mycaar_lms/vendor/yiisoft/yii2-debug/LogTarget.php on line 116
+[14-Dec-2016 04:08:24 UTC] PHP Fatal error:  Allowed memory size of 524288000 bytes exhausted (tried to allocate 72 bytes) in /home/wordpressmonks/public_html/works/mycaar_lms/vendor/yiisoft/yii2/log/Target.php on line 216
+[14-Dec-2016 04:10:13 UTC] PHP Fatal error:  Allowed memory size of 524288000 bytes exhausted (tried to allocate 72 bytes) in /home/wordpressmonks/public_html/works/mycaar_lms/vendor/yiisoft/yii2/log/Target.php on line 216
+[14-Dec-2016 04:10:23 UTC] PHP Fatal error:  Allowed memory size of 524288000 bytes exhausted (tried to allocate 72 bytes) in /home/wordpressmonks/public_html/works/mycaar_lms/vendor/yiisoft/yii2-debug/LogTarget.php on line 116
+[14-Dec-2016 04:19:11 UTC] PHP Fatal error:  Allowed memory size of 1048576000 bytes exhausted (tried to allocate 91365911 bytes) in /home/wordpressmonks/public_html/works/mycaar_lms/vendor/yiisoft/yii2-debug/LogTarget.php on line 57
+[14-Dec-2016 06:19:56 UTC] PHP Fatal error:  Maximum execution time of 360 seconds exceeded in /home/wordpressmonks/public_html/works/mycaar_lms/vendor/yiisoft/yii2/base/Security.php on line 606
+[14-Dec-2016 08:02:57 UTC] PHP Fatal error:  Maximum execution time of 360 seconds exceeded in /home/wordpressmonks/public_html/works/mycaar_lms/vendor/yiisoft/yii2/base/Security.php on line 606
+[14-Dec-2016 10:02:54 UTC] PHP Fatal error:  Maximum execution time of 360 seconds exceeded in /home/wordpressmonks/public_html/works/mycaar_lms/vendor/yiisoft/yii2/base/Security.php on line 606
+[14-Dec-2016 10:12:30 UTC] PHP Fatal error:  Maximum execution time of 360 seconds exceeded in /home/wordpressmonks/public_html/works/mycaar_lms/vendor/yiisoft/yii2/base/Security.php on line 606
+[14-Dec-2016 10:37:03 UTC] PHP Fatal error:  Maximum execution time of 360 seconds exceeded in /home/wordpressmonks/public_html/works/mycaar_lms/vendor/yiisoft/yii2/base/Security.php on line 606
+[14-Dec-2016 10:51:01 UTC] PHP Fatal error:  Maximum execution time of 360 seconds exceeded in /home/wordpressmonks/public_html/works/mycaar_lms/vendor/yiisoft/yii2/base/Security.php on line 606
+[14-Dec-2016 11:31:56 UTC] PHP Fatal error:  Maximum execution time of 360 seconds exceeded in /home/wordpressmonks/public_html/works/mycaar_lms/vendor/yiisoft/yii2/base/Security.php on line 606
+[14-Dec-2016 11:33:09 UTC] PHP Fatal error:  Maximum execution time of 360 seconds exceeded in /home/wordpressmonks/public_html/works/mycaar_lms/vendor/yiisoft/yii2/base/Security.php on line 606
+[14-Dec-2016 11:56:06 UTC] PHP Fatal error:  Maximum execution time of 360 seconds exceeded in /home/wordpressmonks/public_html/works/mycaar_lms/vendor/yiisoft/yii2/base/Security.php on line 606
+[15-Dec-2016 10:40:52 UTC] PHP Fatal error:  Call to a member function delete() on a non-object in /home/wordpressmonks/public_html/works/mycaar_lms/backend/modules/course/controllers/UnitController.php on line 464
+[15-Dec-2016 10:40:52 UTC] PHP Fatal error:  Call to a member function delete() on a non-object in /home/wordpressmonks/public_html/works/mycaar_lms/backend/modules/course/controllers/UnitController.php on line 464
+[15-Dec-2016 10:40:52 UTC] PHP Fatal error:  Call to a member function delete() on a non-object in /home/wordpressmonks/public_html/works/mycaar_lms/backend/modules/course/controllers/UnitController.php on line 464
+[15-Dec-2016 10:40:53 UTC] PHP Fatal error:  Call to a member function delete() on a non-object in /home/wordpressmonks/public_html/works/mycaar_lms/backend/modules/course/controllers/UnitController.php on line 464
+[15-Dec-2016 10:40:53 UTC] PHP Fatal error:  Call to a member function delete() on a non-object in /home/wordpressmonks/public_html/works/mycaar_lms/backend/modules/course/controllers/UnitController.php on line 464
+[15-Dec-2016 10:40:54 UTC] PHP Fatal error:  Call to a member function delete() on a non-object in /home/wordpressmonks/public_html/works/mycaar_lms/backend/modules/course/controllers/UnitController.php on line 464
+[17-Dec-2016 06:18:31 UTC] PHP Warning:  POST Content-Length of 542214240 bytes exceeds the limit of 8388608 bytes in Unknown on line 0
+[28-Dec-2016 10:17:53 UTC] PHP Fatal error:  Call to a member function delete() on a non-object in /home/wordpressmonks/public_html/works/mycaar_lms/backend/modules/course/controllers/UnitController.php on line 385
+[28-Dec-2016 10:17:53 UTC] PHP Fatal error:  Call to a member function delete() on a non-object in /home/wordpressmonks/public_html/works/mycaar_lms/backend/modules/course/controllers/UnitController.php on line 385
+[30-Dec-2016 11:08:14 UTC] PHP Warning:  POST Content-Length of 13989766 bytes exceeds the limit of 8388608 bytes in Unknown on line 0
+[30-Dec-2016 11:38:55 UTC] PHP Warning:  POST Content-Length of 13989766 bytes exceeds the limit of 8388608 bytes in Unknown on line 0
+[30-Dec-2016 11:39:54 UTC] PHP Warning:  POST Content-Length of 13989766 bytes exceeds the limit of 8388608 bytes in Unknown on line 0
+[02-Jan-2017 04:11:17 UTC] PHP Warning:  POST Content-Length of 8545763 bytes exceeds the limit of 8388608 bytes in Unknown on line 0
+[02-Jan-2017 04:22:42 UTC] PHP Warning:  POST Content-Length of 8545763 bytes exceeds the limit of 8388608 bytes in Unknown on line 0
+[02-Jan-2017 11:26:35 asia/kolkata] PHP Parse error:  syntax error, unexpected '<<' (T_SL) in /home/wordpressmonks/public_html/works/mycaar_lms/common/models/Module.php on line 115
+[02-Jan-2017 11:26:46 asia/kolkata] PHP Parse error:  syntax error, unexpected '<<' (T_SL) in /home/wordpressmonks/public_html/works/mycaar_lms/common/models/Module.php on line 115
+[02-Jan-2017 11:26:53 asia/kolkata] PHP Parse error:  syntax error, unexpected '<<' (T_SL) in /home/wordpressmonks/public_html/works/mycaar_lms/common/models/Module.php on line 115
+[02-Jan-2017 11:26:54 asia/kolkata] PHP Parse error:  syntax error, unexpected '<<' (T_SL) in /home/wordpressmonks/public_html/works/mycaar_lms/common/models/Module.php on line 115
+[02-Jan-2017 11:26:56 asia/kolkata] PHP Parse error:  syntax error, unexpected '<<' (T_SL) in /home/wordpressmonks/public_html/works/mycaar_lms/common/models/Module.php on line 115
+[02-Jan-2017 11:26:56 asia/kolkata] PHP Parse error:  syntax error, unexpected '<<' (T_SL) in /home/wordpressmonks/public_html/works/mycaar_lms/common/models/Module.php on line 115
+[02-Jan-2017 12:17:09 asia/kolkata] PHP Parse error:  syntax error, unexpected '<<' (T_SL) in /home/wordpressmonks/public_html/works/mycaar_lms/common/models/Module.php on line 102
+[03-Jan-2017 05:21:53 UTC] PHP Warning:  POST Content-Length of 282284371 bytes exceeds the limit of 8388608 bytes in Unknown on line 0
+[03-Jan-2017 06:03:31 UTC] PHP Warning:  POST Content-Length of 46309735 bytes exceeds the limit of 8388608 bytes in Unknown on line 0
+[03-Jan-2017 06:28:18 UTC] PHP Warning:  POST Content-Length of 46309735 bytes exceeds the limit of 8388608 bytes in Unknown on line 0
+[03-Jan-2017 06:29:31 UTC] PHP Warning:  POST Content-Length of 10498880 bytes exceeds the limit of 8388608 bytes in Unknown on line 0
+[03-Jan-2017 07:28:00 UTC] PHP Warning:  POST Content-Length of 37593410 bytes exceeds the limit of 8388608 bytes in Unknown on line 0
+[03-Jan-2017 08:53:12 UTC] PHP Warning:  POST Content-Length of 17034336 bytes exceeds the limit of 8388608 bytes in Unknown on line 0
+[03-Jan-2017 08:59:23 UTC] PHP Warning:  POST Content-Length of 17034772 bytes exceeds the limit of 8388608 bytes in Unknown on line 0
+[03-Jan-2017 12:54:18 UTC] PHP Warning:  POST Content-Length of 17034336 bytes exceeds the limit of 8388608 bytes in Unknown on line 0
+[04-Jan-2017 04:07:52 UTC] PHP Warning:  POST Content-Length of 17034336 bytes exceeds the limit of 8388608 bytes in Unknown on line 0
+[04-Jan-2017 06:31:43 UTC] PHP Warning:  POST Content-Length of 37593410 bytes exceeds the limit of 8388608 bytes in Unknown on line 0
+[05-Jan-2017 12:17:15 UTC] PHP Warning:  POST Content-Length of 37593410 bytes exceeds the limit of 8388608 bytes in Unknown on line 0
+[09-Jan-2017 10:14:38 UTC] PHP Warning:  POST Content-Length of 8545763 bytes exceeds the limit of 8388608 bytes in Unknown on line 0
+[17-Jan-2017 11:51:50 asia/kolkata] PHP Fatal error:  Call to a member function andFilterWhere() on a non-object in /home/wordpressmonks/public_html/works/mycaar_lms/common/models/search/SearchRole.php on line 67
+[24-Jan-2017 15:27:02 asia/kolkata] PHP Parse error:  syntax error, unexpected 'G' (T_STRING) in /home/wordpressmonks/public_html/works/mycaar_lms/backend/modules/course/controllers/ExportController.php on line 26
+[24-Jan-2017 15:27:26 asia/kolkata] PHP Parse error:  syntax error, unexpected 'M' (T_STRING) in /home/wordpressmonks/public_html/works/mycaar_lms/backend/modules/course/controllers/ExportController.php on line 26
+[24-Jan-2017 15:27:44 asia/kolkata] PHP Fatal error:  Allowed memory size of 262144 bytes exhausted (tried to allocate 88 bytes) in /home/wordpressmonks/public_html/works/mycaar_lms/vendor/yiisoft/yii2-debug/panels/RequestPanel.php on line 55
+[24-Jan-2017 15:28:43 asia/kolkata] PHP Fatal error:  Allowed memory size of 262144 bytes exhausted (tried to allocate 1656 bytes) in /home/wordpressmonks/public_html/works/mycaar_lms/vendor/yiisoft/yii2/base/Arrayable.php on line 63
+[24-Jan-2017 18:40:53 asia/kolkata] PHP Warning:  file_put_contents(/home/wordpressmonks/public_html/works/mycaar_lms/backend/runtime/debug/5887525db4516.data): failed to open stream: Disk quota exceeded in /home/wordpressmonks/public_html/works/mycaar_lms/vendor/yiisoft/yii2-debug/LogTarget.php on line 57
+[24-Jan-2017 18:40:53 asia/kolkata] PHP Warning:  file_put_contents(/home/wordpressmonks/public_html/works/mycaar_lms/backend/runtime/debug/5887525db4516.data): failed to open stream: Disk quota exceeded in /home/wordpressmonks/public_html/works/mycaar_lms/vendor/yiisoft/yii2-debug/LogTarget.php on line 57
+[24-Jan-2017 18:41:36 asia/kolkata] PHP Warning:  file_put_contents(/home/wordpressmonks/public_html/works/mycaar_lms/backend/runtime/debug/588752889d299.data): failed to open stream: Disk quota exceeded in /home/wordpressmonks/public_html/works/mycaar_lms/vendor/yiisoft/yii2-debug/LogTarget.php on line 57
+[24-Jan-2017 18:41:36 asia/kolkata] PHP Warning:  file_put_contents(/home/wordpressmonks/public_html/works/mycaar_lms/backend/runtime/debug/588752889d299.data): failed to open stream: Disk quota exceeded in /home/wordpressmonks/public_html/works/mycaar_lms/vendor/yiisoft/yii2-debug/LogTarget.php on line 57
+[24-Jan-2017 18:42:53 asia/kolkata] PHP Warning:  file_put_contents(/home/wordpressmonks/public_html/works/mycaar_lms/backend/runtime/debug/588752d5b2078.data): failed to open stream: Disk quota exceeded in /home/wordpressmonks/public_html/works/mycaar_lms/vendor/yiisoft/yii2-debug/LogTarget.php on line 57
+[24-Jan-2017 18:42:53 asia/kolkata] PHP Warning:  file_put_contents(/home/wordpressmonks/public_html/works/mycaar_lms/backend/runtime/debug/588752d5b2078.data): failed to open stream: Disk quota exceeded in /home/wordpressmonks/public_html/works/mycaar_lms/vendor/yiisoft/yii2-debug/LogTarget.php on line 57
+[24-Jan-2017 18:46:54 asia/kolkata] PHP Fatal error:  Uncaught exception 'yii\base\ErrorException' with message 'session_write_close(): open(/tmp/sess_4f708a1da3c63512f17a4db648fcefbc, O_RDWR) failed: Disk quota exceeded (122)' in /home/wordpressmonks/public_html/works/mycaar_lms/vendor/yiisoft/yii2/web/Session.php:186
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(2, 'session_write_c...', '/home/wordpress...', 186, Array)
+#1 /home/wordpressmonks/public_html/works/mycaar_lms/vendor/yiisoft/yii2/web/Session.php(186): session_write_close()
+#2 [internal function]: yii\web\Session->close()
+#3 {main}
+  thrown in /home/wordpressmonks/public_html/works/mycaar_lms/vendor/yiisoft/yii2/web/Session.php on line 186
+[24-Jan-2017 18:49:51 asia/kolkata] PHP Warning:  file_put_contents(/home/wordpressmonks/public_html/works/mycaar_lms/backend/runtime/debug/5887547703e98.data): failed to open stream: Disk quota exceeded in /home/wordpressmonks/public_html/works/mycaar_lms/vendor/yiisoft/yii2-debug/LogTarget.php on line 57
+[24-Jan-2017 18:49:51 asia/kolkata] PHP Warning:  file_put_contents(/home/wordpressmonks/public_html/works/mycaar_lms/backend/runtime/debug/5887547703e98.data): failed to open stream: Disk quota exceeded in /home/wordpressmonks/public_html/works/mycaar_lms/vendor/yiisoft/yii2-debug/LogTarget.php on line 57
+[24-Jan-2017 18:51:31 asia/kolkata] PHP Warning:  file_put_contents(/home/wordpressmonks/public_html/works/mycaar_lms/backend/runtime/debug/588754db8ec40.data): failed to open stream: Disk quota exceeded in /home/wordpressmonks/public_html/works/mycaar_lms/vendor/yiisoft/yii2-debug/LogTarget.php on line 57
+[24-Jan-2017 18:51:31 asia/kolkata] PHP Warning:  file_put_contents(/home/wordpressmonks/public_html/works/mycaar_lms/backend/runtime/debug/588754db8ec40.data): failed to open stream: Disk quota exceeded in /home/wordpressmonks/public_html/works/mycaar_lms/vendor/yiisoft/yii2-debug/LogTarget.php on line 57
+[24-Jan-2017 18:59:03 asia/kolkata] PHP Warning:  file_put_contents(/home/wordpressmonks/public_html/works/mycaar_lms/backend/runtime/debug/5887569fbca37.data): failed to open stream: Disk quota exceeded in /home/wordpressmonks/public_html/works/mycaar_lms/vendor/yiisoft/yii2-debug/LogTarget.php on line 57
+[24-Jan-2017 18:59:03 asia/kolkata] PHP Warning:  file_put_contents(/home/wordpressmonks/public_html/works/mycaar_lms/backend/runtime/debug/5887569fbca37.data): failed to open stream: Disk quota exceeded in /home/wordpressmonks/public_html/works/mycaar_lms/vendor/yiisoft/yii2-debug/LogTarget.php on line 57
+[24-Jan-2017 18:59:26 asia/kolkata] PHP Warning:  file_put_contents(/home/wordpressmonks/public_html/works/mycaar_lms/backend/runtime/debug/588756b6ae604.data): failed to open stream: Disk quota exceeded in /home/wordpressmonks/public_html/works/mycaar_lms/vendor/yiisoft/yii2-debug/LogTarget.php on line 57
+[24-Jan-2017 18:59:26 asia/kolkata] PHP Warning:  file_put_contents(/home/wordpressmonks/public_html/works/mycaar_lms/backend/runtime/debug/588756b6ae604.data): failed to open stream: Disk quota exceeded in /home/wordpressmonks/public_html/works/mycaar_lms/vendor/yiisoft/yii2-debug/LogTarget.php on line 57
+[24-Jan-2017 19:04:39 asia/kolkata] PHP Warning:  file_put_contents(/home/wordpressmonks/public_html/works/mycaar_lms/backend/runtime/debug/588757ef33959.data): failed to open stream: Disk quota exceeded in /home/wordpressmonks/public_html/works/mycaar_lms/vendor/yiisoft/yii2-debug/LogTarget.php on line 57
+[24-Jan-2017 19:04:39 asia/kolkata] PHP Warning:  file_put_contents(/home/wordpressmonks/public_html/works/mycaar_lms/backend/runtime/debug/588757ef33959.data): failed to open stream: Disk quota exceeded in /home/wordpressmonks/public_html/works/mycaar_lms/vendor/yiisoft/yii2-debug/LogTarget.php on line 57
+[24-Jan-2017 19:06:09 asia/kolkata] PHP Warning:  file_put_contents(/home/wordpressmonks/public_html/works/mycaar_lms/backend/runtime/debug/5887584926ed3.data): failed to open stream: Disk quota exceeded in /home/wordpressmonks/public_html/works/mycaar_lms/vendor/yiisoft/yii2-debug/LogTarget.php on line 57
+[24-Jan-2017 19:06:09 asia/kolkata] PHP Warning:  file_put_contents(/home/wordpressmonks/public_html/works/mycaar_lms/backend/runtime/debug/5887584926ed3.data): failed to open stream: Disk quota exceeded in /home/wordpressmonks/public_html/works/mycaar_lms/vendor/yiisoft/yii2-debug/LogTarget.php on line 57
+[24-Jan-2017 19:06:13 asia/kolkata] PHP Warning:  file_put_contents(/home/wordpressmonks/public_html/works/mycaar_lms/backend/runtime/debug/5887584d36d25.data): failed to open stream: Disk quota exceeded in /home/wordpressmonks/public_html/works/mycaar_lms/vendor/yiisoft/yii2-debug/LogTarget.php on line 57
+[24-Jan-2017 19:06:13 asia/kolkata] PHP Warning:  file_put_contents(/home/wordpressmonks/public_html/works/mycaar_lms/backend/runtime/debug/5887584d36d25.data): failed to open stream: Disk quota exceeded in /home/wordpressmonks/public_html/works/mycaar_lms/vendor/yiisoft/yii2-debug/LogTarget.php on line 57
+[24-Jan-2017 19:06:24 asia/kolkata] PHP Warning:  file_put_contents(/home/wordpressmonks/public_html/works/mycaar_lms/backend/runtime/debug/58875858c1fa6.data): failed to open stream: Disk quota exceeded in /home/wordpressmonks/public_html/works/mycaar_lms/vendor/yiisoft/yii2-debug/LogTarget.php on line 57
+[24-Jan-2017 19:08:30 asia/kolkata] PHP Warning:  file_put_contents(/home/wordpressmonks/public_html/works/mycaar_lms/backend/runtime/debug/588758d612ecf.data): failed to open stream: Disk quota exceeded in /home/wordpressmonks/public_html/works/mycaar_lms/vendor/yiisoft/yii2-debug/LogTarget.php on line 57
+[24-Jan-2017 19:08:30 asia/kolkata] PHP Warning:  file_put_contents(/home/wordpressmonks/public_html/works/mycaar_lms/backend/runtime/debug/588758d612ecf.data): failed to open stream: Disk quota exceeded in /home/wordpressmonks/public_html/works/mycaar_lms/vendor/yiisoft/yii2-debug/LogTarget.php on line 57
+[24-Jan-2017 19:08:34 asia/kolkata] PHP Warning:  file_put_contents(/home/wordpressmonks/public_html/works/mycaar_lms/backend/runtime/debug/588758da57fd6.data): failed to open stream: Disk quota exceeded in /home/wordpressmonks/public_html/works/mycaar_lms/vendor/yiisoft/yii2-debug/LogTarget.php on line 57
+[24-Jan-2017 19:08:34 asia/kolkata] PHP Warning:  file_put_contents(/home/wordpressmonks/public_html/works/mycaar_lms/backend/runtime/debug/588758da57fd6.data): failed to open stream: Disk quota exceeded in /home/wordpressmonks/public_html/works/mycaar_lms/vendor/yiisoft/yii2-debug/LogTarget.php on line 57
+[24-Jan-2017 19:08:43 asia/kolkata] PHP Warning:  file_put_contents(/home/wordpressmonks/public_html/works/mycaar_lms/backend/runtime/debug/588758e38befb.data): failed to open stream: Disk quota exceeded in /home/wordpressmonks/public_html/works/mycaar_lms/vendor/yiisoft/yii2-debug/LogTarget.php on line 57
+[24-Jan-2017 19:08:43 asia/kolkata] PHP Warning:  file_put_contents(/home/wordpressmonks/public_html/works/mycaar_lms/backend/runtime/debug/588758e38befb.data): failed to open stream: Disk quota exceeded in /home/wordpressmonks/public_html/works/mycaar_lms/vendor/yiisoft/yii2-debug/LogTarget.php on line 57
+[24-Jan-2017 19:08:51 asia/kolkata] PHP Warning:  file_put_contents(/home/wordpressmonks/public_html/works/mycaar_lms/backend/runtime/debug/588758eb460f3.data): failed to open stream: Disk quota exceeded in /home/wordpressmonks/public_html/works/mycaar_lms/vendor/yiisoft/yii2-debug/LogTarget.php on line 57
+[24-Jan-2017 19:08:51 asia/kolkata] PHP Warning:  file_put_contents(/home/wordpressmonks/public_html/works/mycaar_lms/backend/runtime/debug/588758eb460f3.data): failed to open stream: Disk quota exceeded in /home/wordpressmonks/public_html/works/mycaar_lms/vendor/yiisoft/yii2-debug/LogTarget.php on line 57
+[24-Jan-2017 19:12:38 asia/kolkata] PHP Warning:  file_put_contents(/home/wordpressmonks/public_html/works/mycaar_lms/backend/runtime/debug/588759ceb9d68.data): failed to open stream: Disk quota exceeded in /home/wordpressmonks/public_html/works/mycaar_lms/vendor/yiisoft/yii2-debug/LogTarget.php on line 57
+[24-Jan-2017 19:12:38 asia/kolkata] PHP Warning:  file_put_contents(/home/wordpressmonks/public_html/works/mycaar_lms/backend/runtime/debug/588759ceb9d68.data): failed to open stream: Disk quota exceeded in /home/wordpressmonks/public_html/works/mycaar_lms/vendor/yiisoft/yii2-debug/LogTarget.php on line 57
+[24-Jan-2017 19:15:05 asia/kolkata] PHP Warning:  file_put_contents(/home/wordpressmonks/public_html/works/mycaar_lms/backend/runtime/debug/58875a61196b1.data): failed to open stream: Disk quota exceeded in /home/wordpressmonks/public_html/works/mycaar_lms/vendor/yiisoft/yii2-debug/LogTarget.php on line 57
+[24-Jan-2017 19:15:05 asia/kolkata] PHP Warning:  file_put_contents(/home/wordpressmonks/public_html/works/mycaar_lms/backend/runtime/debug/58875a61196b1.data): failed to open stream: Disk quota exceeded in /home/wordpressmonks/public_html/works/mycaar_lms/vendor/yiisoft/yii2-debug/LogTarget.php on line 57
+[24-Jan-2017 19:24:05 asia/kolkata] PHP Warning:  file_put_contents(/home/wordpressmonks/public_html/works/mycaar_lms/backend/runtime/debug/58875c7d3076e.data): failed to open stream: Disk quota exceeded in /home/wordpressmonks/public_html/works/mycaar_lms/vendor/yiisoft/yii2-debug/LogTarget.php on line 57
+[24-Jan-2017 19:24:05 asia/kolkata] PHP Warning:  file_put_contents(/home/wordpressmonks/public_html/works/mycaar_lms/backend/runtime/debug/58875c7d3076e.data): failed to open stream: Disk quota exceeded in /home/wordpressmonks/public_html/works/mycaar_lms/vendor/yiisoft/yii2-debug/LogTarget.php on line 57
+[24-Jan-2017 19:24:21 asia/kolkata] PHP Warning:  file_put_contents(/home/wordpressmonks/public_html/works/mycaar_lms/backend/runtime/debug/58875c8d24e21.data): failed to open stream: Disk quota exceeded in /home/wordpressmonks/public_html/works/mycaar_lms/vendor/yiisoft/yii2-debug/LogTarget.php on line 57
+[24-Jan-2017 19:24:21 asia/kolkata] PHP Warning:  file_put_contents(/home/wordpressmonks/public_html/works/mycaar_lms/backend/runtime/debug/58875c8d24e21.data): failed to open stream: Disk quota exceeded in /home/wordpressmonks/public_html/works/mycaar_lms/vendor/yiisoft/yii2-debug/LogTarget.php on line 57
+[24-Jan-2017 19:28:40 asia/kolkata] PHP Warning:  file_put_contents(/home/wordpressmonks/public_html/works/mycaar_lms/backend/runtime/debug/58875d9015e7e.data): failed to open stream: Disk quota exceeded in /home/wordpressmonks/public_html/works/mycaar_lms/vendor/yiisoft/yii2-debug/LogTarget.php on line 57
+[24-Jan-2017 19:28:40 asia/kolkata] PHP Warning:  file_put_contents(/home/wordpressmonks/public_html/works/mycaar_lms/backend/runtime/debug/58875d9015e7e.data): failed to open stream: Disk quota exceeded in /home/wordpressmonks/public_html/works/mycaar_lms/vendor/yiisoft/yii2-debug/LogTarget.php on line 57
+[24-Jan-2017 19:35:37 asia/kolkata] PHP Warning:  file_put_contents(/home/wordpressmonks/public_html/works/mycaar_lms/backend/runtime/debug/58875f31766be.data): failed to open stream: Disk quota exceeded in /home/wordpressmonks/public_html/works/mycaar_lms/vendor/yiisoft/yii2-debug/LogTarget.php on line 57
+[24-Jan-2017 19:35:37 asia/kolkata] PHP Warning:  file_put_contents(/home/wordpressmonks/public_html/works/mycaar_lms/backend/runtime/debug/58875f31766be.data): failed to open stream: Disk quota exceeded in /home/wordpressmonks/public_html/works/mycaar_lms/vendor/yiisoft/yii2-debug/LogTarget.php on line 57
+[24-Jan-2017 19:35:46 asia/kolkata] PHP Warning:  file_put_contents(/home/wordpressmonks/public_html/works/mycaar_lms/backend/runtime/debug/58875f3a948fd.data): failed to open stream: Disk quota exceeded in /home/wordpressmonks/public_html/works/mycaar_lms/vendor/yiisoft/yii2-debug/LogTarget.php on line 57
+[24-Jan-2017 19:35:46 asia/kolkata] PHP Warning:  file_put_contents(/home/wordpressmonks/public_html/works/mycaar_lms/backend/runtime/debug/58875f3a948fd.data): failed to open stream: Disk quota exceeded in /home/wordpressmonks/public_html/works/mycaar_lms/vendor/yiisoft/yii2-debug/LogTarget.php on line 57
+[24-Jan-2017 19:35:58 asia/kolkata] PHP Warning:  file_put_contents(/home/wordpressmonks/public_html/works/mycaar_lms/backend/runtime/debug/58875f469e105.data): failed to open stream: Disk quota exceeded in /home/wordpressmonks/public_html/works/mycaar_lms/vendor/yiisoft/yii2-debug/LogTarget.php on line 57
+[24-Jan-2017 19:35:58 asia/kolkata] PHP Warning:  file_put_contents(/home/wordpressmonks/public_html/works/mycaar_lms/backend/runtime/debug/58875f469e105.data): failed to open stream: Disk quota exceeded in /home/wordpressmonks/public_html/works/mycaar_lms/vendor/yiisoft/yii2-debug/LogTarget.php on line 57
+[24-Jan-2017 19:36:06 asia/kolkata] PHP Warning:  file_put_contents(/home/wordpressmonks/public_html/works/mycaar_lms/backend/runtime/debug/58875f4eb297e.data): failed to open stream: Disk quota exceeded in /home/wordpressmonks/public_html/works/mycaar_lms/vendor/yiisoft/yii2-debug/LogTarget.php on line 57
+[24-Jan-2017 19:36:06 asia/kolkata] PHP Warning:  file_put_contents(/home/wordpressmonks/public_html/works/mycaar_lms/backend/runtime/debug/58875f4eb297e.data): failed to open stream: Disk quota exceeded in /home/wordpressmonks/public_html/works/mycaar_lms/vendor/yiisoft/yii2-debug/LogTarget.php on line 57
+[24-Jan-2017 19:36:14 asia/kolkata] PHP Warning:  file_put_contents(/home/wordpressmonks/public_html/works/mycaar_lms/backend/runtime/debug/58875f566a3cc.data): failed to open stream: Disk quota exceeded in /home/wordpressmonks/public_html/works/mycaar_lms/vendor/yiisoft/yii2-debug/LogTarget.php on line 57
+[24-Jan-2017 19:36:14 asia/kolkata] PHP Warning:  file_put_contents(/home/wordpressmonks/public_html/works/mycaar_lms/backend/runtime/debug/58875f566a3cc.data): failed to open stream: Disk quota exceeded in /home/wordpressmonks/public_html/works/mycaar_lms/vendor/yiisoft/yii2-debug/LogTarget.php on line 57
+[24-Jan-2017 19:38:05 asia/kolkata] PHP Warning:  file_put_contents(/home/wordpressmonks/public_html/works/mycaar_lms/backend/runtime/debug/58875fbeeeca6.data): failed to open stream: Disk quota exceeded in /home/wordpressmonks/public_html/works/mycaar_lms/vendor/yiisoft/yii2-debug/LogTarget.php on line 57
+[24-Jan-2017 19:38:05 asia/kolkata] PHP Warning:  file_put_contents(/home/wordpressmonks/public_html/works/mycaar_lms/backend/runtime/debug/58875fbeeeca6.data): failed to open stream: Disk quota exceeded in /home/wordpressmonks/public_html/works/mycaar_lms/vendor/yiisoft/yii2-debug/LogTarget.php on line 57
+[24-Jan-2017 19:38:27 asia/kolkata] PHP Warning:  file_put_contents(/home/wordpressmonks/public_html/works/mycaar_lms/backend/runtime/debug/58875fdb53385.data): failed to open stream: Disk quota exceeded in /home/wordpressmonks/public_html/works/mycaar_lms/vendor/yiisoft/yii2-debug/LogTarget.php on line 57
+[24-Jan-2017 19:38:27 asia/kolkata] PHP Warning:  file_put_contents(/home/wordpressmonks/public_html/works/mycaar_lms/backend/runtime/debug/58875fdb53385.data): failed to open stream: Disk quota exceeded in /home/wordpressmonks/public_html/works/mycaar_lms/vendor/yiisoft/yii2-debug/LogTarget.php on line 57
+[24-Jan-2017 19:39:09 asia/kolkata] PHP Warning:  file_put_contents(/home/wordpressmonks/public_html/works/mycaar_lms/backend/runtime/debug/58876005850cc.data): failed to open stream: Disk quota exceeded in /home/wordpressmonks/public_html/works/mycaar_lms/vendor/yiisoft/yii2-debug/LogTarget.php on line 57
+[24-Jan-2017 19:39:09 asia/kolkata] PHP Warning:  file_put_contents(/home/wordpressmonks/public_html/works/mycaar_lms/backend/runtime/debug/58876005850cc.data): failed to open stream: Disk quota exceeded in /home/wordpressmonks/public_html/works/mycaar_lms/vendor/yiisoft/yii2-debug/LogTarget.php on line 57
+[24-Jan-2017 19:40:46 asia/kolkata] PHP Warning:  file_put_contents(/home/wordpressmonks/public_html/works/mycaar_lms/backend/runtime/debug/5887606653e71.data): failed to open stream: Disk quota exceeded in /home/wordpressmonks/public_html/works/mycaar_lms/vendor/yiisoft/yii2-debug/LogTarget.php on line 57
+[24-Jan-2017 19:40:52 asia/kolkata] PHP Warning:  file_put_contents(/home/wordpressmonks/public_html/works/mycaar_lms/backend/runtime/debug/5887606c73ca4.data): failed to open stream: Disk quota exceeded in /home/wordpressmonks/public_html/works/mycaar_lms/vendor/yiisoft/yii2-debug/LogTarget.php on line 57
+[24-Jan-2017 19:40:53 asia/kolkata] PHP Warning:  file_put_contents(/home/wordpressmonks/public_html/works/mycaar_lms/backend/runtime/debug/5887606c73ca4.data): failed to open stream: Disk quota exceeded in /home/wordpressmonks/public_html/works/mycaar_lms/vendor/yiisoft/yii2-debug/LogTarget.php on line 57
+[24-Jan-2017 19:40:56 asia/kolkata] PHP Warning:  file_put_contents(/home/wordpressmonks/public_html/works/mycaar_lms/backend/runtime/debug/58876070c1676.data): failed to open stream: Disk quota exceeded in /home/wordpressmonks/public_html/works/mycaar_lms/vendor/yiisoft/yii2-debug/LogTarget.php on line 57
+[24-Jan-2017 19:40:56 asia/kolkata] PHP Warning:  file_put_contents(/home/wordpressmonks/public_html/works/mycaar_lms/backend/runtime/debug/58876070c1676.data): failed to open stream: Disk quota exceeded in /home/wordpressmonks/public_html/works/mycaar_lms/vendor/yiisoft/yii2-debug/LogTarget.php on line 57
+[24-Jan-2017 19:41:05 asia/kolkata] PHP Warning:  file_put_contents(/home/wordpressmonks/public_html/works/mycaar_lms/backend/runtime/debug/588760791bbc4.data): failed to open stream: Disk quota exceeded in /home/wordpressmonks/public_html/works/mycaar_lms/vendor/yiisoft/yii2-debug/LogTarget.php on line 57
+[24-Jan-2017 19:41:05 asia/kolkata] PHP Warning:  file_put_contents(/home/wordpressmonks/public_html/works/mycaar_lms/backend/runtime/debug/588760791bbc4.data): failed to open stream: Disk quota exceeded in /home/wordpressmonks/public_html/works/mycaar_lms/vendor/yiisoft/yii2-debug/LogTarget.php on line 57
+[01-Feb-2017 15:49:16 asia/kolkata] An Error occurred while handling another error:
+exception 'yii\base\ViewNotFoundException' with message 'The view file does not exist: /home/mycaar/public_html/v3.0/vendor/yiisoft/yii2/views/errorHandler/exception.php' in /home/mycaar/public_html/v2.0/vendor/yiisoft/yii2/base/View.php:227
+Stack trace:
+#0 /home/mycaar/public_html/v2.0/vendor/yiisoft/yii2/web/ErrorHandler.php(241): yii\base\View->renderFile('@yii/views/erro...', Array, Object(yii\web\ErrorHandler))
+#1 /home/mycaar/public_html/v2.0/vendor/yiisoft/yii2/web/ErrorHandler.php(112): yii\web\ErrorHandler->renderFile('@yii/views/erro...', Array)
+#2 /home/mycaar/public_html/v2.0/vendor/yiisoft/yii2/base/ErrorHandler.php(109): yii\web\ErrorHandler->renderException(Object(yii\base\InvalidParamException))
+#3 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\base\InvalidParamException))
+#4 {main}
+Previous exception:
+exception 'yii\base\InvalidParamException' with message 'The file or directory to be published does not exist: /home/mycaar/public_html/v3.0/vendor/yiisoft/yii2/assets' in /home/mycaar/public_html/v2.0/vendor/yiisoft/yii2/web/AssetManager.php:452
+Stack trace:
+#0 /home/mycaar/public_html/v2.0/vendor/yiisoft/yii2/web/AssetBundle.php(183): yii\web\AssetManager->publish('/home/mycaar/pu...', Array)
+#1 /home/mycaar/public_html/v2.0/vendor/yiisoft/yii2/web/AssetManager.php(266): yii\web\AssetBundle->publish(Object(yii\web\AssetManager))
+#2 /home/mycaar/public_html/v2.0/vendor/yiisoft/yii2/web/AssetManager.php(237): yii\web\AssetManager->loadBundle('yii\\grid\\GridVi...', Array, true)
+#3 /home/mycaar/public_html/v2.0/vendor/yiisoft/yii2/web/View.php(284): yii\web\AssetManager->getBundle('yii\\grid\\GridVi...')
+#4 /home/mycaar/public_html/v2.0/vendor/yiisoft/yii2/web/AssetBundle.php(123): yii\web\View->registerAssetBundle('yii\\grid\\GridVi...')
+#5 /home/mycaar/public_html/v2.0/vendor/yiisoft/yii2/grid/GridView.php(286): yii\web\AssetBundle::register(Object(yii\web\View))
+#6 /home/mycaar/public_html/v2.0/vendor/yiisoft/yii2/base/Widget.php(102): yii\grid\GridView->run()
+#7 /home/mycaar/public_html/v2.0/backend/modules/user/views/company/index_user.php(239): yii\base\Widget::widget(Array)
+#8 /home/mycaar/public_html/v2.0/vendor/yiisoft/yii2/base/View.php(326): require('/home/mycaar/pu...')
+#9 /home/mycaar/public_html/v2.0/vendor/yiisoft/yii2/base/View.php(248): yii\base\View->renderPhpFile('/home/mycaar/pu...', Array)
+#10 /home/mycaar/public_html/v2.0/vendor/yiisoft/yii2/base/View.php(150): yii\base\View->renderFile('/home/mycaar/pu...', Array, Object(backend\modules\user\controllers\CompanyController))
+#11 /home/mycaar/public_html/v2.0/vendor/yiisoft/yii2/base/Controller.php(378): yii\base\View->render('index_user', Array, Object(backend\modules\user\controllers\CompanyController))
+#12 /home/mycaar/public_html/v2.0/backend/modules/user/controllers/CompanyController.php(257): yii\base\Controller->render('index_user', Array)
+#13 [internal function]: backend\modules\user\controllers\CompanyController->actionIndexUser()
+#14 /home/mycaar/public_html/v2.0/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#15 /home/mycaar/public_html/v2.0/vendor/yiisoft/yii2/base/Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#16 /home/mycaar/public_html/v2.0/vendor/yiisoft/yii2/base/Module.php(454): yii\base\Controller->runAction('index-user', Array)
+#17 /home/mycaar/public_html/v2.0/vendor/yiisoft/yii2/web/Application.php(100): yii\base\Module->runAction('user/company/in...', Array)
+#18 /home/mycaar/public_html/v2.0/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#19 /home/mycaar/public_html/v2.0/backend/web/index.php(17): yii\base\Application->run()
+#20 {main}
+$_SERVER = [
+    'PATH' => '/sbin:/usr/sbin:/bin:/usr/bin',
+    'SCRIPT_NAME' => '/v2.0/backend/web/index.php',
+    'REQUEST_URI' => '/v2.0/backend/web/user/company/index-user',
+    'QUERY_STRING' => '',
+    'REQUEST_METHOD' => 'GET',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'GATEWAY_INTERFACE' => 'CGI/1.1',
+    'REDIRECT_URL' => '/v2.0/backend/web/user/company/index-user',
+    'REMOTE_PORT' => '53515',
+    'SCRIPT_FILENAME' => '/home/mycaar/public_html/v2.0/backend/web/index.php',
+    'SERVER_ADMIN' => 'webmaster@mycaar.com.au',
+    'CONTEXT_DOCUMENT_ROOT' => '/home/mycaar/public_html',
+    'CONTEXT_PREFIX' => '',
+    'REQUEST_SCHEME' => 'http',
+    'DOCUMENT_ROOT' => '/home/mycaar/public_html',
+    'REMOTE_ADDR' => '122.171.148.189',
+    'SERVER_PORT' => '80',
+    'SERVER_ADDR' => '182.160.167.78',
+    'SERVER_NAME' => 'mycaar.com.au',
+    'SERVER_SOFTWARE' => 'Apache/2.4.23 (Unix) OpenSSL/1.0.1e-fips mod_bwlimited/1.4 mod_fcgid/2.3.9',
+    'SERVER_SIGNATURE' => '',
+    'LD_LIBRARY_PATH' => '/usr/local/apache/lib',
+    'HTTP_COOKIE' => 'timezone=Asia/Kolkata; mycaar-lms=mik2bji78dr65cqctjl9ghkbf4; _identity-mycaar=40a9b5145a2b916181dba042d437bd42fa6fee3b9857ddfa605e44b4ef8b3b64a%3A2%3A%7Bi%3A0%3Bs%3A16%3A%22_identity-mycaar%22%3Bi%3A1%3Bs%3A46%3A%22%5B3%2C%22nJ_TzSn30Q3hR0zBP7g3sof2YfWADo7U%22%2C2592000%5D%22%3B%7D',
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8',
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch',
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36',
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1',
+    'HTTP_CONNECTION' => 'close',
+    'HTTP_HOST' => 'mycaar.com.au',
+    'UNIQUE_ID' => 'WJG2JLagp04AAbUf5hsAAAAK',
+    'REDIRECT_STATUS' => '200',
+    'REDIRECT_UNIQUE_ID' => 'WJG2JLagp04AAbUf5hsAAAAK',
+    'FCGI_ROLE' => 'RESPONDER',
+    'PHP_SELF' => '/v2.0/backend/web/index.php',
+    'REQUEST_TIME_FLOAT' => 1485944356.134210109710693359375,
+    'REQUEST_TIME' => 1485944356,
+]
+[01-Feb-2017 15:50:25 asia/kolkata] An Error occurred while handling another error:
+exception 'yii\base\ViewNotFoundException' with message 'The view file does not exist: /home/mycaar/public_html/v3.0/vendor/yiisoft/yii2/views/errorHandler/exception.php' in /home/mycaar/public_html/v2.0/vendor/yiisoft/yii2/base/View.php:227
+Stack trace:
+#0 /home/mycaar/public_html/v2.0/vendor/yiisoft/yii2/web/ErrorHandler.php(241): yii\base\View->renderFile('@yii/views/erro...', Array, Object(yii\web\ErrorHandler))
+#1 /home/mycaar/public_html/v2.0/vendor/yiisoft/yii2/web/ErrorHandler.php(112): yii\web\ErrorHandler->renderFile('@yii/views/erro...', Array)
+#2 /home/mycaar/public_html/v2.0/vendor/yiisoft/yii2/base/ErrorHandler.php(109): yii\web\ErrorHandler->renderException(Object(yii\base\InvalidParamException))
+#3 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\base\InvalidParamException))
+#4 {main}
+Previous exception:
+exception 'yii\base\InvalidParamException' with message 'The file or directory to be published does not exist: /home/mycaar/public_html/v3.0/vendor/yiisoft/yii2/assets' in /home/mycaar/public_html/v2.0/vendor/yiisoft/yii2/web/AssetManager.php:452
+Stack trace:
+#0 /home/mycaar/public_html/v2.0/vendor/yiisoft/yii2/web/AssetBundle.php(183): yii\web\AssetManager->publish('/home/mycaar/pu...', Array)
+#1 /home/mycaar/public_html/v2.0/vendor/yiisoft/yii2/web/AssetManager.php(266): yii\web\AssetBundle->publish(Object(yii\web\AssetManager))
+#2 /home/mycaar/public_html/v2.0/vendor/yiisoft/yii2/web/AssetManager.php(237): yii\web\AssetManager->loadBundle('yii\\web\\YiiAsse...', Array, true)
+#3 /home/mycaar/public_html/v2.0/vendor/yiisoft/yii2/web/View.php(284): yii\web\AssetManager->getBundle('yii\\web\\YiiAsse...')
+#4 /home/mycaar/public_html/v2.0/vendor/yiisoft/yii2/web/View.php(289): yii\web\View->registerAssetBundle('yii\\web\\YiiAsse...', 1)
+#5 /home/mycaar/public_html/v2.0/vendor/yiisoft/yii2/web/AssetBundle.php(123): yii\web\View->registerAssetBundle('backend\\assets\\...')
+#6 /home/mycaar/public_html/v2.0/backend/views/layouts/dashboard.php(14): yii\web\AssetBundle::register(Object(yii\web\View))
+#7 /home/mycaar/public_html/v2.0/vendor/yiisoft/yii2/base/View.php(326): require('/home/mycaar/pu...')
+#8 /home/mycaar/public_html/v2.0/vendor/yiisoft/yii2/base/View.php(248): yii\base\View->renderPhpFile('/home/mycaar/pu...', Array)
+#9 /home/mycaar/public_html/v2.0/vendor/yiisoft/yii2/base/Controller.php(393): yii\base\View->renderFile('/home/mycaar/pu...', Array, Object(backend\modules\course\controllers\ProgramController))
+#10 /home/mycaar/public_html/v2.0/vendor/yiisoft/yii2/base/Controller.php(379): yii\base\Controller->renderContent('\n    <!--<div c...')
+#11 /home/mycaar/public_html/v2.0/backend/modules/course/controllers/ProgramController.php(83): yii\base\Controller->render('dashboard', Array)
+#12 [internal function]: backend\modules\course\controllers\ProgramController->actionDashboard()
+#13 /home/mycaar/public_html/v2.0/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#14 /home/mycaar/public_html/v2.0/vendor/yiisoft/yii2/base/Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#15 /home/mycaar/public_html/v2.0/vendor/yiisoft/yii2/base/Module.php(454): yii\base\Controller->runAction('dashboard', Array)
+#16 /home/mycaar/public_html/v2.0/vendor/yiisoft/yii2/web/Application.php(100): yii\base\Module->runAction('', Array)
+#17 /home/mycaar/public_html/v2.0/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#18 /home/mycaar/public_html/v2.0/backend/web/index.php(17): yii\base\Application->run()
+#19 {main}
+$_SERVER = [
+    'PATH' => '/sbin:/usr/sbin:/bin:/usr/bin',
+    'SCRIPT_NAME' => '/v2.0/backend/web/index.php',
+    'REQUEST_URI' => '/v2.0/backend/web/',
+    'QUERY_STRING' => '',
+    'REQUEST_METHOD' => 'GET',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'GATEWAY_INTERFACE' => 'CGI/1.1',
+    'REMOTE_PORT' => '53535',
+    'SCRIPT_FILENAME' => '/home/mycaar/public_html/v2.0/backend/web/index.php',
+    'SERVER_ADMIN' => 'webmaster@mycaar.com.au',
+    'CONTEXT_DOCUMENT_ROOT' => '/home/mycaar/public_html',
+    'CONTEXT_PREFIX' => '',
+    'REQUEST_SCHEME' => 'http',
+    'DOCUMENT_ROOT' => '/home/mycaar/public_html',
+    'REMOTE_ADDR' => '122.171.148.189',
+    'SERVER_PORT' => '80',
+    'SERVER_ADDR' => '182.160.167.78',
+    'SERVER_NAME' => 'mycaar.com.au',
+    'SERVER_SOFTWARE' => 'Apache/2.4.23 (Unix) OpenSSL/1.0.1e-fips mod_bwlimited/1.4 mod_fcgid/2.3.9',
+    'SERVER_SIGNATURE' => '',
+    'LD_LIBRARY_PATH' => '/usr/local/apache/lib',
+    'HTTP_COOKIE' => 'timezone=Asia/Kolkata; mycaar-lms=mik2bji78dr65cqctjl9ghkbf4; _identity-mycaar=40a9b5145a2b916181dba042d437bd42fa6fee3b9857ddfa605e44b4ef8b3b64a%3A2%3A%7Bi%3A0%3Bs%3A16%3A%22_identity-mycaar%22%3Bi%3A1%3Bs%3A46%3A%22%5B3%2C%22nJ_TzSn30Q3hR0zBP7g3sof2YfWADo7U%22%2C2592000%5D%22%3B%7D',
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8',
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch',
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36',
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1',
+    'HTTP_CONNECTION' => 'close',
+    'HTTP_HOST' => 'mycaar.com.au',
+    'UNIQUE_ID' => 'WJG2abagp04AAXqC@dUAAAAD',
+    'FCGI_ROLE' => 'RESPONDER',
+    'PHP_SELF' => '/v2.0/backend/web/index.php',
+    'REQUEST_TIME_FLOAT' => 1485944425.357666015625,
+    'REQUEST_TIME' => 1485944425,
+]
+[01-Feb-2017 15:51:02 asia/kolkata] An Error occurred while handling another error:
+exception 'yii\base\ViewNotFoundException' with message 'The view file does not exist: /home/mycaar/public_html/v3.0/vendor/yiisoft/yii2/views/errorHandler/exception.php' in /home/mycaar/public_html/v2.0/vendor/yiisoft/yii2/base/View.php:227
+Stack trace:
+#0 /home/mycaar/public_html/v2.0/vendor/yiisoft/yii2/web/ErrorHandler.php(241): yii\base\View->renderFile('@yii/views/erro...', Array, Object(yii\web\ErrorHandler))
+#1 /home/mycaar/public_html/v2.0/vendor/yiisoft/yii2/web/ErrorHandler.php(112): yii\web\ErrorHandler->renderFile('@yii/views/erro...', Array)
+#2 /home/mycaar/public_html/v2.0/vendor/yiisoft/yii2/base/ErrorHandler.php(109): yii\web\ErrorHandler->renderException(Object(yii\base\InvalidParamException))
+#3 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\base\InvalidParamException))
+#4 {main}
+Previous exception:
+exception 'yii\base\InvalidParamException' with message 'The file or directory to be published does not exist: /home/mycaar/public_html/v3.0/vendor/yiisoft/yii2/assets' in /home/mycaar/public_html/v2.0/vendor/yiisoft/yii2/web/AssetManager.php:452
+Stack trace:
+#0 /home/mycaar/public_html/v2.0/vendor/yiisoft/yii2/web/AssetBundle.php(183): yii\web\AssetManager->publish('/home/mycaar/pu...', Array)
+#1 /home/mycaar/public_html/v2.0/vendor/yiisoft/yii2/web/AssetManager.php(266): yii\web\AssetBundle->publish(Object(yii\web\AssetManager))
+#2 /home/mycaar/public_html/v2.0/vendor/yiisoft/yii2/web/AssetManager.php(237): yii\web\AssetManager->loadBundle('yii\\web\\YiiAsse...', Array, true)
+#3 /home/mycaar/public_html/v2.0/vendor/yiisoft/yii2/web/View.php(284): yii\web\AssetManager->getBundle('yii\\web\\YiiAsse...')
+#4 /home/mycaar/public_html/v2.0/vendor/yiisoft/yii2/web/View.php(289): yii\web\View->registerAssetBundle('yii\\web\\YiiAsse...', 1)
+#5 /home/mycaar/public_html/v2.0/vendor/yiisoft/yii2/web/AssetBundle.php(123): yii\web\View->registerAssetBundle('backend\\assets\\...')
+#6 /home/mycaar/public_html/v2.0/backend/views/layouts/dashboard.php(14): yii\web\AssetBundle::register(Object(yii\web\View))
+#7 /home/mycaar/public_html/v2.0/vendor/yiisoft/yii2/base/View.php(326): require('/home/mycaar/pu...')
+#8 /home/mycaar/public_html/v2.0/vendor/yiisoft/yii2/base/View.php(248): yii\base\View->renderPhpFile('/home/mycaar/pu...', Array)
+#9 /home/mycaar/public_html/v2.0/vendor/yiisoft/yii2/base/Controller.php(393): yii\base\View->renderFile('/home/mycaar/pu...', Array, Object(backend\modules\course\controllers\ProgramController))
+#10 /home/mycaar/public_html/v2.0/vendor/yiisoft/yii2/base/Controller.php(379): yii\base\Controller->renderContent('\n    <!--<div c...')
+#11 /home/mycaar/public_html/v2.0/backend/modules/course/controllers/ProgramController.php(83): yii\base\Controller->render('dashboard', Array)
+#12 [internal function]: backend\modules\course\controllers\ProgramController->actionDashboard()
+#13 /home/mycaar/public_html/v2.0/vendor/yiisoft/yii2/base/InlineAction.php(55): call_user_func_array(Array, Array)
+#14 /home/mycaar/public_html/v2.0/vendor/yiisoft/yii2/base/Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#15 /home/mycaar/public_html/v2.0/vendor/yiisoft/yii2/base/Module.php(454): yii\base\Controller->runAction('dashboard', Array)
+#16 /home/mycaar/public_html/v2.0/vendor/yiisoft/yii2/web/Application.php(100): yii\base\Module->runAction('', Array)
+#17 /home/mycaar/public_html/v2.0/vendor/yiisoft/yii2/base/Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#18 /home/mycaar/public_html/v2.0/backend/web/index.php(17): yii\base\Application->run()
+#19 {main}
+$_SERVER = [
+    'PATH' => '/sbin:/usr/sbin:/bin:/usr/bin',
+    'SCRIPT_NAME' => '/v2.0/backend/web/index.php',
+    'REQUEST_URI' => '/v2.0/backend/web/',
+    'QUERY_STRING' => '',
+    'REQUEST_METHOD' => 'GET',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'GATEWAY_INTERFACE' => 'CGI/1.1',
+    'REMOTE_PORT' => '53552',
+    'SCRIPT_FILENAME' => '/home/mycaar/public_html/v2.0/backend/web/index.php',
+    'SERVER_ADMIN' => 'webmaster@mycaar.com.au',
+    'CONTEXT_DOCUMENT_ROOT' => '/home/mycaar/public_html',
+    'CONTEXT_PREFIX' => '',
+    'REQUEST_SCHEME' => 'http',
+    'DOCUMENT_ROOT' => '/home/mycaar/public_html',
+    'REMOTE_ADDR' => '122.171.148.189',
+    'SERVER_PORT' => '80',
+    'SERVER_ADDR' => '182.160.167.78',
+    'SERVER_NAME' => 'mycaar.com.au',
+    'SERVER_SOFTWARE' => 'Apache/2.4.23 (Unix) OpenSSL/1.0.1e-fips mod_bwlimited/1.4 mod_fcgid/2.3.9',
+    'SERVER_SIGNATURE' => '',
+    'LD_LIBRARY_PATH' => '/usr/local/apache/lib',
+    'HTTP_COOKIE' => 'timezone=Asia/Kolkata; mycaar-lms=mik2bji78dr65cqctjl9ghkbf4; _identity-mycaar=40a9b5145a2b916181dba042d437bd42fa6fee3b9857ddfa605e44b4ef8b3b64a%3A2%3A%7Bi%3A0%3Bs%3A16%3A%22_identity-mycaar%22%3Bi%3A1%3Bs%3A46%3A%22%5B3%2C%22nJ_TzSn30Q3hR0zBP7g3sof2YfWADo7U%22%2C2592000%5D%22%3B%7D',
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.8',
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch',
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.87 Safari/537.36',
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1',
+    'HTTP_CACHE_CONTROL' => 'max-age=0',
+    'HTTP_CONNECTION' => 'close',
+    'HTTP_HOST' => 'mycaar.com.au',
+    'UNIQUE_ID' => 'WJG2jragp04AAa44-G0AAAAB',
+    'FCGI_ROLE' => 'RESPONDER',
+    'PHP_SELF' => '/v2.0/backend/web/index.php',
+    'REQUEST_TIME_FLOAT' => 1485944462.2091960906982421875,
+    'REQUEST_TIME' => 1485944462,
+]
+[09-Feb-2017 09:42:54 UTC] PHP Fatal error:  Uncaught exception 'yii\base\UnknownMethodException' with message 'Calling unknown method: yii\web\Request::getBaseUrl2()' in /home/mycaar/public_html/vendor/yiisoft/yii2/base/Component.php:285
+Stack trace:
+#0 /home/mycaar/public_html/backend/config/main.php(14): yii\base\Component->__call('getBaseUrl2', Array)
+#1 /home/mycaar/public_html/backend/config/main.php(14): yii\web\Request->getBaseUrl2()
+#2 /home/mycaar/public_html/backend/web/index.php(13): require('/home/mycaar/pu...')
+#3 {main}
+  thrown in /home/mycaar/public_html/vendor/yiisoft/yii2/base/Component.php on line 285
+[09-Feb-2017 09:43:01 UTC] PHP Fatal error:  Uncaught exception 'yii\base\UnknownMethodException' with message 'Calling unknown method: yii\web\Request::getBaseUrl2()' in /home/mycaar/public_html/vendor/yiisoft/yii2/base/Component.php:285
+Stack trace:
+#0 /home/mycaar/public_html/backend/config/main.php(14): yii\base\Component->__call('getBaseUrl2', Array)
+#1 /home/mycaar/public_html/backend/config/main.php(14): yii\web\Request->getBaseUrl2()
+#2 /home/mycaar/public_html/backend/web/index.php(13): require('/home/mycaar/pu...')
+#3 {main}
+  thrown in /home/mycaar/public_html/vendor/yiisoft/yii2/base/Component.php on line 285
+[09-Feb-2017 11:01:26 UTC] PHP Parse error:  syntax error, unexpected ')' in /home/mycaar/public_html/backend/config/main.php on line 13
+[09-Feb-2017 11:01:31 UTC] PHP Parse error:  syntax error, unexpected ')' in /home/mycaar/public_html/backend/config/main.php on line 13
+[09-Feb-2017 11:13:17 UTC] PHP Notice:  Trying to get property of non-object in /home/mycaar/public_html/vendor/yiisoft/yii2/helpers/BaseUrl.php on line 135
+[09-Feb-2017 11:13:17 UTC] PHP Fatal error:  Uncaught exception 'yii\base\InvalidParamException' with message 'Unable to resolve the relative route: site/index. No active controller is available.' in /home/mycaar/public_html/vendor/yiisoft/yii2/helpers/BaseUrl.php:136
+Stack trace:
+#0 /home/mycaar/public_html/vendor/yiisoft/yii2/helpers/BaseUrl.php(98): yii\helpers\BaseUrl::normalizeRoute('site/index')
+#1 /home/mycaar/public_html/vendor/yiisoft/yii2/helpers/BaseUrl.php(209): yii\helpers\BaseUrl::toRoute(Array, true)
+#2 /home/mycaar/public_html/backend/config/main.php(11): yii\helpers\BaseUrl::to(Array, true)
+#3 /home/mycaar/public_html/backend/web/index.php(13): require('/home/mycaar/pu...')
+#4 {main}
+  thrown in /home/mycaar/public_html/vendor/yiisoft/yii2/helpers/BaseUrl.php on line 136
+[09-Feb-2017 11:13:20 UTC] PHP Notice:  Trying to get property of non-object in /home/mycaar/public_html/vendor/yiisoft/yii2/helpers/BaseUrl.php on line 135
+[09-Feb-2017 11:13:20 UTC] PHP Fatal error:  Uncaught exception 'yii\base\InvalidParamException' with message 'Unable to resolve the relative route: site/index. No active controller is available.' in /home/mycaar/public_html/vendor/yiisoft/yii2/helpers/BaseUrl.php:136
+Stack trace:
+#0 /home/mycaar/public_html/vendor/yiisoft/yii2/helpers/BaseUrl.php(98): yii\helpers\BaseUrl::normalizeRoute('site/index')
+#1 /home/mycaar/public_html/vendor/yiisoft/yii2/helpers/BaseUrl.php(209): yii\helpers\BaseUrl::toRoute(Array, true)
+#2 /home/mycaar/public_html/backend/config/main.php(11): yii\helpers\BaseUrl::to(Array, true)
+#3 /home/mycaar/public_html/backend/web/index.php(13): require('/home/mycaar/pu...')
+#4 {main}
+  thrown in /home/mycaar/public_html/vendor/yiisoft/yii2/helpers/BaseUrl.php on line 136
+[09-Feb-2017 11:13:22 UTC] PHP Notice:  Trying to get property of non-object in /home/mycaar/public_html/vendor/yiisoft/yii2/helpers/BaseUrl.php on line 135
+[09-Feb-2017 11:13:22 UTC] PHP Fatal error:  Uncaught exception 'yii\base\InvalidParamException' with message 'Unable to resolve the relative route: site/index. No active controller is available.' in /home/mycaar/public_html/vendor/yiisoft/yii2/helpers/BaseUrl.php:136
+Stack trace:
+#0 /home/mycaar/public_html/vendor/yiisoft/yii2/helpers/BaseUrl.php(98): yii\helpers\BaseUrl::normalizeRoute('site/index')
+#1 /home/mycaar/public_html/vendor/yiisoft/yii2/helpers/BaseUrl.php(209): yii\helpers\BaseUrl::toRoute(Array, true)
+#2 /home/mycaar/public_html/backend/config/main.php(11): yii\helpers\BaseUrl::to(Array, true)
+#3 /home/mycaar/public_html/backend/web/index.php(13): require('/home/mycaar/pu...')
+#4 {main}
+  thrown in /home/mycaar/public_html/vendor/yiisoft/yii2/helpers/BaseUrl.php on line 136
+[09-Feb-2017 11:13:51 UTC] PHP Notice:  Trying to get property of non-object in /home/mycaar/public_html/vendor/yiisoft/yii2/helpers/BaseUrl.php on line 135
+[09-Feb-2017 11:13:51 UTC] PHP Fatal error:  Uncaught exception 'yii\base\InvalidParamException' with message 'Unable to resolve the relative route: site/index. No active controller is available.' in /home/mycaar/public_html/vendor/yiisoft/yii2/helpers/BaseUrl.php:136
+Stack trace:
+#0 /home/mycaar/public_html/vendor/yiisoft/yii2/helpers/BaseUrl.php(98): yii\helpers\BaseUrl::normalizeRoute('site/index')
+#1 /home/mycaar/public_html/vendor/yiisoft/yii2/helpers/BaseUrl.php(209): yii\helpers\BaseUrl::toRoute(Array, true)
+#2 /home/mycaar/public_html/backend/config/main.php(11): yii\helpers\BaseUrl::to(Array, true)
+#3 /home/mycaar/public_html/backend/web/index.php(13): require('/home/mycaar/pu...')
+#4 {main}
+  thrown in /home/mycaar/public_html/vendor/yiisoft/yii2/helpers/BaseUrl.php on line 136
+[09-Feb-2017 11:13:57 UTC] PHP Notice:  Trying to get property of non-object in /home/mycaar/public_html/vendor/yiisoft/yii2/helpers/BaseUrl.php on line 135
+[09-Feb-2017 11:13:57 UTC] PHP Fatal error:  Uncaught exception 'yii\base\InvalidParamException' with message 'Unable to resolve the relative route: site/index. No active controller is available.' in /home/mycaar/public_html/vendor/yiisoft/yii2/helpers/BaseUrl.php:136
+Stack trace:
+#0 /home/mycaar/public_html/vendor/yiisoft/yii2/helpers/BaseUrl.php(98): yii\helpers\BaseUrl::normalizeRoute('site/index')
+#1 /home/mycaar/public_html/vendor/yiisoft/yii2/helpers/BaseUrl.php(209): yii\helpers\BaseUrl::toRoute(Array, true)
+#2 /home/mycaar/public_html/backend/config/main.php(11): yii\helpers\BaseUrl::to(Array, true)
+#3 /home/mycaar/public_html/backend/web/index.php(13): require('/home/mycaar/pu...')
+#4 {main}
+  thrown in /home/mycaar/public_html/vendor/yiisoft/yii2/helpers/BaseUrl.php on line 136
+[09-Feb-2017 11:14:09 UTC] PHP Notice:  Trying to get property of non-object in /home/mycaar/public_html/vendor/yiisoft/yii2/helpers/BaseUrl.php on line 135
+[09-Feb-2017 11:14:09 UTC] PHP Fatal error:  Uncaught exception 'yii\base\InvalidParamException' with message 'Unable to resolve the relative route: site/index. No active controller is available.' in /home/mycaar/public_html/vendor/yiisoft/yii2/helpers/BaseUrl.php:136
+Stack trace:
+#0 /home/mycaar/public_html/vendor/yiisoft/yii2/helpers/BaseUrl.php(98): yii\helpers\BaseUrl::normalizeRoute('site/index')
+#1 /home/mycaar/public_html/vendor/yiisoft/yii2/helpers/BaseUrl.php(209): yii\helpers\BaseUrl::toRoute(Array, true)
+#2 /home/mycaar/public_html/backend/config/main.php(11): yii\helpers\BaseUrl::to(Array, true)
+#3 /home/mycaar/public_html/backend/web/index.php(13): require('/home/mycaar/pu...')
+#4 {main}
+  thrown in /home/mycaar/public_html/vendor/yiisoft/yii2/helpers/BaseUrl.php on line 136
+[09-Feb-2017 11:14:23 UTC] PHP Notice:  Trying to get property of non-object in /home/mycaar/public_html/vendor/yiisoft/yii2/helpers/BaseUrl.php on line 135
+[09-Feb-2017 11:14:23 UTC] PHP Fatal error:  Uncaught exception 'yii\base\InvalidParamException' with message 'Unable to resolve the relative route: site/index. No active controller is available.' in /home/mycaar/public_html/vendor/yiisoft/yii2/helpers/BaseUrl.php:136
+Stack trace:
+#0 /home/mycaar/public_html/vendor/yiisoft/yii2/helpers/BaseUrl.php(98): yii\helpers\BaseUrl::normalizeRoute('site/index')
+#1 /home/mycaar/public_html/vendor/yiisoft/yii2/helpers/BaseUrl.php(209): yii\helpers\BaseUrl::toRoute(Array, true)
+#2 /home/mycaar/public_html/backend/config/main.php(11): yii\helpers\BaseUrl::to(Array, true)
+#3 /home/mycaar/public_html/backend/web/index.php(13): require('/home/mycaar/pu...')
+#4 {main}
+  thrown in /home/mycaar/public_html/vendor/yiisoft/yii2/helpers/BaseUrl.php on line 136
+[09-Feb-2017 11:14:36 UTC] PHP Notice:  Trying to get property of non-object in /home/mycaar/public_html/vendor/yiisoft/yii2/helpers/BaseUrl.php on line 135
+[09-Feb-2017 11:14:36 UTC] PHP Fatal error:  Uncaught exception 'yii\base\InvalidParamException' with message 'Unable to resolve the relative route: site/index. No active controller is available.' in /home/mycaar/public_html/vendor/yiisoft/yii2/helpers/BaseUrl.php:136
+Stack trace:
+#0 /home/mycaar/public_html/vendor/yiisoft/yii2/helpers/BaseUrl.php(98): yii\helpers\BaseUrl::normalizeRoute('site/index')
+#1 /home/mycaar/public_html/vendor/yiisoft/yii2/helpers/BaseUrl.php(209): yii\helpers\BaseUrl::toRoute(Array, true)
+#2 /home/mycaar/public_html/backend/config/main.php(11): yii\helpers\BaseUrl::to(Array, true)
+#3 /home/mycaar/public_html/backend/web/index.php(13): require('/home/mycaar/pu...')
+#4 {main}
+  thrown in /home/mycaar/public_html/vendor/yiisoft/yii2/helpers/BaseUrl.php on line 136
+[09-Feb-2017 11:20:05 UTC] PHP Fatal error:  Call to a member function getUrlManager() on a non-object in /home/mycaar/public_html/vendor/yiisoft/yii2/helpers/BaseUrl.php on line 410
+[09-Feb-2017 11:20:50 UTC] PHP Fatal error:  Call to a member function getUrlManager() on a non-object in /home/mycaar/public_html/vendor/yiisoft/yii2/helpers/BaseUrl.php on line 410
+[09-Feb-2017 11:21:02 UTC] PHP Fatal error:  Call to a member function getUrlManager() on a non-object in /home/mycaar/public_html/vendor/yiisoft/yii2/helpers/BaseUrl.php on line 410
+[09-Feb-2017 11:32:03 UTC] PHP Notice:  Trying to get property of non-object in /home/mycaar/public_html/backend/config/main.php on line 14
+[09-Feb-2017 11:32:06 UTC] PHP Notice:  Trying to get property of non-object in /home/mycaar/public_html/backend/config/main.php on line 14
+[09-Feb-2017 11:33:13 UTC] PHP Notice:  Trying to get property of non-object in /home/mycaar/public_html/backend/config/main.php on line 14
+[09-Feb-2017 11:33:16 UTC] PHP Notice:  Trying to get property of non-object in /home/mycaar/public_html/backend/config/main.php on line 14
+[09-Feb-2017 11:33:55 UTC] PHP Notice:  Trying to get property of non-object in /home/mycaar/public_html/backend/config/main.php on line 14
+[09-Feb-2017 11:33:58 UTC] PHP Notice:  Trying to get property of non-object in /home/mycaar/public_html/backend/config/main.php on line 14
+[09-Feb-2017 17:53:41 asia/kolkata] PHP Fatal error:  Call to a member function getRoleName() on a non-object in /home/mycaar/public_html/backend/modules/user/controllers/CompanyController.php on line 277
+[23-Feb-2017 14:34:18 asia/kolkata] PHP Fatal error:  Class 'Company' not found in /home/mycaar/public_html/backend/modules/course/views/module/add.php on line 77

@@ -1,0 +1,1 @@
+[01-Feb-2017 11:45:16 UTC] PHP Fatal error:  Class 'yii\helpers\ArrayHelper' not found in /home/mycaar/public_html/v2.0/common/config/test-local.php on line 2

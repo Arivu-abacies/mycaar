@@ -1,0 +1,1 @@
+[09-Feb-2017 01:37:05 UTC] PHP Fatal error:  Using $this when not in object context in /home/mycaar/public_html/v2.0/backend/modules/course/views/autoreset/index.php on line 10
