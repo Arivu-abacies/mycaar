@@ -245,7 +245,7 @@ else if(Yii::$app->user->can("local_assessor")){
 
 		echo '<div class="horizontal al_cpp_category_16">';
 		//echo '<div id="demo-pie-1" class="pie-title-center" data-percent="25"> <span class="pie-value"></span> </div>';
-		echo '<ul class="name_list" >';
+		echo '<div class="ulpie"><ul class="name_list" >';
 		$overalluser = 0;
 		$countprogress = 0;
 			foreach($users as $user){
@@ -272,7 +272,7 @@ else if(Yii::$app->user->can("local_assessor")){
 	
 		echo '</ul>';
 		$overallprec = $countprogress/$overalluser;
-		echo '<div id="demo-pie-1" class="pie-title-center" data-percent="'.$overallprec.'"> <span class="pie-value"></span> </div>';
+		echo '<div id="demo-pie-1" class="pie-title-center" data-percent="'.$overallprec.'"> <span class="pie-value"></span> </div></div>';
 		//program bar starts from here
         echo'<div class="all_course al_pragram_width ">';
 		foreach($modules as $p_key=>$module)
@@ -656,7 +656,7 @@ else if(Yii::$app->user->can("local_assessor")){
 	.name_list
     	{
         float: left;
-        bottom: -140px;
+        bottom: -154px;
         position: relative;
   
  	margin-top: 0px !important;  
@@ -731,5 +731,8 @@ margin-left: 2px;
   margin-top: -20px;
   line-height: 40px;
 }
-
+div#demo-pie-1 {
+    position: absolute;
+    left: 93px;
+}
 </style>

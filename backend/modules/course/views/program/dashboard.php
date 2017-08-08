@@ -31,31 +31,35 @@ else
 	
 <h3>Progress for <?=  \Yii::$app->user->identity->fullname ?></h3>
 <?php 
+
+	
 	if(isset($programs) && !empty($programs)){
 		foreach($programs as  $tmp)
 		{
 			$overalluser = 0;
-			/* $countprogress = 0;
+			$countprogress = 0;
 			$overallprec = 0;
-			foreach ($users as $user )
+			
+			/* $fun = $tmp->getParticularProgramProgress($tmp->program_id);
+			echo "<pre>";
+			print_r($fun);
+			exit; */
+			
+			/* foreach ($users as $user )
 			{				
-				if($user->user->isEnrolled($tmp->program_id)){
-					$name = $user->userProfile->firstname. " ". $user->userProfile->lastname;
-					if($name == '')
-						$name = $user->user->username;
-					
+				if($user->user->isEnrolled($tmp->program_id)){					
 					$overalluser = $overalluser + 1;
 					$newprogress = $progress = $user->user->getProgramProgress($tmp->program_id);
 					$countprogress = $countprogress + $newprogress;	
 				}
 		    }
 			if(!empty($overalluser))
-				$overallprec = $countprogress/$overalluser; */
+				$overallprec = $countprogress/$overalluser;  */
 			$overallprec = 20;
-			echo $tmp->title."<br>";
-			echo '<div data-id="'.$tmp->program_id.'" id="demo-pie-'.$tmp->program_id.'" class="pie-title-center dataclick" data-percent="'.$overallprec.'"> <span class="pie-value"></span> </div>';
+		
+			echo '<div class="col-md-3" ><div class="for-height" style="height:70px !important;"><label>'.$tmp->title.'</label></div><div data-id="'.$tmp->program_id.'" id="demo-pie-'.$tmp->program_id.'" class="pie-title-center dataclick" data-percent="'.$overallprec.'"> <span class="pie-value"></span> </div></div>';
 			
-			echo "<br>";
+			
 		}
 	}	
 

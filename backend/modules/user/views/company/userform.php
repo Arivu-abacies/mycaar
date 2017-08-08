@@ -97,10 +97,10 @@ use common\models\Role;
             ['prompt'=>'--Role--']    // options
         );  ?>
 	</div>
-	<div class="col-md-12 col-sm-12" id="grouplocation" style="display:none">
-		Select Locations for This Group Accessor
+	<div class="col-md-12 col-sm-12" id="grouplocation" style="display:none;">
+		
 	</div>	
-	<div class="col-md-12 col-sm-12">
+	<div class="col-md-12 col-sm-12" >
 		<div class="form-group" align="center" >
 			<?= Html::submitButton($model->isNewRecord ? 'Create' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
 		</div>

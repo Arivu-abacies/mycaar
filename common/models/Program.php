@@ -141,4 +141,18 @@ class Program extends \yii\db\ActiveRecord
 			$this->delete();
 			return true;
 	}
+	
+	 
+	  
+	 public function getParticularProgramProgress($program_id){
+		 
+		 $connection = \Yii::$app->db;
+		$model = $connection->createCommand('select * from `user` u, program p,`program_enrollment` pe , module m, unit ut, unit_report ur where  u.c_id = 1 and p.company_id = 1 and pe.program_id = p.program_id and pe.user_id = u.id and p.program_id = m.program_id and m.module_id = ut.module_id and ut.unit_id = ur.unit_id and p.program_id ='.$program_id.' group by ur.report_id ');
+		$temp_all_users = $model->queryAll();
+		
+		 return $temp_all_users;
+	 }
+	 
+	
+	
 }

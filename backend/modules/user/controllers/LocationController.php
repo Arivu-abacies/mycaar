@@ -164,9 +164,12 @@ class LocationController extends Controller
 				$mods = Location::find()->where(['company_id'=>$cid])->orderBy('name')->all();
 				if($mods)
 				{
+				 echo "<label>Select Locations for This Group Accessor</label>";
+				 echo "<div class='group-accessor'>";
 				  foreach($mods as $mod){		
-					echo "<input type='checkbox' name='UserProfile[access_location][]' value='".$mod->location_id."'> ".$mod->name."<br>";
+					echo "<div class='col-md-6'><input type='checkbox' name='UserProfile[access_location][]' value='".$mod->location_id."'> ".$mod->name."</div>";
 				  }
+				 echo "</div>";
 				}
 			} else {
 				echo "Invalid Company Name";
