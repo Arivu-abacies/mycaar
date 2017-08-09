@@ -158,8 +158,9 @@ class Program extends \yii\db\ActiveRecord
 				$setlocation = \Yii::$app->user->identity->userProfile->access_location;			  
 				$location = "and up.location in (".$setlocation.")";
 			}
-			else if(Yii::$app->user->can("local_assessor")){	
-					$location = " and up.location = ".$setlocation;
+			else if(Yii::$app->user->can("local_assessor")){
+				$setlocation = \Yii::$app->user->identity->userProfile->location;				
+				$location = " and up.location = ".$setlocation;
 			}
 		 }	  
 		$model = $connection->createCommand("select u.id from user u, user_profile up , program p, program_enrollment pe where u.id= up.user_id and u.c_id = ".$company_id." and p.company_id = ".$company_id." ".$location." and p.program_id = pe.program_id and u.id = pe.user_id and p.program_id = ".$program_id);

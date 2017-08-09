@@ -265,8 +265,10 @@ if($params)
 										.Html::input('hidden', 'c_id', $selected_company, ['class' =>'form-control'])
 										.Html::input('hidden', 'params', serialize($params), ['class' =>'form-control'])
 										. Html::submitButton(
-											'Download Report',
-											['class' => 'btn ink-reaction btn-raised btn-xs btn-info btnexcel','style'=>'display:none']
+											//'Download Report',
+											'<img width="40px" height="40px" src="'.Yii::$app->homeUrl.'img/download.gif" />',
+											['class' => 'btnexcel','style'=>'display:none; background-image: url(img/download.gif)']
+											//['class' => 'btn ink-reaction btn-raised btn-xs btn-info btnexcel','style'=>'display:none']
 										)
 										. Html::endForm();
 										
@@ -791,4 +793,10 @@ margin-left: 2px;
     position: absolute;
     left: 93px;
 }
+.btnexcel {
+    background: transparent;
+    border: none;
+}
+
+
 </style>
