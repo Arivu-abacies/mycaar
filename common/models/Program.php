@@ -149,7 +149,8 @@ class Program extends \yii\db\ActiveRecord
 	
 	
 	public function getAllEnrolledUserProgram($company_id,$program_id){
-      
+		
+		
 		$connection = \Yii::$app->db;
 		$location = "";
 		 if(Yii::$app->user->can("group_assessor")){		
@@ -169,27 +170,64 @@ class Program extends \yii\db\ActiveRecord
 		
 		}
 		$list_user = implode(",",$all_users);
+		
+		/* echo $list_user;
+		echo "<br>";  */
+		
 		if(empty($list_user))
 		{
+			/* echo "Empty Statement False Functionality";
+			exit; */
+			
 			return 0;
 		}
+		
+		
 		$model2 = $connection->createCommand("SELECT ut.unit_id FROM program p, module m, unit ut WHERE p.program_id = m.program_id and m.module_id = ut.module_id and p.program_id = ".$program_id);
 		$unit_details = $model2->queryAll();
+		
+		//print_r($unit_details);
+		
 		$unit_total_per = 0;
 		$all_total_per = 0;
 		$no_user = count($all_users);
+		//echo "total_user".$no_user."<br>";
+		
 		foreach ($unit_details as $key=>$unit) {
+			$n_tests = 0;
+			$c_status = CapabilityQuestion::find()->where(['unit_id'=>$unit['unit_id']])->one();
+			if(!$c_status)
+				$n_tests = $n_tests + 50;
+			
 			$total_per = 0;
 			$no_awareness_progress = 0;
 			$model3 = $connection->createCommand("SELECT count(*)as unituser FROM `unit_report` WHERE unit_id=".$unit['unit_id']." and awareness_progress = '100' and student_id in (".$list_user.")");
-			$report = $model3->queryOne();
 			
+			/* $report = $model3->query();
+			print_r($report);  */
+			
+			
+			$n_tests = $n_tests + 50;
+			$report = $model3->queryOne();
 			$no_awareness_progress = $report['unituser'];
-			$total_per = ($no_awareness_progress * 100 )/$no_user;
-			$unit_total_per = $unit_total_per + round($total_per); 					
+			//echo "awareness_progress".$no_awareness_progress."<br>";
+			$total_per = ($no_awareness_progress * $n_tests )/$no_user;
+			$unit_total_per = $unit_total_per + round($total_per);  
+			
+							
 		}
-		$all_units = count($unit_details); 			
+		
+		
+		/* echo $total_per ;		
+		echo "<br>"; */
+		$all_units = count($unit_details); 
+		/* echo $all_units ;
+		echo "<br>"; */
+			
 		$all_total_per = $unit_total_per/$all_units;
+		/* echo $all_total_per ;
+		echo "<br>";
+			exit; */
 		return round($all_total_per); 
     }	
 	
