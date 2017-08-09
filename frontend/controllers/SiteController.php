@@ -134,13 +134,51 @@ class SiteController extends Controller
 			   return $this->render('under_construction', [ 'company' => $company] );
 		}
 	
-			return $this->render('home', [
+			return $this->render('home_progress', [
 				'programs' => $programs,
 				'users' => $users,
 			]);
 		
     }
 
+	
+	public function actionUserProgram($id)
+    {
+		//render the report of the user here
+		$user = User::findOne(\Yii::$app->user->id);
+		$enrolled = $user->getPrograms();
+		$programs = [];
+		$programs_id = $id;
+		
+		/* foreach($enrolled as $tmprogramid){
+			$programs_id[] = $tmprogramid->program_id;
+		} */
+	
+		$programs = Program::find()->where(['IN', 'program_id', $programs_id ])->orderBy('title')->all();
+		
+		/*  
+		foreach($enrolled as $program){
+			$programs[] = Program::findOne($program->program_id);
+		}
+	
+		By ARIVU CLIENT Correction
+		 */	
+		$users[] = Profile::find()->where(['user_id'=>\Yii::$app->user->id])->one();	
+		
+		if(!Yii::$app->user->can('superadmin')){ 
+			$company = Company::find()->where(['company_id'=>$user->c_id ])->one();	 
+			
+			if($company && $company->status == 1)
+			   return $this->render('under_construction', [ 'company' => $company] );
+		}
+	
+			return $this->render('home', [
+				'programs' => $programs,
+				'users' => $users,
+			]);
+		
+    }
+	
     /**
      * Logs in a user.
 	 * check for both username/ email

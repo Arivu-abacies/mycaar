@@ -17,6 +17,9 @@ $this->params['breadcrumbs'][] = $this->title;
 $this->registerCssFile(\Yii::$app->homeUrl."css/custom/w3.css");
 ?>
 
+ <script src="<?=Yii::$app->homeUrl;?>js/js/pie-chart.js" type="text/javascript"></script>
+	<link href="<?=Yii::$app->homeUrl;?>js/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+
 <!--<link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">-->
     <!--<link rel="stylesheet" href="http://zavoloklom.github.io/material-design-iconic-font/css/docs.md-iconic-font.min.css">-->
     
@@ -25,11 +28,11 @@ $this->registerCssFile(\Yii::$app->homeUrl."css/custom/w3.css");
 					<div class="mdl-cell mdl-cell-8-col" style="margin: 0px 32px 0px 4px !important;">
 						<h1 class="mdl-sidebar"><strong>Home Page</strong></h1>
 					</div>
+					
 	</div>
 		<div class="mdl-grid">
 				<div class="mdl-cell mdl-cell-8-col">
-					<span class="mdl-welcome"><h3>Welcome <?=\Yii::$app->user->identity->fullname?></h3></span>
-					<span class="mdl-current"><h3>Current Programs :</h3></span>
+					<span class="mdl-welcome"><h3>Progress for <?=\Yii::$app->user->identity->fullname?></h3></span>
 				</div>
 		</div>
 	<?php if(Yii::$app->session->getFlash('error')!='') {?>
@@ -39,127 +42,36 @@ $this->registerCssFile(\Yii::$app->homeUrl."css/custom/w3.css");
 	
 	<?php 
 	}
-	$username ='';
-	
 	foreach($programs as $program)
 	{
 		$modules = $program->publishedModules;
 		// mdl-cell This class is removed from [ mdl-cell-8-col ] for Alignment into stright line - 56
 		if(count($modules) > 0 && count($program->programEnrollments) > 0)
-		{
-		echo '<div class="mdl-grid">
-			<div class="mdl-cell-8-col">
-				<span class="mdl-program"><h4><span class="mdl-test">Program</span> : '.$program->title.'</h4></span>
-			</div>
-		</div>';
-		echo '<div class="horizontal al_cpp_category_16">';
-		echo '<ul class="name_list" >';		
+		{	  
+			echo '<div class="horizontal al_cpp_category_16">'; 
+			$overalluser = 0;
+			$countprogress = 0;		
 			foreach($users as $user){
 				if($user->user->isEnrolled($program->program_id)){
-					$name = $user->firstname. " ". $user->lastname;
-					if($name == '')
-						$name = $user->user->username;
 					//$progress = 0;
-					$progress = $user->user->getProgramProgress($program->program_id);
-					echo '
-					<li><div class="mdl-grid" >
-						<div class="mdl-cell mdl-cell--3-col mdl-bar" >
-							<div class="mdl-card--border">
-								<div class="w3-progress-container">
-									<div class="w3-progressbar" style="width:'.$progress.'%">'.$progress.'%</div><span class="mdl-label">'.$name.'</span></div>
-								</div>
-							</div>
-						</div>
-					</li>';
+					$overalluser = $overalluser + 1;
+					$newprogress = $progress = $user->user->getProgramProgress($program->program_id);
+					$countprogress = $countprogress + $newprogress;
+	
 				}
 			}
 	
-		echo '</ul>';
-        echo'<div class="all_course al_pragram_width ">';
-		foreach($modules as $p_key=>$module)
-		{
-			$units = $module->publishedUnits;
-			if(count($units) > 0)
-			{
-			//echo $p_key;
-			if($p_key == 0)
-				echo '<div class="course_listing al_single_course_width units-present-4">';
-			else 
-				echo '<div class="course_listing al_single_course_width units-present-4" >'
-			;
-					echo '<div class="course_name" style="position:relative;">
-                            <h2>
-                                '.$module->title.'
-                            </h2>
-                    </div>
-					<div class="course_units">
-                        <ul>';
 
-				foreach($units as $k=>$unit){
-					if($k==0)
-							echo "<li>";
-					else 
-						echo '<li class="margin" style="margin-left: -298px">';
-						echo 
-							'<div class="single_unit_title" id="'.$unit->unit_id.'" style="overflow:visible; white-space:initial;" ><a href="#'.$unit->title.'">
-                                        '.$unit->title.'
-                            </a></div>
-							<div class="course_types">';
-							foreach($users as $key => $user){
-								if($user->user->isEnrolled($program->program_id))
-								{
-									echo ' <div class="course_indicate">
-												<div class="assessement_item">
-													<div name="unit1">';
-													if(!$key)
-														echo '<span class="first_heading">Aware</span>';
-													else echo '<span class="first_heading" style="display: none">Aware</span>';
-													$progress = $user->user->getUnitProgress($unit->unit_id);
-													if($progress['ap'] == "red")
-														$action = "learn";
-													else $action = "learn";
-													$url = Url::to(["test/$action",'u_id'=>$unit->unit_id]);
-													echo "<div name='unit1'>
-															<a class='mdl-button mdl-js-button mdl-button--fab mdl-hover-{$progress['ap']} mdl-small-icon-{$progress['ap']}' href='$url'><span class='toolkit'><center>{$progress['ap']}</center></span>
-															</a>
-														</div>
-
-													</div>
-
-													<div name='unit1'>";
-														//if(!$key)
-															echo "<span class='first_heading'>Capable</span>";
-														//else echo '<span class="first_heading" style="display: none">Capable</span>';
-														$href= 'javascript:void(0);';
-														if($progress['cp'] != "grey")
-															$onClick = 'popUpNotAllowed();';
-														else $onClick = '';
-														echo "<div name='unit1'>
-															<a class='mdl-button mdl-js-button mdl-button--fab mdl-hover-{$progress['cp']} mdl-small-icon-{$progress['cp']}' href=".$href." onClick={$onClick }><span class='toolkit'><center>{$progress['cp']}</center></span>
-															</a>
-
-														</div>
-													</div>
-
-
-												</div>
-											</div>";
-								}//if enrolled
-							}
-								
-					echo "</div></li>";
-					//$i++;
-				}		
-			echo "</ul></div>";
+		$overallprec = $countprogress/$overalluser;
+		
+		echo '<div class="col-md-3" ><div class="for-height" style="height:70px !important;"><label>'.$program->title.'</label></div><a href="'.Url::to(["site/user-program", "id"=>$program->program_id] ).'" target="_blank"><div data-id="'.$program->program_id.'" id="demo-pie-'.$program->program_id.'" class="pie-title-center dataclick" data-percent="'.$overallprec.'"> <span class="pie-value"></span> </div></a></div>';
+		
 		echo "</div>";
-			} //if unit count
-		}
-		echo "</div></div>";
 		?>
 
 
 		<?php
-		} //module count && enrollment count
+		} 
 	}
 	
 	//FOR DEBUG
@@ -247,12 +159,50 @@ $this->registerCssFile(\Yii::$app->homeUrl."css/custom/w3.css");
 				 var top1 = parseInt(height) - parseInt(300);				 
 				 $("html,body").animate({scrollTop:top1}, 1000);				
 			});
+			
+			
+			<?php if(isset($programs) && !empty($programs)){
+		foreach($programs as  $tmp)
+			{
+		?>	
+            $('#demo-pie-<?= $tmp->program_id ?>').pieChart({
+                barColor: '#68b828',
+                trackColor: '#eee',
+                lineCap: 'square',
+                lineWidth: 14,
+                onStep: function (from, to, percent) {
+                    $(this.element).find('.pie-value').text(Math.round(percent) + '%');
+                }
+            });
+		<?php } } ?>
 
 	</script>
 	<style>
 	.modal-backdrop{
 		z-index:0 !important
 	}
-
+	body{	background:white;	}
 	</style>
 
+<style>
+.pie-title-center {
+  display: inline-block;
+  position: relative;
+  text-align: center;
+}
+
+.pie-value {
+  display: block;
+  position: absolute;
+  font-size: 14px;
+  height: 40px;
+  top: 50%;
+  left: 0;
+  right: 0;
+  margin-top: -20px;
+  line-height: 40px;
+}
+.dataclick{
+	cursor:pointer;
+}
+</style>	
