@@ -51,6 +51,47 @@ else if(Yii::$app->user->can("local_assessor")){
 	$location = Location::find()->where(['company_id'=>$selected_company,'location_id'=>$locationid])->orderBy('name')->all();
 }
 
+$addedstring = "";
+if($params)
+{
+	foreach($params as $key=>$temp)
+	{
+		if(!empty($temp))
+		{	
+			if($key == 'firstname')
+			{
+				$addedstring .= " / ".$temp;
+			}
+			else if($key == 'lastname')
+			{
+				$addedstring .= " / ".$temp;
+			}
+			else if($key == 'role')
+			{
+				$roledata = Role::find()->where(['role_id'=>$temp])->one();
+				$addedstring .= " / ".$roledata->title;
+			}
+			else if($key == 'location')
+			{
+				$locationdata = Location::find()->where(['location_id'=>$temp])->one();
+				$addedstring .= " / ".$locationdata->name;
+			}
+			else if($key == 'division')
+			{
+				$divisiondata = Division::find()->where(['division_id'=>$temp])->one();
+				$addedstring .= " / ".$divisiondata->title;
+			}	
+			else if($key == 'state')
+			{
+				$statedata = State::find()->where(['state_id'=>$temp])->one();
+				$addedstring .= " / ".$statedata->name;
+			}				
+		}
+	}
+}
+
+
+
 	$selected_user = isset($params['user'])?$params['user']:'';
 	$selected_program = isset($params['program'])?$params['program']:'';
 	$firstname = isset($params['firstname'])?$params['firstname']:'';
@@ -216,7 +257,7 @@ else if(Yii::$app->user->can("local_assessor")){
 		$check_output .= $program->program_id;
 		echo '<div class="mdl-grid row">
 			<div class="program_test" style="min-width:100%">
-				<span class="mdl-program"><h4><span class="mdl-test">Program </span> : '.$program->title.'</h4>
+				<span class="mdl-program"><h4><span class="mdl-test">Program </span> : '.$program->title.$addedstring.'</h4>
 			</span>';
 		//if(count($users) > 0 && count($program->programEnrollments)>0)
 		echo Html::beginForm(['/course/export/export'], 'post')
@@ -225,7 +266,7 @@ else if(Yii::$app->user->can("local_assessor")){
 										.Html::input('hidden', 'params', serialize($params), ['class' =>'form-control'])
 										. Html::submitButton(
 											'Download Report',
-											['class' => 'btn ink-reaction btn-raised btn-xs btn-info']
+											['class' => 'btn ink-reaction btn-raised btn-xs btn-info btnexcel','style'=>'display:none']
 										)
 										. Html::endForm();
 										
@@ -272,7 +313,7 @@ else if(Yii::$app->user->can("local_assessor")){
 	
 		echo '</ul>';
 		$overallprec = $countprogress/$overalluser;
-		echo '<div id="demo-pie-1" class="pie-title-center" data-percent="'.$overallprec.'"> <span class="pie-value"></span> </div></div>';
+		echo '<div id="demo-pie-'.$program->program_id.'" class="pie-title-center demo-pie" data-percent="'.$overallprec.'"> <span class="pie-value"></span> </div></div>';
 		//program bar starts from here
         echo'<div class="all_course al_pragram_width ">';
 		foreach($modules as $p_key=>$module)
@@ -608,12 +649,27 @@ else if(Yii::$app->user->can("local_assessor")){
 				 }
 			}); 
 			
+    $(".btnexcel").show();
+
 	});
 	</script>
 	
 	<script type="text/javascript">
-
-        $(document).ready(function () {
+	<?php if(isset($programs) && !empty($programs)){
+		foreach($programs as  $tmp)
+			{
+		?>	
+            $('#demo-pie-<?= $tmp->program_id ?>').pieChart({
+                barColor: '#68b828',
+                trackColor: '#eee',
+                lineCap: 'square',
+                lineWidth: 14,
+                onStep: function (from, to, percent) {
+                    $(this.element).find('.pie-value').text(Math.round(percent) + '%');
+                }
+            });
+		<?php } } ?>
+       /*  $(document).ready(function () {
             $('#demo-pie-1').pieChart({
                 barColor: '#68b828',
                 trackColor: '#eee',
@@ -623,7 +679,7 @@ else if(Yii::$app->user->can("local_assessor")){
                     $(this.element).find('.pie-value').text(Math.round(percent) + '%');
                 }
             });
-          });
+          }); */
 	</script>
 	
 	<style>
@@ -731,7 +787,7 @@ margin-left: 2px;
   margin-top: -20px;
   line-height: 40px;
 }
-div#demo-pie-1 {
+.demo-pie {
     position: absolute;
     left: 93px;
 }

@@ -3,6 +3,8 @@
 namespace common\models;
 
 use Yii;
+use common\models\CapabilityQuestion;
+use common\models\UnitReport;
 
 /**
  * This is the model class for table "program".
@@ -142,17 +144,51 @@ class Program extends \yii\db\ActiveRecord
 			return true;
 	}
 	
-	 
-	  
-	 public function getParticularProgramProgress($program_id){
-		 
-		 $connection = \Yii::$app->db;
-		$model = $connection->createCommand('select * from `user` u, program p,`program_enrollment` pe , module m, unit ut, unit_report ur where  u.c_id = 1 and p.company_id = 1 and pe.program_id = p.program_id and pe.user_id = u.id and p.program_id = m.program_id and m.module_id = ut.module_id and ut.unit_id = ur.unit_id and p.program_id ='.$program_id.' group by ur.report_id ');
-		$temp_all_users = $model->queryAll();
-		
-		 return $temp_all_users;
-	 }
-	 
 	
+	
+	
+	
+	public function getAllEnrolledUserProgram($program_id){
+      
+		$connection = \Yii::$app->db;
+		$location = "";
+		 if(Yii::$app->user->can("group_assessor")){		
+			$setlocation = \Yii::$app->user->identity->userProfile->access_location;			  
+			$location = "and up.location in (".$setlocation.")";
+		}
+		else if(Yii::$app->user->can("local_assessor")){	
+				$location = " and up.location = ".$setlocation;
+		}
+			  
+		$model = $connection->createCommand("select u.id from user u, user_profile up , program p, program_enrollment pe where u.id= up.user_id and u.c_id = 1 and p.company_id = 1 ".$location." and p.program_id = pe.program_id and u.id = pe.user_id and p.program_id = ".$program_id);
+		$company_users = $model->queryAll();
+		
+		$all_users = array();
+		foreach ($company_users as $key=>$tmp) {
+			$all_users[$key] = $tmp['id'];
+		
+		}
+		$list_user = implode(",",$all_users);
+		
+		
+		$model2 = $connection->createCommand("SELECT ut.unit_id FROM program p, module m, unit ut WHERE p.program_id = m.program_id and m.module_id = ut.module_id and p.program_id = ".$program_id);
+		$unit_details = $model2->queryAll();
+		$unit_total_per = 0;
+		$all_total_per = 0;
+		$no_user = count($all_users);
+		foreach ($unit_details as $key=>$unit) {
+			$total_per = 0;
+			$no_awareness_progress = 0;
+			$model3 = $connection->createCommand("SELECT count(*)as unituser FROM `unit_report` WHERE unit_id=".$unit['unit_id']." and awareness_progress = '100' and student_id in (".$list_user.")");
+			$report = $model3->queryOne();
+			
+			$no_awareness_progress = $report['unituser'];
+			$total_per = ($no_awareness_progress * 100 )/$no_user;
+			$unit_total_per = $unit_total_per + round($total_per); 					
+		}
+		$all_units = count($unit_details); 			
+		$all_total_per = $unit_total_per/$all_units;
+		return round($all_total_per); 
+    }	
 	
 }

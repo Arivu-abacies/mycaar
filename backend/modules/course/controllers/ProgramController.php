@@ -92,9 +92,37 @@ class ProgramController extends Controller
 			   return $this->render('under_construction', [ 'company' => $company] );
 			}
 		
-		
+			//echo "<pre>";
 			$programs = Program::find()->where(['company_id'=>\Yii::$app->user->identity->c_id])->orderBy('title')->all();
-			$query = ProgramEnrollment::find()->orderBy('user_profile.firstname ASC');
+		/*	 foreach($programs as $program)
+			{
+				$query = ProgramEnrollment::find()->where(['program_id'=>$program->program_id])->orderBy('user_profile.firstname ASC');
+				$query->innerJoinWith(['userProfile as user_profile']);
+				$dataProvider = new ActiveDataProvider([
+					'query' => $query,
+					 'pagination'=>false,
+				]);	
+				$query->innerJoinWith(['user']);
+				$query->andFilterWhere(['user.c_id'=>\Yii::$app->user->identity->c_id]);
+				
+				 if(Yii::$app->user->can("group_assessor")){		
+					$setlocation = \Yii::$app->user->identity->userProfile->access_location;			  
+					$query->andFilterWhere(['in', 'location', $setlocation]);
+				  }
+				  else if(Yii::$app->user->can("local_assessor")){	
+					$query->andFilterWhere(['location'=>\Yii::$app->user->identity->userProfile->location]);
+				  }
+				  
+				$query->groupBy('program_enrollment.user_id');
+				$users = $dataProvider->models;
+		
+				print_r(count($users));
+				
+				echo "<br>";
+			}
+				//exit; 
+				
+			/* $query = ProgramEnrollment::find()->orderBy('user_profile.firstname ASC');
 			$query->innerJoinWith(['userProfile as user_profile']);
 			$dataProvider = new ActiveDataProvider([
 				'query' => $query,
@@ -112,12 +140,12 @@ class ProgramController extends Controller
 			  }
 			  
 			$query->groupBy('program_enrollment.user_id');
-			$users = $dataProvider->models;			
+			$users = $dataProvider->models;	 */		
 			
 			return $this->render('dashboard', [
 						'programs' => $programs,
-						'users' => $users,
-						'params' => false,
+						//'users' => $users,
+						//'params' => false,
 					]);	
 					
 		

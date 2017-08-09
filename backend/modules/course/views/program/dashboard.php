@@ -7,6 +7,7 @@ use yii\helpers\Url;
 
 use common\models\Company;
 use common\models\User;
+use common\models\Program;
 
 
 
@@ -34,32 +35,21 @@ else
 
 	
 	if(isset($programs) && !empty($programs)){
-		foreach($programs as  $tmp)
-		{
-			$overalluser = 0;
-			$countprogress = 0;
-			$overallprec = 0;
-			
-			/* $fun = $tmp->getParticularProgramProgress($tmp->program_id);
-			echo "<pre>";
-			print_r($fun);
+		/* echo "<pre>";
+			print_r($programs);
 			exit; */
+		foreach($programs as  $key=>$tmp)
+		{	
 			
-			/* foreach ($users as $user )
-			{				
-				if($user->user->isEnrolled($tmp->program_id)){					
-					$overalluser = $overalluser + 1;
-					$newprogress = $progress = $user->user->getProgramProgress($tmp->program_id);
-					$countprogress = $countprogress + $newprogress;	
-				}
-		    }
-			if(!empty($overalluser))
-				$overallprec = $countprogress/$overalluser;  */
-			$overallprec = 20;
+			//$overallprec = 0;
 		
+			//$program_prec = $tmp->getAllEnrolledUserProgram($tmp->program_id);
+			
+			//$overallprec = $program_prec;		
+			$overallprec = 20;		
 			echo '<div class="col-md-3" ><div class="for-height" style="height:70px !important;"><label>'.$tmp->title.'</label></div><div data-id="'.$tmp->program_id.'" id="demo-pie-'.$tmp->program_id.'" class="pie-title-center dataclick" data-percent="'.$overallprec.'"> <span class="pie-value"></span> </div></div>';
-			
-			
+			/* if($key > 1)
+				break; */
 		}
 	}	
 

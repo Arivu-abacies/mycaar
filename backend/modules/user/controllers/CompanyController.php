@@ -47,7 +47,7 @@ class CompanyController extends Controller
 				'class' => AccessControl::className(),
                 'rules' => [
 					[
-                        'actions' => ['multi-hide-company','hide-company','show-company','message-company'],
+                        'actions' => ['multi-hide-company','hide-company','show-company','message-company','company-details-pdf'],
                         'allow' => true,
 						'roles' => ['superadmin']
                     ],
@@ -765,6 +765,24 @@ public function actionCreateRoleUser(){
 			$model->save();				
 		}		
 	}
+	
+	public function actionCompanyDetailsPdf(){
+         Yii::$app->response->format = 'pdf';
 		
+		// Rotate the page
+			Yii::$container->set(Yii::$app->response->formatters['pdf']['class'], [
+			'format' => [216, 356], // Legal page size in mm
+			'orientation' => 'Landscape', // This value will be used when 'format' is an array only. Skipped when 'format' is empty or is a string
+			'beforeRender' => function($mpdf, $data) {},
+			]);
+		
+		$this->layout = false;
+		
+		$connection = \Yii::$app->db;
+		$model = $connection->createCommand('select c.name as companyname ,count(u.id)as usercount from company c, user u where c.status = 0 and c.company_id = u. c_id group by u.c_id ');
+		$company_users = $model->queryAll();
+		
+		return $this->render('companyuserdetails',['company_users'=>$company_users]);
+    }	
 		
 }

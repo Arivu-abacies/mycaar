@@ -218,7 +218,8 @@ AppAsset::register($this);
 							<!--start submenu -->
 								<li><a id="alpgs" href="<?=\Yii::$app->homeUrl?>course/program/company-programs#alpgs" ><span class="title">Programs</span></a></li>
 								<li><a id="add_pgm" href="<?=\Yii::$app->homeUrl?>course/program/create#add_pgm" ><span class="title">Add Program</span></a></li>
-								<li><a id="add_lsn" href="<?=\Yii::$app->homeUrl?>course/module/create#add_lsn" ><span class="title">Add Module</span></a></li>								
+								<li><a id="add_lsn" href="<?=\Yii::$app->homeUrl?>course/module/create#add_lsn" ><span class="title">Add Module</span></a></li>	
+								<li><a id="mr" target="_blank" href="<?=\Yii::$app->homeUrl?>user/company/company-details-pdf#mr"><span class="title">Monthly Reports</span></a></li>								
 							</ul>
 						</li>						
 						<?php } else if(\Yii::$app->user->can('company_admin')) { ?>
@@ -240,6 +241,7 @@ AppAsset::register($this);
 								<li><a id="cpymodules" href="<?=\Yii::$app->homeUrl?>course/copy/index#cpymodules" ><span class="title">Copy Module</span></a></li>
 								<li><a id="enrl" href="<?=\Yii::$app->homeUrl?>user/company/enroll-user#enrl" ><span class="title">Enroll User</span></a></li>
 								<li><a id="ar" href="<?=\Yii::$app->homeUrl?>course/report/assessor-report#ar" ><span class="title">Assessor Reports</span></a></li>
+								
 								<!--<li><a id="reset" href="<?=\Yii::$app->homeUrl?>course/report/reset-programs#reset" ><span class="title">Reset Programs</span></a></li>
 								<li><a id="reset_m" href="<?=\Yii::$app->homeUrl?>course/report/reset-modules#reset_m" ><span class="title">Reset Courses</span></a></li>
 								<li><a id="reset_un" href="<?=\Yii::$app->homeUrl?>course/report/reset-units#reset_un" ><span class="title">Reset Lessons</span></a></li>-->

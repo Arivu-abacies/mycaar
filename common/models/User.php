@@ -589,6 +589,7 @@ class User extends ActiveRecord implements IdentityInterface
 	
 	 
 	 public function getProgramoverallProgress($user_id,$program_id){
+			// ARIVU DASHBOARD TEST
 		$enrolled = ProgramEnrollment::find()->where(['user_id'=>$user_id,'program_id'=>$program_id])->one();
 		if($enrolled)
 		{

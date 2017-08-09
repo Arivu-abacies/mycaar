@@ -81,6 +81,7 @@ class ReportController extends Controller
 			if(isset($param['program']) && $param['program'] !=''){				
 				$programs[] = Program::find()->where(['program_id'=>$param['program']])->one();
 			}else{
+				//$this->redirect(['program/dashboard']);
 				$programs = Program::find()->where(['company_id'=>$company_id])->orderBy('title')->all();
 			}
 			//$query = ProgramEnrollment::
@@ -149,9 +150,13 @@ class ReportController extends Controller
 			
 		} else {
 			
-		 if($p_id)
+		  if($p_id)
 			$programs[] = Program::find()->where(['program_id'=>$p_id])->one();
-		 else $programs = Program::find()->where(['company_id'=>\Yii::$app->user->identity->c_id])->orderBy('title')->all();
+		 else 
+		 {
+			// $this->redirect(['program/dashboard']);
+			 $programs = Program::find()->where(['company_id'=>\Yii::$app->user->identity->c_id])->orderBy('title')->all();
+		 }
 			$query = ProgramEnrollment::find()->orderBy('user_profile.firstname ASC');
 			$query->innerJoinWith(['userProfile as user_profile']);
 			$dataProvider = new ActiveDataProvider([
@@ -180,7 +185,7 @@ class ReportController extends Controller
 						'users' => $users,
 						'params' => false,
 					]);	
-			
+			 
 					
 		}	
 	}
