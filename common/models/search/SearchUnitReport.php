@@ -118,9 +118,18 @@ class SearchUnitReport extends UnitReport
 		
 		if(!Yii::$app->user->can("superadmin")){   
 			 if(Yii::$app->user->can("group_assessor")){		
-				$setlocation = \Yii::$app->user->identity->userProfile->access_location;			  
-				$query->andFilterWhere(['in', 'profile.location', $setlocation]);
-			  }
+					$setlocation = \Yii::$app->user->identity->userProfile->access_location;
+					$newsetlocation = "";
+					if($setlocation)
+					{
+						$setlocation = explode(",",$setlocation);
+						foreach($setlocation as $tmp)
+						{
+							$newsetlocation[] = $tmp;
+						}
+						$query->andFilterWhere(['in', 'profile.location', $newsetlocation]);
+					}
+				  }
 			  else if(Yii::$app->user->can("local_assessor")){	
 				$query->andFilterWhere(['profile.location'=>\Yii::$app->user->identity->userProfile->location]);
 			  }    

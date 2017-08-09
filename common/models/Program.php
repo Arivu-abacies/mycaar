@@ -148,7 +148,7 @@ class Program extends \yii\db\ActiveRecord
 	
 	
 	
-	public function getAllEnrolledUserProgram($program_id){
+	public function getAllEnrolledUserProgram($company_id,$program_id){
       
 		$connection = \Yii::$app->db;
 		$location = "";
@@ -160,7 +160,7 @@ class Program extends \yii\db\ActiveRecord
 				$location = " and up.location = ".$setlocation;
 		}
 			  
-		$model = $connection->createCommand("select u.id from user u, user_profile up , program p, program_enrollment pe where u.id= up.user_id and u.c_id = 1 and p.company_id = 1 ".$location." and p.program_id = pe.program_id and u.id = pe.user_id and p.program_id = ".$program_id);
+		$model = $connection->createCommand("select u.id from user u, user_profile up , program p, program_enrollment pe where u.id= up.user_id and u.c_id = ".$company_id." and p.company_id = ".$company_id." ".$location." and p.program_id = pe.program_id and u.id = pe.user_id and p.program_id = ".$program_id);
 		$company_users = $model->queryAll();
 		
 		$all_users = array();
@@ -169,8 +169,10 @@ class Program extends \yii\db\ActiveRecord
 		
 		}
 		$list_user = implode(",",$all_users);
-		
-		
+		if(empty($list_user))
+		{
+			return 0;
+		}
 		$model2 = $connection->createCommand("SELECT ut.unit_id FROM program p, module m, unit ut WHERE p.program_id = m.program_id and m.module_id = ut.module_id and p.program_id = ".$program_id);
 		$unit_details = $model2->queryAll();
 		$unit_total_per = 0;

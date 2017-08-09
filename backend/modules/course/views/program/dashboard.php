@@ -40,16 +40,16 @@ else
 			exit; */
 		foreach($programs as  $key=>$tmp)
 		{	
-			
-			//$overallprec = 0;
+			/* echo $tmp->program_id;
+			echo "<br>"; */
+			$overallprec = 0;
 		
-			//$program_prec = $tmp->getAllEnrolledUserProgram($tmp->program_id);
+		 	$program_prec = $tmp->getAllEnrolledUserProgram($selected_company,$tmp->program_id);
 			
-			//$overallprec = $program_prec;		
-			$overallprec = 20;		
-			echo '<div class="col-md-3" ><div class="for-height" style="height:70px !important;"><label>'.$tmp->title.'</label></div><div data-id="'.$tmp->program_id.'" id="demo-pie-'.$tmp->program_id.'" class="pie-title-center dataclick" data-percent="'.$overallprec.'"> <span class="pie-value"></span> </div></div>';
-			/* if($key > 1)
-				break; */
+			$overallprec = $program_prec;		
+			//$overallprec = 20;		
+			echo '<div class="col-md-3" ><div class="for-height" style="height:70px !important;"><label>'.$tmp->title.'</label></div><div data-id="'.$tmp->program_id.'" id="demo-pie-'.$tmp->program_id.'" class="pie-title-center dataclick" data-percent="'.$overallprec.'"> <span class="pie-value"></span> </div></div>'; 
+			 
 		}
 	}	
 

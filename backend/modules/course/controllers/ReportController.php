@@ -66,7 +66,11 @@ class ReportController extends Controller
 			$param = \Yii::$app->request->post();
 		else if($data)
 			$param = unserialize($data);
-
+		
+		/* echo "<pre>";
+		print_r($param);
+		exit; */
+		
 		if($param)
 		{
 			if(isset($param['company']))
@@ -116,30 +120,40 @@ class ReportController extends Controller
 				$query->andFilterWhere(['state'=>$param['state']]);
 			if(isset($param['role']) && $param['role'] !='')
 				$query->andFilterWhere(['role'=>$param['role']]);
-			if(isset($param['location']) && $param['location'] !='')
-				$query->andFilterWhere(['location'=>$param['location']]);
-			else 
-			{
-				 if(!Yii::$app->user->can('superadmin')){ 
-				  if(Yii::$app->user->can("group_assessor")){		
-					$setlocation = \Yii::$app->user->identity->userProfile->access_location;			  
-					$query->andFilterWhere(['in', 'location', $setlocation]);
-				  }
-				  else if(Yii::$app->user->can("local_assessor")){	
-					$query->andFilterWhere(['location'=>\Yii::$app->user->identity->userProfile->location]);
-				  }
-				 }
-			}
 			if(isset($param['division']) && $param['division'] !='')
 				$query->andFilterWhere(['division'=>$param['division']]); 
 			if(isset($param['firstname']) && $param['firstname'] !='')
 				$query->andFilterWhere(['like', 'firstname',$param['firstname']]);
 			if(isset($param['lastname']) && $param['lastname'] !='')
 				$query->andFilterWhere(['like', 'lastname', $param['lastname']]);	
+			if(isset($param['location']) && $param['location'] !='')
+				$query->andFilterWhere(['location'=>$param['location']]);
+			else 
+			{
+				if(!Yii::$app->user->can("super_admin")){		
+					if(Yii::$app->user->can("group_assessor")){		
+					$setlocation = \Yii::$app->user->identity->userProfile->access_location;
+					$newsetlocation = "";
+					if($setlocation)
+					{
+						$setlocation = explode(",",$setlocation);
+						foreach($setlocation as $tmp)
+						{
+							$newsetlocation[] = $tmp;
+						}
+						$query->andFilterWhere(['in', 'location', $newsetlocation]);
+					}
+				  }
+				  else if(Yii::$app->user->can("local_assessor")){	
+					$query->andFilterWhere(['location'=>\Yii::$app->user->identity->userProfile->location]);
+				  }
+				}
+			}
+			
 			$query->groupBy('program_enrollment.user_id');		
 			$users = $dataProvider->models;
 			$userscount = $dataProvider2->models;
-					
+		
 			//$users = array_slice( $users, 1, 2 ); 			
 				return $this->render('report', [
 					'programs' => $programs,
@@ -169,9 +183,18 @@ class ReportController extends Controller
 			$query->innerJoinWith(['user']);
 			$query->andFilterWhere(['user.c_id'=>\Yii::$app->user->identity->c_id]);
 			
-			 if(Yii::$app->user->can("group_assessor")){		
-				$setlocation = \Yii::$app->user->identity->userProfile->access_location;			  
-				$query->andFilterWhere(['in', 'location', $setlocation]);
+			if(Yii::$app->user->can("group_assessor")){		
+					$setlocation = \Yii::$app->user->identity->userProfile->access_location;
+					$newsetlocation = "";
+					if($setlocation)
+					{
+						$setlocation = explode(",",$setlocation);
+						foreach($setlocation as $tmp)
+						{
+							$newsetlocation[] = $tmp;
+						}
+						$query->andFilterWhere(['in', 'location', $newsetlocation]);
+					}
 			  }
 			  else if(Yii::$app->user->can("local_assessor")){	
 				$query->andFilterWhere(['location'=>\Yii::$app->user->identity->userProfile->location]);
