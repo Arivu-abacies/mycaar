@@ -130,8 +130,9 @@ class ReportController extends Controller
 				$query->andFilterWhere(['location'=>$param['location']]);
 			else 
 			{
-				if(!Yii::$app->user->can("superadmin") && Yii::$app->user->can("company_admin")) {		
+				if((!Yii::$app->user->can("superadmin")) && (!Yii::$app->user->can("company_admin"))) {		
 					if(Yii::$app->user->can("group_assessor")){		
+					
 					$setlocation = \Yii::$app->user->identity->userProfile->access_location;
 					$newsetlocation = "";
 					if($setlocation)

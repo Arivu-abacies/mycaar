@@ -116,7 +116,7 @@ class SearchUnitReport extends UnitReport
 		$query->andFilterWhere(['like', 'rolelist.item_name', $this->accesslevel]);   		
 		$query->andFilterWhere(['like', 'unit_report.updated_at', $this->updated_at]);  	
 		
-		if(!Yii::$app->user->can("superadmin")){   
+		if((!Yii::$app->user->can("superadmin")) && (!Yii::$app->user->can("company_admin"))) {	  
 			 if(Yii::$app->user->can("group_assessor")){		
 					$setlocation = \Yii::$app->user->identity->userProfile->access_location;
 					$newsetlocation = "";

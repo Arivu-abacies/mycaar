@@ -197,7 +197,7 @@ class SearchUser extends User
             ->andFilterWhere(['=', 'user_profile.state', $this->state])      
             ->andFilterWhere(['like', 'rolelist.item_name', $this->roleName]); 
 			
-           if(!Yii::$app->user->can("superadmin")){   
+           if((!Yii::$app->user->can("superadmin")) && (!Yii::$app->user->can("company_admin"))) {	
 			if(Yii::$app->user->can("group_assessor")){		
 					$setlocation = \Yii::$app->user->identity->userProfile->access_location;
 					$newsetlocation = "";
