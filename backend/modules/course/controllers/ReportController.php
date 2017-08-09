@@ -183,7 +183,7 @@ class ReportController extends Controller
 			]);	
 			$query->innerJoinWith(['user']);
 			$query->andFilterWhere(['user.c_id'=>\Yii::$app->user->identity->c_id]);
-			
+			if((!Yii::$app->user->can("superadmin")) && (!Yii::$app->user->can("company_admin"))) {	
 			if(Yii::$app->user->can("group_assessor")){		
 					$setlocation = \Yii::$app->user->identity->userProfile->access_location;
 					$newsetlocation = "";
@@ -200,7 +200,7 @@ class ReportController extends Controller
 			  else if(Yii::$app->user->can("local_assessor")){	
 				$query->andFilterWhere(['location'=>\Yii::$app->user->identity->userProfile->location]);
 			  }
-			  
+			}  
 			$query->groupBy('program_enrollment.user_id');
 			$users = $dataProvider->models;			
 			
