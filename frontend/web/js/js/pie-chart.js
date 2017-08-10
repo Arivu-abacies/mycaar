@@ -119,7 +119,7 @@
       trackColor: '#f9f9f9',
       lineCap: 'round',
       lineWidth: 3,
-      size: 150,
+      size: 120,
       rotate: 0,
       animate: {
         duration: 1000,

@@ -64,7 +64,7 @@ $this->registerCssFile(\Yii::$app->homeUrl."css/custom/w3.css");
 
 		$overallprec = $countprogress/$overalluser;
 		
-		echo '<div class="col-md-3" ><div class="for-height" style="height:70px !important;"><label>'.$program->title.'</label></div><a href="'.Url::to(["site/user-program", "id"=>$program->program_id] ).'" target="_blank"><div data-id="'.$program->program_id.'" id="demo-pie-'.$program->program_id.'" class="pie-title-center dataclick" data-percent="'.$overallprec.'"> <span class="pie-value"></span> </div></a></div>';
+		echo '<div class="col-md-3" ><div class="for-height" style="height:70px !important;"><label>'.$program->title.'</label></div><a href="'.Url::to(["site/user-program", "id"=>$program->program_id] ).'" ><div data-id="'.$program->program_id.'" id="demo-pie-'.$program->program_id.'" class="pie-title-center dataclick" data-percent="'.$overallprec.'"> <span class="pie-value"></span> </div></a></div>';
 		
 		echo "</div>";
 		?>

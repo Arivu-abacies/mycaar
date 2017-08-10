@@ -161,7 +161,17 @@ class LocationController extends Controller
 			$cid = Yii::$app->user->identity->c_id;
 			if($cid)
 			{
-				$mods = Location::find()->where(['company_id'=>$cid])->orderBy('name')->all();
+				 if(Yii::$app->user->can('group_assessor')) { 
+					$setlocation = \Yii::$app->user->identity->userProfile->access_location;				
+					if($setlocation)
+					{
+						$setlocation = explode(",",$setlocation);
+					}
+				
+					$mods = Location::find()->where(['company_id'=>$cid])->andWhere(["in","location_id",$setlocation])->orderBy('name')->all();
+				}else{
+					$mods = Location::find()->where(['company_id'=>$cid])->orderBy('name')->all();
+				}
 				if($mods)
 				{
 				 echo "<label>Select Locations for This Group Accessor</label>";
@@ -184,18 +194,32 @@ class LocationController extends Controller
 			$cid = Yii::$app->user->identity->c_id;			
 			if($cid)
 			{
-				$mods = Location::find()->where(['company_id'=>$cid])->orderBy('name')->all();
+				 if(Yii::$app->user->can('group_assessor')) { 
+					$setlocation = \Yii::$app->user->identity->userProfile->access_location;				
+					if($setlocation)
+					{
+						$setlocation = explode(",",$setlocation);
+					}
+				
+					$mods = Location::find()->where(['company_id'=>$cid])->andWhere(["in","location_id",$setlocation])->orderBy('name')->all();
+				}else{
+					$mods = Location::find()->where(['company_id'=>$cid])->orderBy('name')->all();
+				}
+				
 				if($mods)
 				{
+				 echo "<label>Select Locations for This Group Accessor</label>";
+				 echo "<div class='group-accessor'>";
 				  foreach($mods as $mod){	
 					if (in_array($mod->location_id, $accesslocation))
 					{
-					echo "<input type='checkbox' checked='checked' name='UserProfile[access_location][]' value='".$mod->location_id."'> ".$mod->name."<br>";
+					echo "<div class='col-md-6'><input type='checkbox' checked='checked' name='UserProfile[access_location][]' value='".$mod->location_id."'> ".$mod->name."</div>";
 					} else 
 					{
-					echo "<input type='checkbox' name='UserProfile[access_location][]' value='".$mod->location_id."'> ".$mod->name."<br>";
+					echo "<div class='col-md-6'><input type='checkbox' name='UserProfile[access_location][]' value='".$mod->location_id."'> ".$mod->name."</div>";
 					}	
 				  }
+				   echo "</div>";
 				}
 			} else {
 				echo "Invalid Company Name";

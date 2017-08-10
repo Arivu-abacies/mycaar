@@ -63,10 +63,32 @@ else if(Yii::$app->user->can("local_assessor")){
 		<?= $form->field($model, 'password')->passwordInput()->label("Password (Optional)") ?>
 		
 		
-			<?= $form->field($model, 'role')->dropDownList(
+		<?php if($model->isNewRecord)
+			{	
+			
+			echo $form->field($model, 'role')->dropDownList(
             $roles,           // Flat array ('id'=>'label')
-            ['prompt'=>'--Access Level--']    // options
-        )->label("User Access Level"); ?>
+            ['prompt'=>'--Access Level--',
+			'onchange'=>'
+                $.post( "'.Yii::$app->urlManager->createUrl('user/location/group-location?id=').'"+$(this).val(), function( data ) {
+                  $( "#grouplocation" ).html( data );
+				  $( "#grouplocation" ).show();
+                });']    // options
+			)->label("User Access Level"); 
+			
+			} else { 
+			
+			echo $form->field($model, 'role')->dropDownList(
+            $roles,           // Flat array ('id'=>'label')
+            ['prompt'=>'--Access Level--',
+			'onchange'=>'
+			$.post( "'.Yii::$app->urlManager->createUrl('user/location/update-group-location?locations='.$profile->access_location.'&id=').'"+$(this).val(), function( data ) {
+                  $( "#grouplocation" ).html( data );
+				  $( "#grouplocation" ).show();
+                });']    // options
+				)->label("User Access Level"); 
+			}
+		?>
 		
 	</div>
 	<div class="col-md-6 col-sm-6">
@@ -102,6 +124,8 @@ else if(Yii::$app->user->can("local_assessor")){
             ['prompt'=>'--Role--']    // options
         );  ?>
 	</div>	
+	<div class="col-md-12 col-sm-12" id="grouplocation" style="display:none;"></div>	
+	
 	<div class="col-md-12 col-sm-12">
 		<div class="form-group" align="center" >
 			<?= Html::submitButton($model->isNewRecord ? 'Create ' : 'Update ', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
@@ -112,3 +136,14 @@ else if(Yii::$app->user->can("local_assessor")){
 		<?php ActiveForm::end(); ?>
 	</div>
 </div>
+
+<script type="text/javascript">
+$(document).ready(function(){
+	<?php if($model->role == "group_assessor")
+	{
+		?>
+	$( "#user-role" ).trigger( "change" );
+	<?php } ?>	
+});
+
+</script>
