@@ -62,6 +62,28 @@ class ExportController extends Controller
 				$location = Location::findOne($param['location']);
 				$searched_by_user .= " Location:".$location->name;
 			}
+			else 
+			{
+				if((!Yii::$app->user->can("superadmin")) && (!Yii::$app->user->can("company_admin"))) {		
+					if(Yii::$app->user->can("group_assessor")){		
+					
+					$setlocation = \Yii::$app->user->identity->userProfile->access_location;
+					$newsetlocation = "";
+					if($setlocation)
+					{
+						$setlocation = explode(",",$setlocation);
+						foreach($setlocation as $tmp)
+						{
+							$newsetlocation[] = $tmp;
+						}
+						$query->andFilterWhere(['in', 'location', $newsetlocation]);
+					}
+				  }
+				  else if(Yii::$app->user->can("local_assessor")){	
+					$query->andFilterWhere(['location'=>\Yii::$app->user->identity->userProfile->location]);
+				  }
+				}
+			}
 				
 			if(isset($param['division']) && $param['division'] !=''){
 				$query->andFilterWhere(['division'=>$param['division']]); 
