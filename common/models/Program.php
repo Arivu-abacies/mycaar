@@ -148,23 +148,47 @@ class Program extends \yii\db\ActiveRecord
 	
 	
 	
-	public function getAllEnrolledUserProgram($company_id,$program_id){
+	public function getAllEnrolledUserProgram($company_id,$program_id,$firstname="",$lastname="",$role="",$division="",$location="",$state=""){
 		
+		$whereCondition ="";
+		$setlocation = "";
+		if(isset($firstname)&& !empty($firstname))
+			$whereCondition .= " and up.firstname like '%".$firstname."%'";
+		if(isset($lastname)&& !empty($lastname))
+			$whereCondition .= " and up.lastname like '%".$lastname."%'";
+		if(isset($role)&& !empty($role))
+			$whereCondition .= " and up.role = '".$role."'";
+		if(isset($division)&& !empty($division))
+			$whereCondition .= " and up.division = '".$division."'";
+		if(isset($location)&& !empty($location))
+			$whereCondition .= " and up.location = '".$location."'";
+		if(isset($state)&& !empty($state))
+			$whereCondition .= " and up.state = '".$state."'";
 		
 		$connection = \Yii::$app->db;
-		$location = "";
-		 if(!Yii::$app->user->can("company_admin")){	
+		if(empty($location))
+		{
+		
+		 if((!Yii::$app->user->can("superadmin")) && (!Yii::$app->user->can("company_admin"))){	
 			 if(Yii::$app->user->can("group_assessor")){		
 				$setlocation = \Yii::$app->user->identity->userProfile->access_location;			  
-				$location = "and up.location in (".$setlocation.")";
+				$setlocation = "and up.location in (".$setlocation.")";
 			}
 			else if(Yii::$app->user->can("local_assessor")){
 				$setlocation = \Yii::$app->user->identity->userProfile->location;				
-				$location = " and up.location = ".$setlocation;
+				$setlocation = " and up.location = ".$setlocation;
 			}
-		 }	  
-		$model = $connection->createCommand("select u.id from user u, user_profile up , program p, program_enrollment pe where u.id= up.user_id and u.c_id = ".$company_id." and p.company_id = ".$company_id." ".$location." and p.program_id = pe.program_id and u.id = pe.user_id and p.program_id = ".$program_id);
+		 }
+		}
+		
+		$model = $connection->createCommand("select u.id from user u, user_profile up , program p, program_enrollment pe where u.id= up.user_id and u.c_id = ".$company_id." and p.company_id = ".$company_id." ".$setlocation.$whereCondition." and p.program_id = pe.program_id and u.id = pe.user_id and p.program_id = ".$program_id);
 		$company_users = $model->queryAll();
+		
+		
+	 /*   $company_users = $model->query();
+		echo "<pre>";
+		print_r($company_users);
+		exit;   */
 		
 		$all_users = array();
 		foreach ($company_users as $key=>$tmp) {
@@ -174,26 +198,39 @@ class Program extends \yii\db\ActiveRecord
 		$list_user = implode(",",$all_users);
 		
 		/* echo $list_user;
-		echo "<br>";  */
+		echo "<br>"; */ 
+		//exit;
 		
 		if(empty($list_user))
 		{
 			/* echo "Empty Statement False Functionality";
 			exit; */
 			
-			return 0;
+			return false;
 		}
 		
 		
 		$model2 = $connection->createCommand("SELECT ut.unit_id FROM program p, module m, unit ut WHERE p.program_id = m.program_id and m.module_id = ut.module_id and p.program_id = ".$program_id);
 		$unit_details = $model2->queryAll();
 		
-		//print_r($unit_details);
+		 $setunit_details = $model2->query();
+		$all_units = array();
+		foreach ($setunit_details as $key=>$tmp) {
+			$all_units[$key] = $tmp['unit_id'];		
+			}
+		$list_units = implode(",",$all_units); 
+		
+		 
+		/* print_r($list_units);
+		exit;  */
 		
 		$unit_total_per = 0;
 		$all_total_per = 0;
+		$total_all_units = count($unit_details); 
 		$no_user = count($all_users);
 		//echo "total_user".$no_user."<br>";
+		//echo 
+		//exit;
 		
 		foreach ($unit_details as $key=>$unit) {
 			$n_tests = 0;
@@ -203,7 +240,7 @@ class Program extends \yii\db\ActiveRecord
 			
 			$total_per = 0;
 			$no_awareness_progress = 0;
-			$model3 = $connection->createCommand("SELECT count(*)as unituser FROM `unit_report` WHERE unit_id=".$unit['unit_id']." and awareness_progress = '100' and student_id in (".$list_user.")");
+			$model3 = $connection->createCommand("SELECT count(*)as unituser FROM `unit_report` WHERE unit_id=".$unit['unit_id']." and (awareness_progress = '100' or  capability_progress = '100') and student_id in (".$list_user.")");
 			
 			/* $report = $model3->query();
 			print_r($report);  */
@@ -212,24 +249,36 @@ class Program extends \yii\db\ActiveRecord
 			$n_tests = $n_tests + 50;
 			$report = $model3->queryOne();
 			$no_awareness_progress = $report['unituser'];
+			if($no_awareness_progress == 0)
+			{
+				$total_all_units = $total_all_units - 1;
+			}
 			//echo "awareness_progress".$no_awareness_progress."<br>";
 			$total_per = ($no_awareness_progress * $n_tests )/$no_user;
 			$unit_total_per = $unit_total_per + round($total_per);  
 			
-							
+			//echo "cap & awsare-> ".$n_tests." unit id ".$unit['unit_id']." report ".$no_awareness_progress." no of Users ".$no_user." all unit points ".$unit_total_per."<br>";				
 		}
 		
 		
 		/* echo $total_per ;		
 		echo "<br>"; */
-		$all_units = count($unit_details); 
-		/* echo $all_units ;
-		echo "<br>"; */
+		 
+		 /* echo $total_all_units ;
+		echo "<br>"; 
+			exit; */
 			
-		$all_total_per = $unit_total_per/$all_units;
+		if($total_all_units == 0)	
+			$all_total_per = 0;
+		else 
+			$all_total_per = $unit_total_per/$total_all_units;
+		
 		/* echo $all_total_per ;
 		echo "<br>";
 			exit; */
+		
+	//	echo " Total no units".$total_all_units." total unit per ".$unit_total_per." program perc ".$all_total_per;
+		
 		return round($all_total_per); 
     }	
 	

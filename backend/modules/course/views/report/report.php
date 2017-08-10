@@ -17,8 +17,6 @@ use common\models\State;
 /* @var $searchModel common\models\search\SearchProgram */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$testFGH = '';
-
 $this->title = 'Reports';
 $this->params['breadcrumbs'][] = $this->title;
 $this->registerCssFile(\Yii::$app->homeUrl."css/custom/w3.css");

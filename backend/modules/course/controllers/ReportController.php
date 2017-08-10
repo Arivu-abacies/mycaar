@@ -56,9 +56,9 @@ class ReportController extends Controller
                 ],
             ], 
         ];
-    }   
-
-	public function actionSearch($p_id=null,$data=null){
+    }  
+	
+/* 	public function actionSearchqweqweqweqweweq($p_id=null,$data=null){
 		
 		$programs = $users = [];
 		$param = false;
@@ -67,9 +67,6 @@ class ReportController extends Controller
 		else if($data)
 			$param = unserialize($data);
 		
-		/* echo "<pre>";
-		print_r($param);
-		exit; */
 		
 		if($param)
 		{
@@ -171,6 +168,170 @@ class ReportController extends Controller
 		 {
 			// $this->redirect(['program/dashboard']);
 			 $programs = Program::find()->where(['company_id'=>\Yii::$app->user->identity->c_id])->orderBy('title')->all();
+		 }
+			$query = ProgramEnrollment::find()->orderBy('user_profile.firstname ASC');
+			$query->innerJoinWith(['userProfile as user_profile']);
+			$dataProvider = new ActiveDataProvider([
+				'query' => $query,
+					'pagination' => [
+						'pageSize' =>50,
+						 'page' =>0,
+					],
+			]);	
+			$query->innerJoinWith(['user']);
+			$query->andFilterWhere(['user.c_id'=>\Yii::$app->user->identity->c_id]);
+			if((!Yii::$app->user->can("superadmin")) && (!Yii::$app->user->can("company_admin"))) {	
+			if(Yii::$app->user->can("group_assessor")){		
+					$setlocation = \Yii::$app->user->identity->userProfile->access_location;
+					$newsetlocation = "";
+					if($setlocation)
+					{
+						$setlocation = explode(",",$setlocation);
+						foreach($setlocation as $tmp)
+						{
+							$newsetlocation[] = $tmp;
+						}
+						$query->andFilterWhere(['in', 'location', $newsetlocation]);
+					}
+			  }
+			  else if(Yii::$app->user->can("local_assessor")){	
+				$query->andFilterWhere(['location'=>\Yii::$app->user->identity->userProfile->location]);
+			  }
+			}  
+			$query->groupBy('program_enrollment.user_id');
+			$users = $dataProvider->models;			
+			
+			return $this->render('report', [
+						'programs' => $programs,
+						'users' => $users,
+						'params' => false,
+					]);	
+			 
+					
+		}	
+	} */
+	
+	public function actionSearch($p_id=null,$data=null){
+		
+		$programs = $users = [];
+		$param = false;
+		if(\Yii::$app->request->post())
+			$param = \Yii::$app->request->post();
+		else if($data)
+			$param = unserialize($data);
+		
+		if($param)
+		{
+			if(isset($param['company']))
+				$company_id = $param['company'];
+			else
+				$company_id = \Yii::$app->user->identity->c_id;
+		}	
+		
+		if($param){			
+				
+			//find program
+			if(isset($param['program']) && $param['program'] !=''){				
+				$programs[] = Program::find()->where(['program_id'=>$param['program']])->one();
+				
+				
+			}else{
+				//$this->redirect(['program/all-progress-dashboard',"data"=>$param]);
+				$programs = Program::find()->where(['company_id'=>$company_id])->orderBy('title')->all();
+				return $this->render('allprogressdashboard', [
+						'programs' => $programs,
+						'params' => $param,						
+					]);	
+				//$programs = Program::find()->where(['company_id'=>$company_id])->orderBy('title')->all();
+			}
+			//$query = ProgramEnrollment::
+			$query = ProgramEnrollment::find()->orderBy('user_profile.firstname ASC');
+			
+			$dataProvider = new ActiveDataProvider([
+				'query' => $query,
+					 'pagination' => [
+						'pageSize' => 50,
+						 'page' =>$param['page'], 
+					], 
+			]);	
+		
+		$dataProvider2 = new ActiveDataProvider([
+				'query' => $query,
+				'pagination' => [
+						'pageSize' => 0,
+						 
+					], 				
+			]);	
+			
+			$query->innerJoinWith(['userProfile as user_profile']);
+			$query->innerJoinWith(['user']);
+			$query->andFilterWhere(['user.c_id'=>$company_id]);			
+			//if any of the user parametr is filled,then search for that users
+			//$query = User::find()->where(['c_id' =>Yii::$app->user->identity->c_id]);
+			if(isset($param['program']) && $param['program'] !='')
+				$query->andFilterWhere(['program_id'=>$param['program']]);	
+ 			if(isset($param['user']) && $param['user'] !='')
+				$query->andFilterWhere(['user_id'=>$param['user']]);			
+ 			if(isset($param['state']) && $param['state'] !='')
+				$query->andFilterWhere(['state'=>$param['state']]);
+			if(isset($param['role']) && $param['role'] !='')
+				$query->andFilterWhere(['role'=>$param['role']]);
+			if(isset($param['division']) && $param['division'] !='')
+				$query->andFilterWhere(['division'=>$param['division']]); 
+			if(isset($param['firstname']) && $param['firstname'] !='')
+				$query->andFilterWhere(['like', 'firstname',$param['firstname']]);
+			if(isset($param['lastname']) && $param['lastname'] !='')
+				$query->andFilterWhere(['like', 'lastname', $param['lastname']]);	
+			if(isset($param['location']) && $param['location'] !='')
+				$query->andFilterWhere(['location'=>$param['location']]);
+			else 
+			{
+				if((!Yii::$app->user->can("superadmin")) && (!Yii::$app->user->can("company_admin"))) {		
+					if(Yii::$app->user->can("group_assessor")){		
+					
+					$setlocation = \Yii::$app->user->identity->userProfile->access_location;
+					$newsetlocation = "";
+					if($setlocation)
+					{
+						$setlocation = explode(",",$setlocation);
+						foreach($setlocation as $tmp)
+						{
+							$newsetlocation[] = $tmp;
+						}
+						$query->andFilterWhere(['in', 'location', $newsetlocation]);
+					}
+				  }
+				  else if(Yii::$app->user->can("local_assessor")){	
+					$query->andFilterWhere(['location'=>\Yii::$app->user->identity->userProfile->location]);
+				  }
+				}
+			}
+			
+			$query->groupBy('program_enrollment.user_id');		
+			$users = $dataProvider->models;
+			$userscount = $dataProvider2->models;
+		
+			//$users = array_slice( $users, 1, 2 ); 			
+				return $this->render('report', [
+					'programs' => $programs,
+					'users' => $users,
+					'params' => $param,
+					'usersfiltercount' => $userscount
+				]);
+			
+		} else {
+			
+		  if($p_id)
+			$programs[] = Program::find()->where(['program_id'=>$p_id])->one();
+		 else 
+		 {
+			 $programs = Program::find()->where(['company_id'=>\Yii::$app->user->identity->c_id])->orderBy('title')->all();
+			 return $this->render('allprogressdashboard', [
+						'programs' => $programs,
+						'params' => $param,						
+					]);
+			//$this->redirect(['program/all-progress-dashboard']);
+			 //$programs = Program::find()->where(['company_id'=>\Yii::$app->user->identity->c_id])->orderBy('title')->all();
 		 }
 			$query = ProgramEnrollment::find()->orderBy('user_profile.firstname ASC');
 			$query->innerJoinWith(['userProfile as user_profile']);

@@ -440,6 +440,7 @@ class User extends ActiveRecord implements IdentityInterface
 
 						$total_tests = 	$total_tests + $n_tests;
 //					}//unit status
+					
 				}
 //			}//module status
 		 }
@@ -448,7 +449,14 @@ class User extends ActiveRecord implements IdentityInterface
 		 //total units completed (aw + cp)
 		 if($total_tests == 0)
 			 return 0;
-		 $progress =  ($tests_completed/$total_tests)*100;
+		// $progress =  ($tests_completed/$total_tests)*100;
+		
+		/* echo "test completyed ".$tests_completed." toral test ".$total_tests;
+		exit; */
+		
+		 $progress =  ($tests_completed * 100)/$total_tests;
+		 
+		 
 		 //if($progress > 100)
 		//	 return 100;
 		 //else
