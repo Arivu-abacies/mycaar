@@ -161,7 +161,7 @@ class LocationController extends Controller
 			$cid = Yii::$app->user->identity->c_id;
 			if($cid)
 			{
-				 if(Yii::$app->user->can('group_assessor')) { 
+			   if((Yii::$app->user->can('group_assessor')) && (!Yii::$app->user->can('company_admin'))) { 
 					$setlocation = \Yii::$app->user->identity->userProfile->access_location;				
 					if($setlocation)
 					{
@@ -181,6 +181,9 @@ class LocationController extends Controller
 				  }
 				 echo "</div>";
 				}
+				else {
+					echo "Invalid Company Name, Please Check";
+				}
 			} else {
 				echo "Invalid Company Name";
 			}
@@ -194,7 +197,7 @@ class LocationController extends Controller
 			$cid = Yii::$app->user->identity->c_id;			
 			if($cid)
 			{
-				 if(Yii::$app->user->can('group_assessor')) { 
+				 if((Yii::$app->user->can('group_assessor')) && (!Yii::$app->user->can('company_admin'))) { 
 					$setlocation = \Yii::$app->user->identity->userProfile->access_location;				
 					if($setlocation)
 					{
@@ -220,6 +223,9 @@ class LocationController extends Controller
 					}	
 				  }
 				   echo "</div>";
+				}
+				else {
+					echo "Invalid Company Name, Please Check";
 				}
 			} else {
 				echo "Invalid Company Name";

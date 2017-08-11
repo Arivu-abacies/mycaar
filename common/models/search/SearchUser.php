@@ -57,7 +57,7 @@ class SearchUser extends User
 		{
 			 $query = User::find()->where(['status'=>10]);			 			 
 		} 		
-		else if((\Yii::$app->user->can('company_admin'))||(\Yii::$app->user->can('company_assessor'))||(\Yii::$app->user->can('group_assessor'))||(\Yii::$app->user->can('"local_assessor"')))
+		else if((\Yii::$app->user->can('company_admin'))||(\Yii::$app->user->can('company_assessor'))||(\Yii::$app->user->can('group_assessor'))||(\Yii::$app->user->can('local_assessor')))
 		{			
 			 $query = User::find()->where(['c_id' =>Yii::$app->user->identity->c_id,'status'=>10]);
 		}
@@ -78,7 +78,7 @@ class SearchUser extends User
 		{
 			$query->andWhere(['<>','rolelist.item_name','sysadmin']);
 		}
-		else if((\Yii::$app->user->can('company_admin'))||(\Yii::$app->user->can('company_assessor'))||(\Yii::$app->user->can('group_assessor'))||(\Yii::$app->user->can('"local_assessor"')))
+		else if((\Yii::$app->user->can('company_admin'))||(\Yii::$app->user->can('company_assessor'))||(\Yii::$app->user->can('group_assessor'))||(\Yii::$app->user->can('local_assessor')))
 		{
 			$query->andWhere(['not in','rolelist.item_name',['sysadmin','superadmin']]);
 		}			
@@ -135,13 +135,15 @@ class SearchUser extends User
 		
 		if(\Yii::$app->user->can('company manage')) 
 		{
+			
 			 $query = User::find()->where(['status'=>10]);			 			 
 		} 		
-		else if((\Yii::$app->user->can('company_admin'))||(\Yii::$app->user->can('company_assessor'))||(\Yii::$app->user->can('group_assessor'))||(\Yii::$app->user->can('"local_assessor"')))
-		{			
+		else if((\Yii::$app->user->can('company_admin'))||(\Yii::$app->user->can('company_assessor'))||(\Yii::$app->user->can('group_assessor'))||(\Yii::$app->user->can('local_assessor')))
+		{	
+			
 			 $query = User::find()->where(['c_id' =>Yii::$app->user->identity->c_id,'status'=>10]);
 		}
-        // add conditions that should always apply here
+        // add conditions that should always apply here 
 		
         $dataProvider = new ActiveDataProvider([
             'query' => $query,
@@ -158,7 +160,7 @@ class SearchUser extends User
 		{
 			$query->andWhere(['<>','rolelist.item_name','sysadmin']);
 		}
-		else if((\Yii::$app->user->can('company_admin')) ||(\Yii::$app->user->can('company_assessor'))||(\Yii::$app->user->can('group_assessor'))||(\Yii::$app->user->can('"local_assessor"')))
+		else if((\Yii::$app->user->can('company_admin')) ||(\Yii::$app->user->can('company_assessor'))||(\Yii::$app->user->can('group_assessor'))||(\Yii::$app->user->can('local_assessor')))
 		{
 			$query->andWhere(['not in','rolelist.item_name',['sysadmin','superadmin']]);
 			
