@@ -21,11 +21,11 @@ $this->registerCssFile(\Yii::$app->homeUrl."css/custom/w3.css");
     <!--<link rel="stylesheet" href="http://zavoloklom.github.io/material-design-iconic-font/css/docs.md-iconic-font.min.css">-->
     
 	<div class="mdl-section-check">
-    <div class="mdl-grid mdl-home ">
-					<div class="mdl-cell mdl-cell-8-col" style="margin: 0px 32px 0px 4px !important;">
+    <div class="mdl-grid mdl-home" style="text-align:right;">
+					<div class="mdl-cell mdl-cell-8-col" style="width:100%;">
 						<!--<h1 class="mdl-sidebar"><strong>Home Page</strong></h1>-->
-						<a href="<?=Yii::$app->homeUrl;?>" class="btn btn-success" ><i class="fa fa-undo" aria-hidden="true"></i>
-Dashboard</a>
+						<a href="<?=Yii::$app->homeUrl;?>" class="btn btn-success homepage-btn"><i class="fa fa-undo" aria-hidden="true"></i>
+HOMEPAGE</a>
 					</div>
 	</div>
 		<div class="mdl-grid">
@@ -254,6 +254,32 @@ Dashboard</a>
 	.modal-backdrop{
 		z-index:0 !important
 	}
+	
+	.homepage-btn {
+		background-color: #4F81BE;
+		color: #fff;
+		border-color: #4F81BE;
+	}
+	 .homepage-btn:hover {
+		background-color: #4F81BE;
+		color: #fff;
+		border-color: #4F81BE;
+	}
+	.homepage-btn:focus {
+		color: #ffffff;
+		background-color: #4F81BE;
+		border-color: #4F81BE;
+	}
+.homepage-btn:active {
+		color: #ffffff;
+		background-color: #4F81BE;
+		border-color: #4F81BE;
+}
+.btn-success:active:hover {
+		color: #ffffff;
+		background-color: #4F81BE;
+		border-color: #4F81BE;
+}
 
 	</style>
 
