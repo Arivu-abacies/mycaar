@@ -5,20 +5,17 @@ $params = array_merge(
     require(__DIR__ . '/params.php'),
     require(__DIR__ . '/params-local.php')
 );
-$backEndBaseUrl = str_replace('/frontend/web', '/admin', (new \yii\web\Request)->getBaseUrl());
+$backEndBaseUrl = str_replace('/frontend/web', '/backend/web', (new \yii\web\Request)->getBaseUrl());
 return [
     'id' => 'app-frontend',
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
     'controllerNamespace' => 'frontend\controllers',
-    'defaultRoute' => 'site/index',
-    
+	'defaultRoute' => 'site/index',
     'components' => [
         'request' => [
             'csrfParam' => '_csrf-frontend',
 			'enableCsrfValidation'=>false,
-			'class' => 'common\components\Request',
-			 'web'=> '/frontend/web',
         ],
         'user' => [
             'identityClass' => 'common\models\User',

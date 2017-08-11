@@ -40,8 +40,7 @@ else
 ?>
 <script src="<?=Yii::$app->homeUrl;?>js/js/pie-chart.js" type="text/javascript"></script>
 <link href="<?=Yii::$app->homeUrl;?>js/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
-	
-<h3>Progress for <?=  \Yii::$app->user->identity->fullname ?></h3>
+
 <?php 
 
 	
@@ -54,7 +53,7 @@ else
 			if($program_prec !== false)
 			{				
 			$overallprec = $program_prec;					
-			echo '<div class="col-md-3" ><div class="for-height" style="height:70px !important;"><label>'.$tmp->title.'</label></div><div data-id="'.$tmp->program_id.'" id="demo-pie-'.$tmp->program_id.'" class="pie-title-center dataclick" data-percent="'.$overallprec.'"> <span class="pie-value"></span> </div></div>'; 
+			echo '<div class="col-md-3 pie-chart-align" ><div class="for-height" style="height:70px !important;"><label>'.$tmp->title.'</label></div><div data-id="'.$tmp->program_id.'" id="demo-pie-'.$tmp->program_id.'" class="pie-title-center dataclick" data-percent="'.$overallprec.'"> <span class="pie-value"></span> </div></div>'; 
 			}	
 		}
 	}	
@@ -62,7 +61,7 @@ else
 
 ?>
 
-<form target="_blank" style="display:none" name="formsubmit" id="formsubmit" method="post" action="<?= Url::to(['report/search'])?>">
+<form  style="display:none" name="formsubmit" id="formsubmit" method="post" action="<?= Url::to(['report/search'])?>">
 	<input type="hidden" name="company" class="form-control"  id="company" value="<?=$company_id ?>" />
 	<input type="hidden" name="program" class="form-control"  id="program" value="0" />
 	<input type="hidden" name="firstname" class="form-control"  id="firstname" value="<?=$firstname ?>" />
@@ -112,9 +111,11 @@ else
 }
 
 .pie-value {
+  color: #68B828;
+  font-weight: bold;
+  font-size: 20px;
   display: block;
   position: absolute;
-  font-size: 14px;
   height: 40px;
   top: 50%;
   left: 0;
@@ -124,6 +125,12 @@ else
 }
 .dataclick{
 	cursor:pointer;
+}
+.pie-chart-align {
+	text-align: center;
+}
+.for-height {
+    width: 250px;
 }
 </style>	
 	

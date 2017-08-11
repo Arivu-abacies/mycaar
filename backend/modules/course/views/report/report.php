@@ -777,9 +777,11 @@ margin-left: 2px;
 }
 
 .pie-value {
+  color: #68B828;
+  font-weight: bold;
+  font-size: 20px;
   display: block;
   position: absolute;
-  font-size: 14px;
   height: 40px;
   top: 50%;
   left: 0;
@@ -794,6 +796,12 @@ margin-left: 2px;
 .btnexcel {
     background: transparent;
     border: none;
+}
+.pie-chart-align {
+   text-align:center;
+   }
+   .for-height {
+    width: 250px;
 }
 
 
