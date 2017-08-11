@@ -14,13 +14,16 @@ return [
 			'viewPath' => '@common/mail',
 			'useFileTransport' => false,//set this property to false to send mails to real email addresses
 			//comment the following array to send mail using php's mail function		
-			'transport' => [
-          		 'class' => 'Swift_SmtpTransport',
-           		 'host' => 'smtp.gmail.com',
-           		 'username' => 'arivu.ilan@gmail.com',
-           		 'password' => 'arivuilan',
-           		 'port' => '25',
-           		 'encryption' => 'tls', 
+			'useFileTransport' => false,
+		 	 'transport' => [
+            'class' => 'Swift_SmtpTransport',
+            'host' => 'smtp.gmail.com',
+			/* 'username' => 'arivazhagan@abacies.com',
+            'password' => 'Arivu@123', */
+			'username' => 'arivazhagan0117@gmail.com',
+            'password' => 'Arivu@!@#Vega', 
+            'port' => '587',
+            'encryption' => 'tls', 
                         ], 
 
 		],   

@@ -82,7 +82,7 @@ else if(Yii::$app->user->can("local_assessor")){
             $roles,           // Flat array ('id'=>'label')
             ['prompt'=>'--Access Level--',
 			'onchange'=>'
-			$.post( "'.Yii::$app->urlManager->createUrl('user/location/update-group-location?locations='.$profile->access_location.'&id=').'"+$(this).val(), function( data ) {
+			$.post( "'.Yii::$app->urlManager->createUrl('user/location/update-group-location?locations='.$profile->access_location.'&userid='.$profile->user_id.'&id=').'"+$(this).val(), function( data ) {
                   $( "#grouplocation" ).html( data );
 				  $( "#grouplocation" ).show();
                 });']    // options

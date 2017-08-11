@@ -154,14 +154,15 @@ class SearchProgramEnrollment extends User
 			 $location[$key]= $get->location_id;
 			}
 		}	
+		$setlocation = implode(",",$location);
 	}
 	else if(Yii::$app->user->can("local_assessor")){
-		$locationid = \Yii::$app->user->identity->userProfile->location;
-		$location = Location::find()->where(['company_id'=>$selected_company,'location_id'=>$locationid])->orderBy('name')->all();
+		$locationid = \Yii::$app->user->identity->userProfile->location;		
+		$setlocation = $locationid;
 	}
 
 		
-		$setlocation = implode(",",$location);
+		
 		
 		
 		/// Variable for Temporary Following Condition.
