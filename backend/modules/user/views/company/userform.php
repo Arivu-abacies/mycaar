@@ -97,10 +97,10 @@ use common\models\Role;
             ['prompt'=>'--Role--']    // options
         );  ?>
 	</div>
-	<div class="col-md-12 col-sm-12" id="grouplocation" style="display:none;">
+	<div class="col-md-6 col-sm-6" id="grouplocation" style="display:none;">
 		
 	</div>	
-	<div class="col-md-12 col-sm-12" >
+	<div class="col-md-12 col-sm-12 create-btn" >
 		<div class="form-group" align="center" >
 			<?= Html::submitButton($model->isNewRecord ? 'Create' : 'Update', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
 		</div>
@@ -121,3 +121,16 @@ $(document).ready(function(){
 });
 
 </script>
+<style>
+div#grouplocation {
+    box-shadow: 0px 1px -2px 1px rgba(0,0,0,0.33);
+    border: 1px solid #ddd;
+}
+.create-btn {
+    margin-top: 10px;
+}
+.group-accessor .col-md-6 {
+    margin: 0 0 4px 0;
+    background-color: #ddd;
+}
+</style>
