@@ -235,7 +235,11 @@ class CompanyController extends Controller
 				 $profile->user_id = $model->id;
 				 $access_location = "";
 					if($model->role == "group_assessor")
-					    $access_location = implode(",",$profile->access_location);
+					{
+						$access_location = implode(",",$profile->access_location);
+						$access_location .= $access_location.','.$profile->location;
+					}						
+					    
 				 $profile->access_location	= $access_location;		 
 				 $profile->save();	
 				
@@ -326,7 +330,11 @@ class CompanyController extends Controller
 			$profile->user_id = $model->id;	
 			$access_location = "";
 			 if($model->role == "group_assessor")
+			 {
 				$access_location = implode(",",$profile->access_location);
+				if(!in_array($profile->location,$profile->access_location))
+					$access_location .= $access_location.','.$profile->location;
+			 }
 			$profile->access_location	= $access_location;				
 			$profile->save();	
 			
@@ -608,8 +616,15 @@ public function actionCreateRoleUser(){
 				$auth = Yii::$app->authManager;
 				$authorRole = $auth->getRole($model->role);
 				$auth->assign($authorRole, $model->id); 
-				//save profile first				
-				 $profile->user_id = $model->id;			
+				//save profile first
+					
+				 $profile->user_id = $model->id;
+				 $access_location = "";
+				if($model->role == "group_assessor")
+					{
+						$access_location = implode(",",$profile->access_location);
+						$access_location .= $access_location.','.$profile->location;
+					}	
 				 $profile->save();	
 				
 					
@@ -656,7 +671,14 @@ public function actionCreateRoleUser(){
 			$authorRole = $auth->getRole($model->role);
 			$auth->assign($authorRole, $model->id);
 			//save profile first			
-			$profile->user_id = $model->id;			
+			$profile->user_id = $model->id;	
+			$access_location = "";
+			 if($model->role == "group_assessor")
+			 {
+				$access_location = implode(",",$profile->access_location);
+				if(!in_array($profile->location,$profile->access_location))
+					$access_location .= $access_location.','.$profile->location;
+			 }		
 			$profile->save();	
 			
 			if(!empty($model->password))

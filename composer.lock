@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "7ca95de9d4721658653b24527c1d0147",
+    "content-hash": "87292db323adb2c235da89e96d46902c",
     "packages": [
         {
             "name": "bower-asset/bootstrap",
@@ -483,12 +483,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/kartik-v/yii2-widget-select2.git",
-                "reference": "690ddac32f6796f63b8317783f26e89ca26fa94a"
+                "reference": "a129c6663078fe0ad14cde2a5d0afd071c7608e9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/kartik-v/yii2-widget-select2/zipball/690ddac32f6796f63b8317783f26e89ca26fa94a",
-                "reference": "690ddac32f6796f63b8317783f26e89ca26fa94a",
+                "url": "https://api.github.com/repos/kartik-v/yii2-widget-select2/zipball/a129c6663078fe0ad14cde2a5d0afd071c7608e9",
+                "reference": "a129c6663078fe0ad14cde2a5d0afd071c7608e9",
                 "shasum": ""
             },
             "require": {
@@ -497,7 +497,7 @@
             "type": "yii2-extension",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.0.x-dev"
+                    "dev-master": "2.1.x-dev"
                 }
             },
             "autoload": {
@@ -528,7 +528,7 @@
                 "widget",
                 "yii2"
             ],
-            "time": "2017-06-21 11:33:04"
+            "time": "2017-08-07 18:12:36"
         },
         {
             "name": "mdmsoft/yii2-admin",
@@ -698,16 +698,16 @@
         },
         {
             "name": "robregonm/yii2-pdf",
-            "version": "dev-master",
+            "version": "1.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/robregonm/yii2-pdf.git",
-                "reference": "4ef2951e8eab220cfb6500ac630a845adeaa3036"
+                "reference": "0702997518ae58675a918924183585d25a47d604"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/robregonm/yii2-pdf/zipball/4ef2951e8eab220cfb6500ac630a845adeaa3036",
-                "reference": "4ef2951e8eab220cfb6500ac630a845adeaa3036",
+                "url": "https://api.github.com/repos/robregonm/yii2-pdf/zipball/0702997518ae58675a918924183585d25a47d604",
+                "reference": "0702997518ae58675a918924183585d25a47d604",
                 "shasum": ""
             },
             "require": {
@@ -744,7 +744,7 @@
                 "yii",
                 "yii2"
             ],
-            "time": "2015-03-04 10:55:42"
+            "time": "2015-01-15T18:10:47+00:00"
         },
         {
             "name": "setasign/fpdi",
@@ -1581,16 +1581,16 @@
         },
         {
             "name": "phpdocumentor/reflection-docblock",
-            "version": "3.2.1",
+            "version": "3.2.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpDocumentor/ReflectionDocBlock.git",
-                "reference": "183824db76118b9dddffc7e522b91fa175f75119"
+                "reference": "4aada1f93c72c35e22fb1383b47fee43b8f1d157"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpDocumentor/ReflectionDocBlock/zipball/183824db76118b9dddffc7e522b91fa175f75119",
-                "reference": "183824db76118b9dddffc7e522b91fa175f75119",
+                "url": "https://api.github.com/repos/phpDocumentor/ReflectionDocBlock/zipball/4aada1f93c72c35e22fb1383b47fee43b8f1d157",
+                "reference": "4aada1f93c72c35e22fb1383b47fee43b8f1d157",
                 "shasum": ""
             },
             "require": {
@@ -1622,7 +1622,7 @@
                 }
             ],
             "description": "With this component, a library can provide support for annotations via DocBlocks or otherwise retrieve information that is embedded in a DocBlock.",
-            "time": "2017-08-04T20:55:59+00:00"
+            "time": "2017-08-08T06:39:58+00:00"
         },
         {
             "name": "phpdocumentor/type-resolver",
@@ -3535,8 +3535,7 @@
     "aliases": [],
     "minimum-stability": "stable",
     "stability-flags": {
-        "kartik-v/yii2-widget-select2": 20,
-        "robregonm/yii2-pdf": 20
+        "kartik-v/yii2-widget-select2": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,

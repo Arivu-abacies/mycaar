@@ -4,6 +4,7 @@ namespace backend\modules\user\controllers;
 
 use Yii;
 use common\models\Location;
+use common\models\User;
 use common\models\search\SearchLocation;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
@@ -176,7 +177,7 @@ class LocationController extends Controller
 				{
 				 echo "<label>Select Locations for This Group Accessor</label>";
 				 echo "<div class='group-accessor'>";
-				  foreach($mods as $mod){		
+				  foreach($mods as $mod){					  
 					echo "<div class='col-md-6'><input type='checkbox' name='UserProfile[access_location][]' value='".$mod->location_id."'> ".$mod->name."</div>";
 				  }
 				 echo "</div>";
@@ -190,8 +191,11 @@ class LocationController extends Controller
 		}	
 	}
 	
-	public function actionUpdateGroupLocation($locations,$id){
+	public function actionUpdateGroupLocation($locations,$userid,$id){
 		$accesslocation = explode(",",$locations);
+		$userlocation = "";
+		$user = User::find()->where(['id'=>$userid])->One();
+		$userlocation = $user->userProfile->location;
 		 if($id == "group_assessor")
 		{
 			$cid = Yii::$app->user->identity->c_id;			
@@ -216,7 +220,10 @@ class LocationController extends Controller
 				  foreach($mods as $mod){	
 					if (in_array($mod->location_id, $accesslocation))
 					{
-					echo "<div class='col-md-6'><input type='checkbox' checked='checked' name='UserProfile[access_location][]' value='".$mod->location_id."'> ".$mod->name."</div>";
+						
+						$default_location =($userlocation == $mod->location_id)?"disabled='disabled'":"";
+						
+					echo "<div class='col-md-6'><input type='checkbox' ".$default_location." checked='checked' name='UserProfile[access_location][]' value='".$mod->location_id."'> ".$mod->name."</div>";
 					} else 
 					{
 					echo "<div class='col-md-6'><input type='checkbox' name='UserProfile[access_location][]' value='".$mod->location_id."'> ".$mod->name."</div>";

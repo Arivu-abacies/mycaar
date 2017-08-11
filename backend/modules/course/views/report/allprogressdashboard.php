@@ -9,9 +9,6 @@ use common\models\Company;
 use common\models\User;
 use common\models\Program;
 
-
-
-
 /* @var $this yii\web\View */
 /* @var $searchModel common\models\search\SearchProgram */
 /* @var $dataProvider yii\data\ActiveDataProvider */
@@ -40,7 +37,7 @@ else
 ?>
 <script src="<?=Yii::$app->homeUrl;?>js/js/pie-chart.js" type="text/javascript"></script>
 <link href="<?=Yii::$app->homeUrl;?>js/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
-
+<h4></h4>
 <?php 
 
 	
