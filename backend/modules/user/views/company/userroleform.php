@@ -124,9 +124,9 @@ else if(Yii::$app->user->can("local_assessor")){
             ['prompt'=>'--Role--']    // options
         );  ?>
 	</div>	
-	<div class="col-md-12 col-sm-12" id="grouplocation" style="display:none;"></div>	
+	<div class="col-md-6 col-sm-6" id="grouplocation" style="display:none;"></div>	
 	
-	<div class="col-md-12 col-sm-12">
+	<div class="col-md-12 col-sm-12 create-btn">
 		<div class="form-group" align="center" >
 			<?= Html::submitButton($model->isNewRecord ? 'Create ' : 'Update ', ['class' => $model->isNewRecord ? 'btn btn-success' : 'btn btn-primary']) ?>
 		</div>
