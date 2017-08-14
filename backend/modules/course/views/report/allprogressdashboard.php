@@ -129,5 +129,8 @@ else
 .for-height {
     width: 250px;
 }
+.for-height label {
+    font-weight: 600;
+}
 </style>	
 	

@@ -140,4 +140,7 @@ $this->registerCssFile(\Yii::$app->homeUrl."css/custom/w3.css");
    .for-height {
     width: 250px;
 }
+.for-height label {
+    font-weight: 600;
+}
 </style>	
