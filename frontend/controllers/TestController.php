@@ -97,9 +97,13 @@ class TestController extends Controller
     public function actionAwTest($u_id)
     {
 		$current_unit = Unit::findOne($u_id);
+		$modules = Module::find()->where(['module_id'=>$current_unit->module_id])->one();
+		$program_id = $modules->program_id;
+		
 		if(!$this->isAllowed($u_id)){
 			\Yii::$app->getSession()->setFlash('error', 'You are not enrolled to this program. Please contact your administrator');
-			return $this->redirect(['site/index']);
+			//return $this->redirect(['site/index']);
+			return $this->redirect(["site/user-program/?id=".$program_id]);
 		}
 		if($current_unit == null)
 			throw new NotFoundHttpException('The requested page does not exist.');
@@ -121,7 +125,8 @@ class TestController extends Controller
 		$total = AwarenessQuestion::find()->where('unit_id = :unit_id', [':unit_id' => $u_id])->count();
 		if($total == 0){
 			\Yii::$app->getSession()->setFlash('error', 'No questions found for this unit');
-			return $this->redirect(['site/index']);
+			//return $this->redirect(['site/index']);
+			return $this->redirect(["site/user-program/?id=".$program_id]);
 		}
 		//if previous unit is completed
 		$session = Yii::$app->session;
@@ -176,7 +181,8 @@ class TestController extends Controller
 					$this->saveProgress(\Yii::$app->user->id,$u_id);
 				  }
 				  $session->remove($u_id."_".\Yii::$app->user->id);
-				  return $this->redirect(["site/index#".$u_id]);
+				  //return $this->redirect(["site/index#".$u_id]);
+				  return $this->redirect(["site/user-program/?id=".$program_id."#".$u_id]);
 				}
 			  }
 			if( in_array("", $answers, true) || $count_qstns > $ans_qstns){
@@ -197,11 +203,13 @@ class TestController extends Controller
 			if(isset(Yii::$app->request->post()['save_n_exit'])){
 				if(Yii::$app->request->post()['save_n_exit'] == 'Submit Answer/s'){
 					$session->remove($u_id."_".\Yii::$app->user->id);
-					return $this->redirect(["site/index#".$u_id]);
+					//return $this->redirect(["site/index#".$u_id]);
+					return $this->redirect(["site/user-program/?id=".$program_id."#".$u_id]);
 				}
 				if(Yii::$app->request->post()['save_n_exit'] == 'Save & Return to Dashboard'){
 					//$session->remove($u_id."_".\Yii::$app->user->id);
-					return $this->redirect(["site/index#".$u_id]);
+					//return $this->redirect(["site/index#".$u_id]);
+					return $this->redirect(["site/user-program/?id=".$program_id."#".$u_id]);
 				}
 			}
 
@@ -219,6 +227,10 @@ class TestController extends Controller
 
 	public function actionRetake($u_id)
 	{
+		$model = $this->findModel($u_id);
+		$modules = Module::find()->where(['module_id'=>$model->module_id])->one();
+		$program_id = $modules->program_id;
+		
 		//see if any new questions are added to the unit here
 
 /* 		$this->isAnyChange($u_id,\Yii::$app->user->id);
@@ -226,7 +238,8 @@ class TestController extends Controller
 		$model = $this->findModel($u_id);
 		if(!$this->isAllowed($u_id)){
 			\Yii::$app->getSession()->setFlash('error', 'You are not enrolled to this program. Please contact your administrator');
-			return $this->redirect(['site/index']);
+			//return $this->redirect(['site/index']);
+			return $this->redirect(["site/user-program/?id=".$program_id]);
 		}
 		$questions = $model->awarenessQuestions;
 		foreach($questions as $key=>$quest){
@@ -243,13 +256,15 @@ class TestController extends Controller
 			$this->saveAnswers($answers);
 			if(isset(Yii::$app->request->post()['save_n_exit'])){
 				$this->saveProgress(\Yii::$app->user->id,$u_id);
-				return $this->redirect(["site/index#".$u_id]);
+				//return $this->redirect(["site/index#".$u_id]);
+				return $this->redirect(["site/user-program/?id=".$program_id."#".$u_id]);
 			}
 				
 			if($this->saveProgress(\Yii::$app->user->id,$u_id)!= 100)
 				return $this->redirect(['retake','u_id'=>$u_id]);
 			//redirect to next page or homepage
-			return $this->redirect(["site/index#".$u_id]);
+			//return $this->redirect(["site/index#".$u_id]);
+			return $this->redirect(["site/user-program/?id=".$program_id."#".$u_id]);
 		}
 		else return $this->render('retest', [
             'model' => $model,
