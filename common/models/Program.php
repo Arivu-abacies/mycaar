@@ -230,38 +230,69 @@ class Program extends \yii\db\ActiveRecord
 		$unit_total_per = 0;
 		$all_total_per = 0;
 		$total_all_units = count($unit_details); 
+		
+		
 		$no_user = count($all_users);
+	
 		//echo "total_user".$no_user."<br>";
 		//echo 
 		//exit;
 		
 		foreach ($unit_details as $key=>$unit) {
-			$n_tests = 0;
-			$c_status = CapabilityQuestion::find()->where(['unit_id'=>$unit['unit_id']])->one();
-			if(!$c_status)
-				$n_tests = $n_tests + 50;
-			
-			$total_per = 0;
+			//$n_tests = 0;
+			$total_aws_per = 0;
+			$total_cap_per = 0;
 			$no_awareness_progress = 0;
-			$model3 = $connection->createCommand("SELECT count(*)as unituser FROM `unit_report` WHERE unit_id=".$unit['unit_id']." and (awareness_progress = '100' or  capability_progress = '100') and student_id in (".$list_user.")");
+			$no_capability_progress = 0;
+			
+			$c_status = CapabilityQuestion::find()->where(['unit_id'=>$unit['unit_id']])->one();
+			
+			if($c_status)
+			{	
+				//$n_tests = $n_tests + 50;
+				
+				$model4 = $connection->createCommand("SELECT count(*)as unitcapabuser FROM `unit_report` WHERE unit_id=".$unit['unit_id']." and capability_progress = '100' and student_id in (".$list_user.")");
+			
+				$report = $model4->queryOne();
+				
+				$no_capability_progress = $report['unitcapabuser'];
+				
+				$total_all_units = $total_all_units + 1;
+			}
+			
+			
+			$model3 = $connection->createCommand("SELECT count(*)as unitawareuser FROM `unit_report` WHERE unit_id=".$unit['unit_id']." and awareness_progress = '100' and student_id in (".$list_user.")");
 			
 			/* $report = $model3->query();
 			print_r($report);  */
 			
 			
-			$n_tests = $n_tests + 50;
+			//$n_tests = $n_tests + 50;
 			$report = $model3->queryOne();
-			$no_awareness_progress = $report['unituser'];
+			
+			$no_awareness_progress = $report['unitawareuser'];
+			
+			
 			if($no_awareness_progress == 0)
 			{
-				$total_all_units = $total_all_units - 1;
+				//$total_all_units = $total_all_units - 1;
 			}
+			
+			
 			//echo "awareness_progress".$no_awareness_progress."<br>";
-			$total_per = ($no_awareness_progress * $n_tests )/$no_user;
-			$unit_total_per = $unit_total_per + round($total_per);  
+			$total_aws_per = ($no_awareness_progress * 100 );		
+				
+			$total_cap_per = ($no_capability_progress  * 100 );
+			
+			
+			
+			
+			$unit_total_per = $unit_total_per + round($total_aws_per) + round($total_cap_per);  
 			
 			//echo "cap & awsare-> ".$n_tests." unit id ".$unit['unit_id']." report ".$no_awareness_progress." no of Users ".$no_user." all unit points ".$unit_total_per."<br>";				
 		}
+		
+	
 		
 		
 		/* echo $total_per ;		
@@ -274,7 +305,7 @@ class Program extends \yii\db\ActiveRecord
 		if($total_all_units == 0)	
 			$all_total_per = 0;
 		else 
-			$all_total_per = $unit_total_per/$total_all_units;
+			$all_total_per = $unit_total_per/($total_all_units * $no_user );
 		
 		/* echo $all_total_per ;
 		echo "<br>";
@@ -282,7 +313,10 @@ class Program extends \yii\db\ActiveRecord
 		
 	//	echo " Total no units".$total_all_units." total unit per ".$unit_total_per." program perc ".$all_total_per;
 		
+		
+		
 		return round($all_total_per); 
+		
     }	
 	
 }

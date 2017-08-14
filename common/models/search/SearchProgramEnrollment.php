@@ -140,6 +140,8 @@ class SearchProgramEnrollment extends User
 			{
 			 $location[$key]= $get->location_id;		
 		    }	
+			
+		$setlocation = implode(",",$location);	
 		}
 	else if(Yii::$app->user->can("group_assessor")){
 		//$access_location = \Yii::$app->user->identity->userProfile->access_location;
