@@ -142,7 +142,9 @@ class SearchProgramEnrollment extends User
 		    }	
 		}
 	else if(Yii::$app->user->can("group_assessor")){
-		$access_location = \Yii::$app->user->identity->userProfile->access_location;
+		//$access_location = \Yii::$app->user->identity->userProfile->access_location;
+		$users_details = User::findOne(\Yii::$app->user->id);
+		$access_location = $users_details->userProfile->access_location;
 		if(!empty($access_location))
 		 $useraccesslocation = explode(",",$access_location);
 	 

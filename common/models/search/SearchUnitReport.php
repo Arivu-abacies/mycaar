@@ -6,6 +6,7 @@ use Yii;
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
 use common\models\UnitReport;
+use common\models\User;
 
 /**
  * SearchUserProfile represents the model behind the search form about `common\models\UserProfile`.
@@ -118,7 +119,10 @@ class SearchUnitReport extends UnitReport
 		
 		if((!Yii::$app->user->can("superadmin")) && (!Yii::$app->user->can("company_admin"))) {	  
 			 if(Yii::$app->user->can("group_assessor")){		
-					$setlocation = \Yii::$app->user->identity->userProfile->access_location;
+					//$setlocation = \Yii::$app->user->identity->userProfile->access_location;
+					$users_details = User::findOne(\Yii::$app->user->id);
+					$setlocation = $users_details->userProfile->access_location;
+					
 					$newsetlocation = "";
 					if($setlocation)
 					{

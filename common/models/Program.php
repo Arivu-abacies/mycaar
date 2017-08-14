@@ -5,6 +5,7 @@ namespace common\models;
 use Yii;
 use common\models\CapabilityQuestion;
 use common\models\UnitReport;
+use common\models\User;
 
 /**
  * This is the model class for table "program".
@@ -171,7 +172,9 @@ class Program extends \yii\db\ActiveRecord
 		
 		 if((!Yii::$app->user->can("superadmin")) && (!Yii::$app->user->can("company_admin"))){	
 			 if(Yii::$app->user->can("group_assessor")){		
-				$setlocation = \Yii::$app->user->identity->userProfile->access_location;			  
+				//$setlocation = \Yii::$app->user->identity->userProfile->access_location;	
+				$users_details = User::findOne(\Yii::$app->user->id);
+				$setlocation = $users_details->userProfile->access_location;
 				$setlocation = "and up.location in (".$setlocation.")";
 			}
 			else if(Yii::$app->user->can("local_assessor")){

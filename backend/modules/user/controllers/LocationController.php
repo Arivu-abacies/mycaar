@@ -163,7 +163,9 @@ class LocationController extends Controller
 			if($cid)
 			{
 			   if((Yii::$app->user->can('group_assessor')) && (!Yii::$app->user->can('company_admin'))) { 
-					$setlocation = \Yii::$app->user->identity->userProfile->access_location;				
+					//$setlocation = \Yii::$app->user->identity->userProfile->access_location;	
+					$users_details = User::findOne(\Yii::$app->user->id);
+					$setlocation = $users_details->userProfile->access_location;					
 					if($setlocation)
 					{
 						$setlocation = explode(",",$setlocation);
@@ -202,7 +204,9 @@ class LocationController extends Controller
 			if($cid)
 			{
 				 if((Yii::$app->user->can('group_assessor')) && (!Yii::$app->user->can('company_admin'))) { 
-					$setlocation = \Yii::$app->user->identity->userProfile->access_location;				
+					//$setlocation = \Yii::$app->user->identity->userProfile->access_location;
+					$users_details = User::findOne(\Yii::$app->user->id);
+					$setlocation = $users_details->userProfile->access_location;
 					if($setlocation)
 					{
 						$setlocation = explode(",",$setlocation);

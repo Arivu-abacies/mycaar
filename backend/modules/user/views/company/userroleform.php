@@ -8,6 +8,7 @@ use common\models\Division;
 use common\models\State;
 use common\models\Location;
 use common\models\Role;
+use common\models\User;
 /* @var $this yii\web\View */
 /* @var $model common\models\User */
 /* @var $form yii\widgets\ActiveForm */
@@ -18,7 +19,9 @@ if(Yii::$app->user->can("company_assessor")){
 	$location = Location::find()->where(['company_id'=>$selected_company])->orderBy('name')->all();
 	}
 else if(Yii::$app->user->can("group_assessor")){
-	$access_location = \Yii::$app->user->identity->userProfile->access_location;
+	//$access_location = \Yii::$app->user->identity->userProfile->access_location;
+	$users_details = User::findOne(\Yii::$app->user->id);
+	$access_location = $users_details->userProfile->access_location;
 	if(!empty($access_location))
 	 $useraccesslocation = explode(",",$access_location);
  

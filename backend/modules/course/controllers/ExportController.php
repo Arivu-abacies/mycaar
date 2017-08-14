@@ -12,6 +12,7 @@ use yii\data\ActiveDataProvider;
 use common\models\Program;
 use common\models\Company;
 use common\models\UserProfile;
+use common\models\User;
 use common\models\Division;
 use common\models\State;
 use common\models\Location;
@@ -67,7 +68,9 @@ class ExportController extends Controller
 				if((!Yii::$app->user->can("superadmin")) && (!Yii::$app->user->can("company_admin"))) {		
 					if(Yii::$app->user->can("group_assessor")){		
 					
-					$setlocation = \Yii::$app->user->identity->userProfile->access_location;
+					//$setlocation = \Yii::$app->user->identity->userProfile->access_location;
+					$users_details = User::findOne(\Yii::$app->user->id);	
+					$setlocation = $users_details->userProfile->access_location;
 					$newsetlocation = "";
 					if($setlocation)
 					{
