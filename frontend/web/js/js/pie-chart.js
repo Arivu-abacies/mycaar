@@ -91,7 +91,9 @@
       ctx.lineCap = options.lineCap;
 
       // draw bar
+	  if(percent != 0)
       drawCircle(options.barColor, options.lineWidth, percent / 100);
+  
     }.bind(this);
 
     this.animate = function (from, to) {
