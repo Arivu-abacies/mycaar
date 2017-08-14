@@ -328,12 +328,21 @@ class CompanyController extends Controller
 			$auth->assign($authorRole, $model->id);
 			//save profile first			
 			$profile->user_id = $model->id;	
-			$access_location = "";
-			 if($model->role == "group_assessor")
+			$access_location = "";			
+			
+			 if(($model->role == "group_assessor" ) && (!empty($profile->access_location)) && (is_array($profile->access_location)))
 			 {
 				$access_location = implode(",",$profile->access_location);
 				if(!in_array($profile->location,$profile->access_location))
-					$access_location .= $access_location.','.$profile->location;
+					$access_location = $access_location.','.$profile->location;
+			 }
+			 else if(($model->role == "group_assessor") && (!empty($profile->access_location)))
+			 {
+				 $access_location = $profile->location;
+			 }
+			 else if(($model->role == "group_assessor") && (empty($profile->access_location)))
+			 {
+				 $access_location = $profile->location;
 			 }
 			$profile->access_location	= $access_location;				
 			$profile->save();	
@@ -673,6 +682,10 @@ public function actionCreateRoleUser(){
 			//save profile first			
 			$profile->user_id = $model->id;	
 			$access_location = "";
+			echo "<pre>";
+			print_r($profile->access_location);
+			exit;
+			
 			 if($model->role == "group_assessor")
 			 {
 				$access_location = implode(",",$profile->access_location);
