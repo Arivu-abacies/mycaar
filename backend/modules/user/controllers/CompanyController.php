@@ -47,7 +47,7 @@ class CompanyController extends Controller
 				'class' => AccessControl::className(),
                 'rules' => [
 					[
-                        'actions' => ['multi-hide-company','hide-company','show-company','message-company','company-details-pdf'],
+                        'actions' => ['multi-hide-company','hide-company','show-company','message-company','company-details-pdf','company-details-page'],
                         'allow' => true,
 						'roles' => ['superadmin']
                     ],
@@ -607,8 +607,8 @@ public function actionCreateRoleUser(){
 			$model = new User();
 			$profile = new Profile();									
 			//$roles = MyCaar::getChildRoles('assessor');	
-			$roles = MyCaar::getChildRoles(Yii::$app->user->identity->role);
-			
+			//$roles = MyCaar::getChildRoles(Yii::$app->user->identity->role);			
+			$roles = MyCaar::getChildRolesName(MyCaar::getRoleNameByUserid(Yii::$app->user->identity->id));		
 			$profile->scenario = 'company_admin_user';
 		if(($model->load(Yii::$app->request->post())) && ($profile->load(Yii::$app->request->post())) && ($model->validate()) && ($profile->validate()))   {	
 			$model->username = $model->email;
@@ -655,7 +655,7 @@ public function actionCreateRoleUser(){
 		    $model = User::findOne($id);
 			$profile = Profile::find()->where(['user_id'=>$id])->one();				
 			//$roles = MyCaar::getChildRoles('assessor');	
-			$roles = MyCaar::getChildRoles(Yii::$app->user->identity->role);
+			$roles = MyCaar::getChildRoles("company_admin");
 			$model->role = $model->getRoleName();
 			
 		if(\Yii::$app->user->can('assessor')) {	
@@ -681,17 +681,13 @@ public function actionCreateRoleUser(){
 			$auth->assign($authorRole, $model->id);
 			//save profile first			
 			$profile->user_id = $model->id;	
-			$access_location = "";
-			echo "<pre>";
-			print_r($profile->access_location);
-			exit;
-			
+			/* $access_location = "";
 			 if($model->role == "group_assessor")
 			 {
 				$access_location = implode(",",$profile->access_location);
 				if(!in_array($profile->location,$profile->access_location))
 					$access_location .= $access_location.','.$profile->location;
-			 }		
+			 } */		
 			$profile->save();	
 			
 			if(!empty($model->password))
@@ -801,7 +797,39 @@ public function actionCreateRoleUser(){
 		}		
 	}
 	
+	
+	public function actionCompanyDetailsPage(){	
+			
+			$company_users = "";
+			$requireddate  = "";
+			if($_POST)
+			{
+				$requireddate = Yii::$app->request->post()['requireddate']; 
+				/* echo "<pre>";
+				print_r($requireddate);
+				echo "<br>"; */
+				$time = strtotime('01-'.$requireddate);
+				$last_day_of_month = date('t-m-Y',$time);				
+				$lasttime = strtotime($last_day_of_month);
+				$lastdate = date("d-m-Y",$lasttime);
+			/* 	echo "<br>";
+				print_r($lasttime);
+				echo "<br>";
+				print_r($lastdate);
+				
+				exit; */	
+				$connection = \Yii::$app->db;
+				$model = $connection->createCommand('select c.name as companyname ,count(u.id)as usercount from company c, user u where c.status = 0 and c.company_id = u. c_id and u.created_at <= '.$lasttime.' group by u.c_id order by c.name');
+				$company_users = $model->queryAll();
+			}	
+			return $this->render('companyuserdetailspage',['company_users'=>$company_users,"requireddate"=>$requireddate ]);
+	}	
+	
+	
 	public function actionCompanyDetailsPdf(){
+		
+		if($_POST)
+		{
          Yii::$app->response->format = 'pdf';
 		
 		// Rotate the page
@@ -813,11 +841,22 @@ public function actionCreateRoleUser(){
 		
 		$this->layout = false;
 		
-		$connection = \Yii::$app->db;
-		$model = $connection->createCommand('select c.name as companyname ,count(u.id)as usercount from company c, user u where c.status = 0 and c.company_id = u. c_id group by u.c_id ');
-		$company_users = $model->queryAll();
+		$requireddate = Yii::$app->request->post()['requireddate2']; 
+		$time = strtotime('01-'.$requireddate);
+		$last_day_of_month = date('t-m-Y',$time);				
+		$lasttime = strtotime($last_day_of_month);
+		$lastdate = date("d-m-Y",$lasttime);
 		
-		return $this->render('companyuserdetails',['company_users'=>$company_users]);
-    }	
+		$connection = \Yii::$app->db;
+		$model = $connection->createCommand('select c.name as companyname ,count(u.id)as usercount from company c, user u where c.status = 0 and c.company_id = u. c_id and u.created_at <= '.$lasttime.' group by u.c_id order by c.name');
+		$company_users = $model->queryAll();
+		return $this->render('companyuserdetails',['company_users'=>$company_users,"requireddate"=>$time]);
+		
+		} else 
+		{
+			return $this->redirect(['company/company-details-page']);
+		}
+		
+    }
 		
 }

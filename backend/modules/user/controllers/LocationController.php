@@ -225,12 +225,16 @@ class LocationController extends Controller
 					if (in_array($mod->location_id, $accesslocation))
 					{
 						
-						$default_location =($userlocation == $mod->location_id)?"disabled='disabled'":"";
+						$default_location =($userlocation == $mod->location_id )?"disabled='disabled'":"";
+						if(empty($default_location))
+							$default_location =(!Yii::$app->user->can('company_admin'))?"disabled='disabled'":"";
 						
 					echo "<div class='col-md-6'><input type='checkbox' ".$default_location." checked='checked' name='UserProfile[access_location][]' value='".$mod->location_id."'> ".$mod->name."</div>";
 					} else 
 					{
-					echo "<div class='col-md-6'><input type='checkbox' name='UserProfile[access_location][]' value='".$mod->location_id."'> ".$mod->name."</div>";
+						$default_location =(!Yii::$app->user->can('company_admin'))?"disabled='disabled'":"";
+						
+					echo "<div class='col-md-6'><input type='checkbox' ".$default_location." name='UserProfile[access_location][]' value='".$mod->location_id."'> ".$mod->name."</div>";
 					}	
 				  }
 				   echo "</div>";

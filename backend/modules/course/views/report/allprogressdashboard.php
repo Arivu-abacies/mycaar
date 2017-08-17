@@ -206,17 +206,29 @@ else if(Yii::$app->user->can("local_assessor")){
 		
 <?php 
 
+	$backcolor[] ="";
+	if(isset($programs) && !empty($programs)){	
 	
-	if(isset($programs) && !empty($programs)){		
 		foreach($programs as  $key=>$tmp)
-		{				
+		{	
+			$colorclass ="";		
 			$overallprec = 0;
 			$program_id = $tmp->program_id;
 		 	$program_prec = $tmp->getAllEnrolledUserProgram($selected_company,$program_id,$firstname,$lastname,$selected_role,$selected_division,$selected_location,$selected_state);	
 			if($program_prec !== false)
 			{				
-			$overallprec = $program_prec;					
-			echo '<div class="col-md-3 pie-chart-align" ><div class="for-height" style="height:70px !important;"><label>'.$tmp->title.'</label></div><div data-id="'.$tmp->program_id.'" id="demo-pie-'.$tmp->program_id.'" class="pie-title-center dataclick" data-percent="'.$overallprec.'"> <span class="pie-value"></span> </div></div>'; 
+			$overallprec = $program_prec;	
+		 $backcolor[$tmp->program_id] = $overallprec;		
+		if($overallprec == 0)
+			$colorclass = "grey";
+		else if ($overallprec <= 30)
+			$colorclass = "red";
+		else if ($overallprec <= 70)
+			$colorclass = "orange";
+		else if ($overallprec > 70)
+			$colorclass = "green"; 
+		
+			echo '<div class="col-md-3 pie-chart-align" ><div class="for-height" style="height:70px !important;"><label>'.$tmp->title.'</label></div><div data-id="'.$tmp->program_id.'" id="demo-pie-'.$tmp->program_id.'" class="pie-title-center dataclick" data-percent="'.$overallprec.'"> <span class="pie-value '.$colorclass.'"></span> </div></div>'; 
 			}	
 		}
 	}	
@@ -233,13 +245,38 @@ else if(Yii::$app->user->can("local_assessor")){
 			var card = $(e.currentTarget).closest('.card');
 			materialadmin.AppCard.toggleCardCollapse(card);
 		});
-		
+		var backcolor = "#68b828";	
 		<?php if(isset($programs) && !empty($programs)){
 		foreach($programs as  $tmp)
 			{
+			 if(isset($backcolor[$tmp->program_id]))
+			{
+				if($backcolor[$tmp->program_id] == 0)
+				{
+				?>
+				backcolor = "#81889a";
+				<?php 
+				}
+				else if($backcolor[$tmp->program_id] <= 30)
+				{
+				?>
+				backcolor = "#c10001";
+				<?php 
+				} else if($backcolor[$tmp->program_id] <= 70)
+				{
+				?>
+				backcolor = "#ffc000";
+				<?php 	
+				} else if($backcolor[$tmp->program_id] > 70)
+				{
+				?>
+				backcolor = "#68b828";
+				<?php 
+				}
+			}	 
 		?>	
             $('#demo-pie-<?= $tmp->program_id ?>').pieChart({
-                barColor: '#68b828',
+                barColor: backcolor,
                 trackColor: '#eee',
                 lineCap: 'square',
                 lineWidth: 14,
@@ -289,6 +326,19 @@ else if(Yii::$app->user->can("local_assessor")){
 }
 .for-height label {
     font-weight: 600;
+}
+
+.red {
+	color: #c10001 !important
+}
+.orange {
+	color: #ffc000 !important
+}
+.green {
+	color: #68b828 !important
+}
+.grey {
+	color: #81889a !important
 }
 </style>	
 	

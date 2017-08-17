@@ -220,6 +220,7 @@ AppAsset::register($this);
 								<li><a id="add_pgm" href="<?=\Yii::$app->homeUrl?>course/program/create#add_pgm" ><span class="title">Add Program</span></a></li>
 								<li><a id="add_lsn" href="<?=\Yii::$app->homeUrl?>course/module/create#add_lsn" ><span class="title">Add Module</span></a></li>	
 								<li><a id="mr" target="_blank" href="<?=\Yii::$app->homeUrl?>user/company/company-details-pdf#mr"><span class="title">Monthly Reports</span></a></li>								
+								<li><a id="mrp" target="_blank" href="<?=\Yii::$app->homeUrl?>user/company/company-details-page#mrp"><span class="title">tet Monthly Reports</span></a></li>								
 							</ul>
 						</li>						
 						<?php } else if(\Yii::$app->user->can('company_admin')) { ?>

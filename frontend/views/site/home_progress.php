@@ -40,6 +40,7 @@ $this->registerCssFile(\Yii::$app->homeUrl."css/custom/w3.css");
 	
 	<?php 
 	}
+	$backcolor[] ="";
 	foreach($programs as $program)
 	{
 		$modules = $program->publishedModules;
@@ -61,8 +62,18 @@ $this->registerCssFile(\Yii::$app->homeUrl."css/custom/w3.css");
 	
 
 		$overallprec = $countprogress/$overalluser;
-		
-		echo '<div class="col-md-3 pie-chart-align" ><div class="for-height" style="height:70px !important;"><label>'.$program->title.'</label></div><a href="'.Url::to(["site/user-program", "id"=>$program->program_id] ).'" ><div data-id="'.$program->program_id.'" id="demo-pie-'.$program->program_id.'" class="pie-title-center dataclick" data-percent="'.$overallprec.'"> <span class="pie-value"></span> </div></a></div>';
+		$colorclass ="";
+	   $backcolor[$program->program_id] = $overallprec;		
+		if($overallprec == 0)
+			$colorclass = "grey";
+		else if ($overallprec <= 30)
+			$colorclass = "red";
+		else if ($overallprec <= 70)
+			$colorclass = "orange";
+		else if ($overallprec > 70)
+			$colorclass = "green"; 
+			
+		echo '<div class="col-md-3 pie-chart-align" ><div class="for-height" style="height:70px !important;"><label>'.$program->title.'</label></div><a href="'.Url::to(["site/user-program", "id"=>$program->program_id] ).'" ><div data-id="'.$program->program_id.'" id="demo-pie-'.$program->program_id.'" class="pie-title-center dataclick" data-percent="'.$overallprec.'"> <span class="pie-value '.$colorclass.'"></span> </div></a></div>';
 		
 		echo "</div>";
 		?>
@@ -87,13 +98,40 @@ $this->registerCssFile(\Yii::$app->homeUrl."css/custom/w3.css");
 				 $("html,body").animate({scrollTop:top1}, 1000);				
 			});
 			
-			
+		var backcolor = "#68b828";	
 			<?php if(isset($programs) && !empty($programs)){
 		foreach($programs as  $tmp)
 			{
+			  if(isset($backcolor[$tmp->program_id]))
+			 {
+				if($backcolor[$tmp->program_id] == 0)
+				{
+				?>
+				backcolor = "#81889a";
+				<?php 
+				}
+				else if($backcolor[$tmp->program_id] <= 30)
+				{
+				?>
+				backcolor = "#c10001";
+				<?php 
+				} else if($backcolor[$tmp->program_id] <= 70)
+				{
+				?>
+				backcolor = "#ffc000";
+				<?php 	
+				} else if($backcolor[$tmp->program_id] > 70)
+				{
+				?>
+				backcolor = "#68b828";
+				<?php 
+				}
+			 } 
 		?>	
+		
+		
             $('#demo-pie-<?= $tmp->program_id ?>').pieChart({
-                barColor: '#68b828',
+                barColor: backcolor,
                 trackColor: '#eee',
                 lineCap: 'square',
                 lineWidth: 14,
@@ -142,5 +180,18 @@ $this->registerCssFile(\Yii::$app->homeUrl."css/custom/w3.css");
 }
 .for-height label {
     font-weight: 600;
+}
+
+.red {
+	color: #c10001 !important
+}
+.orange {
+	color: #ffc000 !important
+}
+.green {
+	color: #68b828 !important
+}
+.grey {
+	color: #81889a !important
 }
 </style>	

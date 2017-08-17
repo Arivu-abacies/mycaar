@@ -29,6 +29,45 @@ class ExportController extends Controller
 		
 		//////////////////get users searched////////////////////////////
 		$param = unserialize(\Yii::$app->request->post()['params']);
+		
+		$addedstring = "";
+if($param)
+{
+	foreach($param as $key=>$temp)
+	{
+		if(!empty($temp))
+		{	
+			if($key == 'firstname')
+			{
+				$addedstring .= " / ".$temp;
+			}
+			else if($key == 'lastname')
+			{
+				$addedstring .= " / ".$temp;
+			}
+			else if($key == 'role')
+			{
+				$roledata = Role::find()->where(['role_id'=>$temp])->one();
+				$addedstring .= " / ".$roledata->title;
+			}
+			else if($key == 'location')
+			{
+				$locationdata = Location::find()->where(['location_id'=>$temp])->one();
+				$addedstring .= " / ".$locationdata->name;
+			}
+			else if($key == 'division')
+			{
+				$divisiondata = Division::find()->where(['division_id'=>$temp])->one();
+				$addedstring .= " / ".$divisiondata->title;
+			}	
+			else if($key == 'state')
+			{
+				$statedata = State::find()->where(['state_id'=>$temp])->one();
+				$addedstring .= " / ".$statedata->name;
+			}				
+		}
+	}
+}
 		$searched_by_user = '';
 		//var_dump($params);die;
 		if($param){
@@ -187,9 +226,9 @@ class ExportController extends Controller
 		//if file exists
 		//Display program title
 		$categoryname = $program->title;
-		$sheet->getStyle("E3:I3")->applyFromArray($sty);
-		$objPHPExcel->setActiveSheetIndex(0)->mergeCells("E3:I3");
-		$objPHPExcel->getActiveSheet()->setCellValue('E3', "Program:" . $categoryname);
+		$sheet->getStyle("E3:S3")->applyFromArray($sty);
+		$objPHPExcel->setActiveSheetIndex(0)->mergeCells("E3:S3");
+		$objPHPExcel->getActiveSheet()->setCellValue('E3', "Program:" . $categoryname.$addedstring);
 		$objPHPExcel->getActiveSheet()->getStyle('E3')->getAlignment()->setWrapText(true);
 		$objPHPExcel->getActiveSheet()->getStyle("E3")->getFont()->setBold(true);
 		$objPHPExcel->getActiveSheet()->getStyle("E3")->getFont()->setSize(10);
@@ -197,10 +236,10 @@ class ExportController extends Controller
 		//searched by
 		//$searched_by_user = implode(',',$param);
 		$objRichText = new \PHPExcel_RichText();
-		$objBold = $objRichText->createTextRun('This report searched by : ');
-		$objBold->getFont()->setBold(true);
-		$objRichText->createText($searched_by_user);
-		$objPHPExcel->getActiveSheet()->getCell('E4')->setValue($objRichText);
+		//$objBold = $objRichText->createTextRun('This report searched by : ');
+		//$objBold->getFont()->setBold(true);
+		//$objRichText->createText($searched_by_user);
+		//$objPHPExcel->getActiveSheet()->getCell('E4')->setValue($objRichText);  
 		
 		$objPHPExcel->getActiveSheet()->getStyle('E4')->getAlignment()->setWrapText(false);
 		$objPHPExcel->getActiveSheet()->getStyle("E4")->getFont()->setSize(10);
@@ -229,6 +268,7 @@ class ExportController extends Controller
 			} else {
 				$split_color_val = round ( ( $capability_percentage / 10 ), 0 );
 			}
+			
 			switch ($split_color_val) {
 				case 1: 
 					$logo = \Yii::$app->basePath.'/web/img/excel/range1.png';
@@ -258,7 +298,7 @@ class ExportController extends Controller
 					$logo = \Yii::$app->basePath.'/web/img/excel/range9.png';
 					break;
 				case 10:
-					$logo = \Yii::$app->basePath.'/web/img/excel/range1.png';
+					$logo = \Yii::$app->basePath.'/web/img/excel/range10.png';
 					break;
 				default:
 					$logo = \Yii::$app->basePath.'/web/img/excel/range0.png';

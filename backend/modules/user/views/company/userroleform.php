@@ -83,7 +83,7 @@ else if(Yii::$app->user->can("local_assessor")){
 			
 			echo $form->field($model, 'role')->dropDownList(
             $roles,           // Flat array ('id'=>'label')
-            ['prompt'=>'--Access Level--',
+            ['prompt'=>'--Access Level--','disabled'=>"true",
 			'onchange'=>'
 			$.post( "'.Yii::$app->urlManager->createUrl('user/location/update-group-location?locations='.$profile->access_location.'&userid='.$profile->user_id.'&id=').'"+$(this).val(), function( data ) {
                   $( "#grouplocation" ).html( data );

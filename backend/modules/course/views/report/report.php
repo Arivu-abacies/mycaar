@@ -240,6 +240,7 @@ if($params)
 	<?php 
 	$check_output ='';	
 	//echo count($users);
+	$backcolor[] = "";
 	foreach($programs as $program)
 	{
 		
@@ -315,7 +316,20 @@ if($params)
 	
 		echo '</ul>';
 		$overallprec = $countprogress/$overalluser;
-		echo '<div id="demo-pie-'.$program->program_id.'" class="pie-title-center demo-pie" data-percent="'.$overallprec.'"> <span class="pie-value"></span> </div></div>';
+		$colorclass ="";
+		$backcolor[$program->program_id] = $overallprec;
+		
+		
+		if($overallprec == 0)
+			$colorclass = "grey";
+		else if ($overallprec <= 30)
+			$colorclass = "red";
+		else if ($overallprec <= 70)
+			$colorclass = "orange";
+		else if ($overallprec > 70)
+			$colorclass = "green"; 
+		
+		echo '<div id="demo-pie-'.$program->program_id.'" class="pie-title-center demo-pie" data-percent="'.$overallprec.'"> <span class="pie-value '.$colorclass.'"></span> </div></div>';
 		//program bar starts from here
         echo'<div class="all_course al_pragram_width ">';
 		foreach($modules as $p_key=>$module)
@@ -657,12 +671,39 @@ if($params)
 	</script>
 	
 	<script type="text/javascript">
+	var backcolor = "#68b828";	
 	<?php if(isset($programs) && !empty($programs)){
 		foreach($programs as  $tmp)
+			{		
+			 if(isset($backcolor[$tmp->program_id]))
 			{
+			if($backcolor[$tmp->program_id]== 0)
+				{
+				?>
+				backcolor = "#81889a";
+				<?php 
+				}
+				else if($backcolor[$tmp->program_id] <= 30)
+				{
+				?>
+				backcolor = "#c10001";
+				<?php 
+				} else if($backcolor[$tmp->program_id] <= 70)
+				{
+				?>
+				backcolor = "#ffc000";
+				<?php 	
+				} else if($backcolor[$tmp->program_id] > 70)
+				{
+				?>
+				backcolor = "#68b828";
+				<?php 
+				}
+			}	 
 		?>	
+			
             $('#demo-pie-<?= $tmp->program_id ?>').pieChart({
-                barColor: '#68b828',
+                barColor: backcolor,
                 trackColor: '#eee',
                 lineCap: 'square',
                 lineWidth: 14,
@@ -794,6 +835,7 @@ margin-left: 2px;
 .demo-pie {
     position: absolute;
     left: 93px;
+	margin-top: 7px;
 }
 .btnexcel {
     background: transparent;
@@ -805,6 +847,16 @@ margin-left: 2px;
    .for-height {
     width: 250px;
 }
-
-
+.red {
+	color: #c10001 !important
+}
+.orange {
+	color: #ffc000 !important
+}
+.green {
+	color: #68b828 !important
+}
+.grey {
+	color: #81889a !important
+}
 </style>

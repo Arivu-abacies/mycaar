@@ -630,11 +630,19 @@ background-color: lightgreen;
         bottom: -140px;
         position: relative;
     }
+	
+	.horizontal.al_cpp_category_16 {
+       margin-top: 10px;
+   }
 }
 
 /* for firfox browser*/
 @-moz-document url-prefix() {
 
+	.horizontal.al_cpp_category_16 {
+       margin-top: 30px;
+   }
+   
     .mdl-section {
         margin-top: 12px;
         margin-bottom: 0px;
